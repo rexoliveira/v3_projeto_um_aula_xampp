@@ -26,6 +26,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 65vh;
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+
