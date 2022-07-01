@@ -1,0 +1,504 @@
+/* Importação da fontes do projeto da página do BOT */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+#menu_toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+#menu_toggle:checked+.menu_btn>span {
+    transform: rotate(45deg);
+}
+
+#menu_toggle:checked+.menu_btn>span::before {
+    top: 0;
+    transform: rotate(3deg);
+}
+
+#menu_toggle:checked+.menu_btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/* #menu_toggle:checked~.sidebar {
+    left: 0 !important;
+} */
+
+.sidebar.active .menu_btn {
+    flex-direction: row;
+    position: fixed;
+    top: 20px;
+    left: 210px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 2;
+    /* x vermelho fica em cima da barra lateral */
+}
+
+.sidebar .menu_btn {
+    flex-direction: row;
+    position: fixed;
+    top: 20px;
+    left: 28px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.25s ease;
+}
+
+/* Alinha o icone do botão login na página principal */
+span.material-icons {
+    font-size: 35px;
+    position: absolute;
+    left: -35px;
+    top: 0px;
+    z-index: 10;
+}
+
+/* Correção para site */
+.menu_btn>span,
+.menu_btn>span::before,
+.menu_btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #09f4f4c9;
+    transition-duration: 0.25s;
+
+}
+
+
+.menu_btn>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu_btn>span::after {
+    content: '';
+    top: 8px;
+}
+
+
+.logo_title {
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: #c2f9ae;
+    background: linear-gradient(90deg,
+            /* #00867C 0%, */
+            #000A22 10%, #00867C 190%);
+    transition: all 0.25s ease;
+
+}
+
+.but_log {
+    margin-left: 190px;
+}
+
+.menu {
+    margin-left: 140px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 12px 24px;
+
+}
+.title {
+    font-size: 75px;
+    padding: 12px 12px;
+    color: #61f889;
+    font-family: 'Righteous', cursive;
+    transition: all 0.8s ease;
+}
+.title_principal {
+    font-size: 75px;
+    padding: 12px 12px;
+    color: #61f889;
+    font-family: 'Righteous', cursive;
+    transition: all 0.8s ease;
+}
+
+.logo {
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    height: 150px;
+    transition: all 0.8s ease;
+}
+
+.logo.active{
+    display: none;
+    transition: all 0.8s ease;
+}
+
+.body {
+    background: linear-gradient(90deg, #00867C 0%, #000A22 24%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.itinerario_quadro {
+    padding: 15px;
+    border: 1px solid black;
+    width: 100%
+}
+
+.image_home:hover {
+    /* hover passar o mouse por cima */
+    box-shadow: 0 0 10px 0 #ecd6c4 inset, 0 0 10px 4px #ecd6c4;
+}
+
+.image_home {
+    top: 10px;
+    left: 10px;
+    width: 55px;
+    height: 55px;
+}
+
+.home_geral {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.image_home_title {
+    font-size: 13px;
+    color: #61f889;
+
+}
+
+#all_cards {
+    padding-top: 10px;
+    padding-right: 5px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.cards_ver {
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.cards_hor {
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+
+.card_ver {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 30px;
+    margin: 20px;
+    width: 250px;
+    height: 100%;
+    transition: all 0.3s ease-out;
+}
+
+.card_hor {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 10px;
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s ease-out;
+}
+
+.camara {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 10px;
+    margin: 20px;
+    width: auto;
+    height: auto;
+    transition: all 0.3s ease-out;
+}
+
+.card_hor:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.card_ver:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.title_card_ver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #03f9fd;
+    font-size: 15px;
+}
+
+.title_card_hor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a3a5ae;
+    font-size: 15px;
+}
+
+
+.image_card {
+    float: none;
+    max-width: 128px;
+    max-height: 128px;
+}
+
+.image_card_outros {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.image_card_tempo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 100%;
+    max-height: 55%;
+}
+
+.tempo {
+    border-left: 3px solid #7cff48;
+}
+
+.cultura {
+    border-left: 3px solid #ffbc48;
+}
+
+.transito {
+    border-left: 3px solid #fc48ff;
+}
+
+.noticia {
+    border-left: 3px solid #ff4848;
+}
+
+.camara {
+    border-left: 3px solid #490871;
+}
+
+.vertical {
+    border-left: 5px solid #03f9fd;
+}
+
+
+.item_menu {
+    color: #bac1b8;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-decoration-line: none;
+
+}
+
+.button {
+    margin: 10px;
+    width: auto;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: rgba(17, 17, 17, 0.377);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 5px;
+}
+
+.button:before {
+    content: '';
+    background: linear-gradient(45deg, #02a8ee, #3d38a0, #95dbe9, #006aff, #60eed7, #2647ec, #caffd3, #2f2f59fd, #00ffbf);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 5px;
+}
+
+.button:active {
+    color: rgba(0, 0, 0, 0.676)
+}
+
+.button:active:after {
+    background: transparent;
+}
+
+.button:hover:before {
+    opacity: 1;
+}
+
+.button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(126, 208, 238, 0.14);
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* RESPONSIVO */
+@media (max-width:940px) {
+    .title_principal {
+        font-size: 35px;
+        padding: 0;
+        color: #ffffff;
+    }
+
+    .logo {
+        top: 0px;
+        left: 0px;
+        width: 75px;
+        height: 75px;
+
+    }
+
+    .logo_title {
+        padding-left: 80px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .rodape_title_texto {
+        font-size: 25px;
+        color: #ffffff;
+
+    }
+
+    .rodape_credito {
+        justify-content: flex-start;
+    }
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@media (max-width:635px) {
+    .card_ver {
+        width: 125px;
+        height: 50%;
+    }
+
+    .card_hor {
+        width: 125px;
+        height: 125px;
+
+    }
+
+    .image_card {
+        display: none;
+    }
+
+    .image_card_camara {
+        display: none;
+    }
+
+    .logo_title {
+        width: 100%;
+        display: block;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .button {
+        margin: 5px;
+        height: 20px;
+        background: rgb(8, 8, 8);
+        border-radius: 5px;
+    }
+
+    .item_menu {
+        color: #ffffff;
+        font-size: 14px;
+    }
+
+    span.material-icons {
+        font-size: 16px;
+        left: -20px;
+    }
+}

@@ -1,0 +1,26 @@
+ /*  fonte:https://medium.com/trainingcenter/criando-um-rel%C3%B3gio-digital-com-javascript-f50a3092a943 */
+  #data-hora {
+    margin: 20px;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(2, 255, 234, 0.30);
+    background-color: rgba(96, 246, 218, 0.5);
+    border: none;
+    border-radius: 3%;
+    color: rgb(238, 157, 157);
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    height: 20px;
+    width: 170px;
+    border-radius: 5px;
+  }
+
+  /* RESPONSIVO */
+  @media (max-width:940px) {
+    #data-hora {
+      font-size: 12px;
+      color: rgb(238, 157, 157);
+      height: 15px;
+      width: 120px;
+    }
+  }

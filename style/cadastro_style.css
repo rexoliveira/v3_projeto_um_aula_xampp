@@ -1,0 +1,19 @@
+.conteudo_cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body_cadastro {
+    background: linear-gradient(90deg, #00867C 0%, #000A22 24%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+}
+
+.image_cadastro {
+    width: 100%;
+    height: 70%;
+}

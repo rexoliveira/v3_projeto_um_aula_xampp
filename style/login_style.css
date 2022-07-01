@@ -1,0 +1,31 @@
+
+.conteudo_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body_login {
+    background: linear-gradient(90deg, #00867C 0%, #000A22 24%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+}
+
+.image_login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 70%;
+}
+
+.conteudo_login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

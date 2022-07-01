@@ -1,0 +1,460 @@
+/* Projeto original no YouTube: https://www.youtube.com/watch?v=wEfaoAa99XY&t=222s&ab_channel=CodingLab */
+
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 78px;
+    background: linear-gradient(90deg, #00867C 0%, #000A22 19%);
+    padding: 6px 14px;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+
+
+.title_principal.active {
+    font-size: 40px;
+    padding: 12px 12px;
+    color: #61f889;
+    font-family: 'Righteous', cursive;
+    transition: all 0.8s ease;
+}
+
+.sidebar.active {
+    width: 250px;
+}
+
+.sidebar .logo_details {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.sidebar .logo_details .icon {
+    height: 60px;
+    width: 60px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar .logo_details .logo_name {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .logo_details .icon,
+.sidebar.active .logo_details .logo_name {
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+/* .sidebar #btn{ não aplicado conforme original
+    
+} 
+. . sidebar #btn{
+    
+}
+*/
+.sidebar i {
+    color: white;
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.sidebar .nav_list {
+    margin-top: 20px;
+    height: 100%;
+}
+
+.sidebar li {
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+}
+
+
+.sidebar li .tooltip.menu {
+    position: absolute;
+    top: -20px;
+    left: calc(10% - 90px);
+    z-index: 3;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 6px 6px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: 0s;
+}
+
+
+.sidebar li:hover .tooltip.menu {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sidebar.active li .tooltip.menu {
+    display: none;
+}
+
+.sidebar li .tooltip_logout {
+    position: absolute;
+    top: -20px;
+    left: calc(100% + 5px);
+    z-index: 3;
+    background: white;
+    box-shadow: 0 5px 10px rgba(255, 1, 1, 0.2);
+    padding: 6px 6px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: 0s;
+    color: red;
+    opacity: 0;
+}
+
+
+.sidebar  li:hover .tooltip_logout {
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+.sidebar.active li:hover .tooltip_logout{
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    
+}
+
+
+.sidebar input {
+    font-size: 15px;
+    color: white;
+    font-weight: 400;
+    outline: none;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    background: #5e9e9e71;
+
+}
+
+.sidebar.active input {
+    padding: 0 20px 0 50px;
+    width: 100%;
+}
+
+.sidebar .bx-search {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 18px;
+    background: #1d1b31;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar.active .bx-search:hover {
+    background: #1d1b31;
+    color: white;
+}
+
+.sidebar .bx-search:hover {
+    background: white;
+    color: #1d1b31;
+}
+
+.sidebar li a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background-color: none;
+
+}
+
+.sidebar li a:hover {
+    background: white;
+}
+
+.sidebar li a .links_name {
+    color: aqua;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.sidebar.active li a .links_name {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i {
+    transition: all 0.5s ease;
+    color: #11101d;
+}
+
+.sidebar li i {
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.sidebar.active .profile{
+    height:50px;
+    transition: all 0.8s ease;
+}
+
+.sidebar .profile .name_job{
+    height: 0;
+}
+
+.sidebar.active .name_job{
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 0.8s ease;
+    
+}
+
+.sidebar .profile_details {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 48px;
+    transition: all 0.8s ease;
+}
+
+.sidebar.active  .profile_details {
+    height: 50px;
+    width:100%;
+    border-radius: 10px;
+    background: #5e9e9e71;
+    transition: all 0.8s ease;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+
+.sidebar li .img_user {
+    opacity: 0;
+    height: 0px;
+}
+
+.sidebar.active li .img_user {
+    opacity: 1;
+    transition: all;
+    height: 50px;
+    width:50px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: all;
+
+}
+
+.sidebar.active .name_user {
+    display: flex;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    white-space: nowrap;
+    opacity: 1;
+    transition: all;
+}
+.sidebar.active .job {
+    display: flex;
+    font-size: 10px;
+    font-weight: 200;
+    color: white;
+    white-space: nowrap;
+    opacity: 1;
+    transition: all;
+}
+
+.sidebar .name_user,
+.sidebar .job {
+    height: 0;
+    opacity: 0;
+}
+
+
+
+.sidebar #log_out {
+    font-size: 18px;
+    background: #1d1b31;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar.active #log_out {
+    background: none;
+    color: white;
+}
+
+.sidebar.active  #log_out:hover {
+    background: none;
+    color: rgb(255, 2, 2);
+}
+
+.sidebar  #log_out:hover {
+    background: white;
+    color: rgb(255, 2, 2);
+}
+
+
+
+.home_section {
+    position: relative;
+    min-height: 100vh;
+    top: 0;
+    left: 78px;
+    width: calc(100% - 78px);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.sidebar.active~.home_section {
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+.home_section .text {
+    display: inline-block;
+    color: #11101d;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 18px;
+}
+
+@media (max-width: 420px) {
+    .sidebar li .tooltip.menu {
+        display: none;
+    }
+    .sidebar li .tooltip_logout {
+        display: none;
+    }
+}
+
+.sidebar li .sub_menu {
+    padding: 6px 6px 14px 80px;
+    margin-top: -10px;
+    background: white;
+    display: none;
+}
+
+.sidebar li.showMenu .sub_menu {
+    display: block;
+}
+
+.sidebar li .sub_menu a {
+    color: #000A22;
+    font-size: 15px;
+    padding: 5px 0;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.sidebar li .sub_menu a:hover {
+    color: aqua;
+    opacity: 1;
+}
+
+.sidebar li .sub_menu {
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    /* original 0 10px 10px 0 */
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.sidebar li:hover .sub_menu {
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+}
+
+
+/* .sidebar  li .sub_menu .link_name {
+    display: none;
+} */
+
+.sidebar.active .sub_menu .link_name {
+    font-size: 18px;
+    opacity: 1;
+    display: block;
+}
+
+.sidebar li .sub_menu.blank {
+    opacity: 1;
+    pointer-events: auto;
+    padding: 3px 20px 6px 16px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar li:hover .sub_menu.blank {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 400px) {
+    .sidebar.active li .sub-menu {
+        display: none;
+    }
+}

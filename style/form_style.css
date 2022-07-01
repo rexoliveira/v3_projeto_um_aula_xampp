@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 38px;
+    max-height: 65vh;
+}
+
+.button_cadas_login{
+    padding: 5px ;
+    background: none;
+    border-style: none;
+}
+
+.w50 {
+    width: 50%;
+    float: left;
+
+}
+
+.c_senha {
+    padding-left: 10px;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 930px;
+}
+
+.box_image {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 50%;
+    display: flex;
+    background-color: rgba(105, 147, 163, 0.8);
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 90px;
+    border-radius: 20px 0 0 20px;
+}
+
+
+
+.box_form {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(105, 147, 163, 1);
+    backdrop-filter: blur(40px);
+    padding: 30px 40px;
+    width: 50%;
+    border-radius: 0 20px 20px 0;
+}
+
+.box_form h2 {
+    font-size: 30px;
+}
+
+.box_form p {
+    font-weight: bold;
+    color: #3d3d3d;
+}
+
+
+.box_form p a {
+    color: #03e8f8;
+    text-decoration: none;
+}
+
+.box_form form {
+    margin: 20px 0;
+}
+
+form .input_group {
+    margin-bottom: 15px;
+}
+
+form .input_group label {
+    color: #3d3d3d;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form .input_group input {
+    width: 100%;
+    height: 47px;
+    background-color: rgba(255, 255, 255, 0.32);
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 15px;
+    font-size: 15px;
+    color: #616161;
+    transition: all 0.4s ease;
+}
+
+form .input_group input:focus {
+    border-color: #03e8f8;
+}
+
+form .input_group button:hover {
+    /* hover passar o mouse por cima */
+    box-shadow: 0 0 10px 0 #ecd6c4 inset, 0 0 10px 4px #ecd6c4;
+    color: rgb(0, 255, 47);
+}
+
+form .input_group button {
+    font-weight: bold;
+    width: 100%;
+    height: 47px;
+    background: #03e8f8;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+
+/* RESPONSIVO */
+@media (max-width:930px) {
+    .box_image {
+        display: none;
+    }
+
+    .box {
+        width: 100%;
+        margin: 10%;
+    }
+
+    .box_form {
+        width: 100%;
+        border-radius: 20px;
+        margin: 10%;
+    }
+}
+
+@media (max-width:705px) {
+    .w50 {
+        width: 100%;
+        padding: 0;
+    }
+    .box {
+        width: 100%;
+        margin: 10%;
+        
+    }
+
+    .box_form {
+        width: 100%;
+        border-radius: 20px;
+        margin: 10%;
+    }
+
+    
+
+}
+
+@media (max-width:437px) {
+    
+    .title{
+        font-size: 30px;
+        color: white;
+    }
+
+    .box_form p a {
+        color: white;
+        
+    }
+    
+
+}
