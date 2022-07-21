@@ -49,7 +49,7 @@
         </li>
 
         <li>
-          <a href="/page/dashboard.php">
+          <a href="dashboard.php">
             <i class="bx bx-grid-alt"></i>
             <span class="links_name">Dashboard</span>
           </a>
@@ -57,7 +57,7 @@
         </li>
 
         <li>
-          <a href="../page/usuario.php">
+          <a href="usuario.php">
             <i class="bx bx-user"></i>
             <span class="links_name">Usuário</span>
           </a>
