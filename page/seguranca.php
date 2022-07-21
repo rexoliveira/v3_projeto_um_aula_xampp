@@ -17,7 +17,7 @@
             <img class="logo" src="../image/icon/smart-city-200.png" alt="">
             <h1 class="title"> Segurança</h1>
             <section class="home">
-               <a href="../index.html"><img id="image_home" class= "image_home"src="..\image\icon\house.png" alt="home"></a>
+               <a href="principal.php"><img id="image_home" class= "image_home"src="..\image\icon\house.png" alt="home"></a>
                 <label class="image_home_title"for="image_home">Home</label>
             </section>
         </section>

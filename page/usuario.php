@@ -28,16 +28,16 @@
                     <ul class="menu">
                         <section class="but_log">
                             <button class="button log" type="button">
-                                <a class="item_menu" href="login.html"><span
+                                <a class="item_menu" href="login.php"><span
                                         class="material-icons">person</span>Login</a>
                             </button>
                             <button class="button log" type="button">
-                                <a class="item_menu" href="cadastro.html">Cadastra-se</a>
+                                <a class="item_menu" href="cadastro.php">Cadastra-se</a>
                             </button>
                         </section>
 
                         <section class="home">
-                            <a href="../index.html"><img id="image_home" class="image_home" src="..\image\icon\house.png"
+                            <a href="principal.php"><img id="image_home" class="image_home" src="..\image\icon\house.png"
                                     alt="home"></a>
                             <label class="image_home_title" for="image_home">Home</label>
                         </section>

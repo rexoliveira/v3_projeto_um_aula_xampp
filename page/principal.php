@@ -49,7 +49,7 @@
         </li>
 
         <li>
-          <a href="/page/dashboard.html">
+          <a href="/page/dashboard.php">
             <i class="bx bx-grid-alt"></i>
             <span class="links_name">Dashboard</span>
           </a>
@@ -57,7 +57,7 @@
         </li>
 
         <li>
-          <a href="../page/usuario.html">
+          <a href="../page/usuario.php">
             <i class="bx bx-user"></i>
             <span class="links_name">Usuário</span>
           </a>
@@ -137,27 +137,27 @@
           <section class="logo_sub_title">
             <ul class="menu">
               <button class="button cul" type="button">
-                <a class="item_menu" href="cultura.html">Cultura</a>
+                <a class="item_menu" href="cultura.php">Cultura</a>
               </button>
               <button class="button edu" type="button">
-                <a class="item_menu" href="educacao.html">Educação</a>
+                <a class="item_menu" href="educacao.php">Educação</a>
               </button>
               <button class="button seg" type="button">
-                <a class="item_menu" href="seguranca.html">Segurança</a>
+                <a class="item_menu" href="seguranca.php">Segurança</a>
               </button>
               <button class="button tra" type="button">
-                <a class="item_menu" href="transporte.html">Transporte</a>
+                <a class="item_menu" href="transporte.php">Transporte</a>
               </button>
               <button class="button sob" type="button">
-                <a class="item_menu" href="sobre.html">Sobre</a>
+                <a class="item_menu" href="sobre.php">Sobre</a>
               </button>
 
               <button class="button log" type="button">
-                <a class="item_menu" href="cadastro.html">Cadastra-se</a>
+                <a class="item_menu" href="cadastro.php">Cadastra-se</a>
               </button>
 
               <button class="button log login" type="button">
-                <a class="item_menu" href="login.html"
+                <a class="item_menu" href="login.php"
                   ><span class="material-icons">person</span>Login</a
                 >
               </button>
@@ -170,7 +170,7 @@
         <section id="all_cards">
           <section class="cards_ver">
             <section class="card_hor vertical">
-              <a href="bot.html">
+              <a href="bot.php">
                 <h1 class="title_card_ver">BOT HELP</h1>
                 <img
                   class="image_card"

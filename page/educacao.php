@@ -8,21 +8,19 @@
     <link rel="shortcut icon" href="../image/icon/smart-city.png" type="image/x-icon">
 
     <link rel="stylesheet" href="../style/style.css">
-    <title>Cultura</title>
-    
+    <title>Educação</title>
+
 </head>
 
 <body class="body">
-    <section class="Cultura">
-
+    <section class="Sobre">
         <section class="logo_title">
             <img class="logo" src="../image/icon/smart-city-200.png" alt="">
-            <h1 class="title">Cultura</h1>
-
+            <h1 class="title"> Educação</h1>
             <section class="home">
-                <a href="../index.html"><img id="image_home" class= "image_home"src="..\image\icon\house.png" alt="home"></a>
-                 <label class="image_home_title"for="image_home">Home</label>
-             </section>
+               <a href="principal.php"><img id="image_home" class= "image_home"src="..\image\icon\house.png" alt="home"></a>
+                <label class="image_home_title"for="image_home">Home</label>
+            </section>
         </section>
 
 </body>

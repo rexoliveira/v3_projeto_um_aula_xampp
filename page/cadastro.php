@@ -28,7 +28,7 @@
 
         <h1 class="title">Cadastra-se</h1>
         <section class="home">
-            <a href="../index.html"
+            <a href="principal.php"
               ><img
                 id="image_home"
                 class="image_home"
@@ -56,7 +56,7 @@
               class="button_cadas_login"
               type="button"
             >
-              <a class="cabecalho_menu_item" href="../page/login.html">Login</a>
+              <a class="cabecalho_menu_item" href="../page/login.php">Login</a>
             </button>
           </p>
           <form id="form_cadastro" action="/php/processa.php" method="POST">

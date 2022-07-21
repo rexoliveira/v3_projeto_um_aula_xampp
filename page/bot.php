@@ -46,7 +46,7 @@
         <h1 class="title">BOT</h1>
 
         <section class="home">
-          <a href="../index.html"
+          <a href="principal.php"
             ><img
               id="image_home"
               class="image_home"
