@@ -98,7 +98,7 @@
 .sidebar li .tooltip.menu {
     position: absolute;
     top: -20px;
-    left: calc(10% - 90px);
+    left: calc(130%);
     z-index: 3;
     background: white;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);

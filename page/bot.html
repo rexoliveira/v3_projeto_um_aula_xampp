@@ -1,89 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Um bot que le fornecera ajuda" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Um bot que le fornecera ajuda">
+    <link
+      rel="shortcut icon"
+      href="../image/icon/smart-city.png"
+      type="image/x-icon"
+    />
 
-    <link rel="shortcut icon" href="../image/icon/smart-city.png" type="image/x-icon">
-
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/bot_style.css">
-    <link rel="stylesheet" href="../style/form_style.css">
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/bot_style.css" />
+    <link rel="stylesheet" href="../style/form_style.css" />
     <title>BOT</title>
-</head>
+  </head>
 
-<body class="body">
+  <body class="body">
     <!-- Cabeçalho -->
     <header class="header">
+      <section class="logo_title">
+        <img class="logo" src="../image/icon/smart-city-200.png" alt="" />
+        <!-- Menu de navegação -->
+        <section class="cabecalho">
+          <nav class="cabecalho_menu">
+            <button class="button_bot com" type="button">
+              <a class="cabecalho_menu_item" href="">Comunidade do Bairro</a>
+            </button>
 
-        <section class="home_geral">
-            <section class="home">
-                <a href="../index.php"><img id="image_home" class="image_home" src="..\image\icon\house.png"
-                        alt="home"></a>
-                <label class="image_home_title" for="image_home">Home</label>
-            </section>
+            <button class="button_bot tut" type="button">
+              <a class="cabecalho_menu_item" href="">Tutorial</a>
+            </button>
+
+            <button class="button_bot map" type="button">
+              <a class="cabecalho_menu_item" href="">Mapa do Site</a>
+            </button>
+
+            <button class="button_bot fun" type="button">
+              <a class="cabecalho_menu_item" href="">Funções Principais</a>
+            </button>
+          </nav>
         </section>
 
+        <h1 class="title">BOT</h1>
 
-        <section class="logo_title">
-            <img class="logo" src="../image/icon/smart-city-200.png" alt="">
-            <!-- Menu de navegação -->
-            <section class="cabecalho">
-                <nav class="cabecalho_menu">
-                    <button class="button_bot com" type="button"><a class="cabecalho_menu_item" href="">Comunidade do
-                            Bairro</a></button>
-
-                    <button class="button_bot tut" type="button"><a class="cabecalho_menu_item"
-                            href="">Tutorial</a></button>
-
-                    <button class="button_bot map" type="button"><a class="cabecalho_menu_item" href="">Mapa do
-                            Site</a></button>
-
-                    <button class="button_bot fun" type="button"> <a class="cabecalho_menu_item" href="">Funções
-                            Principais</a></button>
-
-                </nav>
-            </section>
-
-            <h1 class="title">BOT</h1>
+        <section class="home">
+          <a href="../index.html"
+            ><img
+              id="image_home"
+              class="image_home"
+              src="..\image\icon\house.png"
+              alt="home"
+          /></a>
+          <label class="image_home_title" for="image_home">Home</label>
         </section>
+      </section>
     </header>
 
     <main class="conteudo">
-        <section class="conteudo_principal">
-            <div class="conteudo_principal_escrito">
-                <h1 class="conteudo_principal_escrito_titulo">SmartBot</h1>
-                <h2 class="conteudo_principal_escrito_subtitulo">Ajuda a Comunidade da Cidade de um jeito fácil</h2>
-                <button class="conteudo_principal_escrito_botao" type="button">Me adicione!</button>
-            </div>
-            <img class="conteudo_principal_imagem" src="../image/icon/bot-animado.gif" alt="bot-animado">
-        </section>
-        <section class="conteudo_secundario">
-            <h3 class="conteudo_secundario_titulo">O que ele faz por você?</h3>
-            <p class="conteudo_secundario_paragrafo">1. Dá dica de <strong>segurança e personalização</strong> do seu
-                perfil;</p>
-            <p class="conteudo_secundario_paragrafo">2. Possui um sistema que <strong>verifica alert</strong>a do bairro
-                e da cidade;</p>
-            <p class="conteudo_secundario_paragrafo">3. Informa <strong>possíveis soluções</strong> de problemas
-                comuns a comunidade.</p>
-        </section>
+      <section class="conteudo_principal">
+        <div class="conteudo_principal_escrito">
+          <h1 class="conteudo_principal_escrito_titulo">SmartBot</h1>
+          <h2 class="conteudo_principal_escrito_subtitulo">
+            Ajuda a Comunidade da Cidade de um jeito fácil
+          </h2>
+          <button class="conteudo_principal_escrito_botao" type="button">
+            Me adicione!
+          </button>
+        </div>
+        <img
+          class="conteudo_principal_imagem"
+          src="../image/icon/bot-animado.gif"
+          alt="bot-animado"
+        />
+      </section>
+      <section class="conteudo_secundario">
+        <h3 class="conteudo_secundario_titulo">O que ele faz por você?</h3>
+        <p class="conteudo_secundario_paragrafo">
+          1. Dá dica de <strong>segurança e personalização</strong> do seu
+          perfil;
+        </p>
+        <p class="conteudo_secundario_paragrafo">
+          2. Possui um sistema que <strong>verifica alert</strong>a do bairro e
+          da cidade;
+        </p>
+        <p class="conteudo_secundario_paragrafo">
+          3. Informa <strong>possíveis soluções</strong> de problemas comuns a
+          comunidade.
+        </p>
+      </section>
     </main>
 
     <footer class="rodape">
-        <section class="rodape_title">
-            <h1 class="rodape_title_texto"> SmartCityCamaquã</h1>
-        </section>
+      <section class="rodape_title">
+        <h1 class="rodape_title_texto">SmartCityCamaquã</h1>
+      </section>
 
-        <section class="rodape_credito">
-            <a href="https://www.youtube.com/watch?v=llF6vD-RljE&ab_channel=RafaellaBallerini">
-                <h1 class="rodape_credito_texto"> Crédito: Rafaella Ballerini (YouTube: LANDING PAGE COM HTML e CSS!)</h1>
-            </a>
-        </section>
-
+      <section class="rodape_credito">
+        <a
+          href="https://www.youtube.com/watch?v=llF6vD-RljE&ab_channel=RafaellaBallerini"
+        >
+          <h1 class="rodape_credito_texto">
+            Crédito: Rafaella Ballerini (YouTube: LANDING PAGE COM HTML e CSS!)
+          </h1>
+        </a>
+      </section>
     </footer>
-
-</body>
-
+  </body>
 </html>

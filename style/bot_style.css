@@ -9,7 +9,7 @@
     text-decoration: none;
 }
 /* Reset CSS */
-body {
+html, body {
     font-size: 100%;
 }
 
@@ -45,6 +45,7 @@ body {
     z-index: 0;
     border-radius: 5px;
 }
+
 
 .button_bot:before {
     content: '';
@@ -257,6 +258,11 @@ body {
     
     .rodape_credito{
         justify-content: flex-start;
+    }
+
+    .cabecalho_menu{
+        display: flex;
+        flex-direction: column;
     }
     
 }

@@ -53,12 +53,22 @@
 
 /* Alinha o icone do botão login na página principal */
 span.material-icons {
-    font-size: 35px;
+    margin-left: 0px;
+    font-size: 32px;
     position: absolute;
     left: -35px;
     top: 0px;
     z-index: 10;
 }
+
+.button.log.login {
+    margin-left: 45px;
+}
+
+.button {
+    padding: 5px;
+}
+
 
 /* Correção para site */
 .menu_btn>span,
@@ -86,14 +96,14 @@ span.material-icons {
 
 
 .logo_title {
+    display: flex;
     width: 100%;
-    float: left;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 24px;
+    padding: 12px;
     background-color: #c2f9ae;
     background: linear-gradient(90deg,
             /* #00867C 0%, */
@@ -102,12 +112,9 @@ span.material-icons {
 
 }
 
-.but_log {
-    margin-left: 190px;
-}
+
 
 .menu {
-    margin-left: 140px;
     flex-wrap: wrap;
     display: flex;
     flex-direction: row;
@@ -115,20 +122,24 @@ span.material-icons {
     padding: 12px 24px;
 
 }
-.title {
-    font-size: 75px;
-    padding: 12px 12px;
+
+h1.title {
+    margin: 0;
+    font-size: 70px;
+    padding: 12px;
     color: #61f889;
     font-family: 'Righteous', cursive;
     transition: all 0.8s ease;
 }
+
 .title_principal {
     font-size: 75px;
-    padding: 12px 12px;
+    padding: 12px;
     color: #61f889;
     font-family: 'Righteous', cursive;
     transition: all 0.8s ease;
 }
+
 
 .logo {
     top: 20px;
@@ -138,7 +149,7 @@ span.material-icons {
     transition: all 0.8s ease;
 }
 
-.logo.active{
+.logo.active {
     display: none;
     transition: all 0.8s ease;
 }
@@ -418,7 +429,7 @@ span.material-icons {
 }
 
 /* RESPONSIVO */
-@media (max-width:940px) {
+@media (max-width:990px) {
     .title_principal {
         font-size: 35px;
         padding: 0;
@@ -433,29 +444,6 @@ span.material-icons {
 
     }
 
-    .logo_title {
-        padding-left: 80px;
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .rodape{
-        display:flex ;
-        flex-direction: row;
-        max-height: 1vh;
-        
-    }
-
-    .rodape_title_texto {
-        font-size: 25px;
-        color: #ffffff;
-
-    }
-
-    .rodape_credito {
-        justify-content: flex-end;
-    }
-
 }
 
 a {
@@ -463,7 +451,7 @@ a {
 }
 
 
-@media (max-width:635px) {
+@media (max-width:760px) {
     .card_ver {
         width: 125px;
         height: 50%;
@@ -492,25 +480,93 @@ a {
         padding: 20px;
     }
 
-    .button {
-        margin: 5px;
-        height: 20px;
-        background: rgb(8, 8, 8);
-        border-radius: 5px;
-    }
-
     .item_menu {
         color: #ffffff;
         font-size: 14px;
     }
 
-    span.material-icons {
-        font-size: 16px;
-        left: -20px;
-    }
-
-    .rodape{
+    .rodape {
         display: flex;
         flex-direction: column;
     }
+}
+
+@media (max-width:430px) {
+
+    .cards_hor,
+    .cards_ver {
+        width: 140px;
+        padding: 0;
+        /* display: none; */
+    }
+
+
+    img.logo.principal {
+        display: none;
+        transition: all 0.4s ease;
+    }
+
+    h1.title_principal {
+        font-size: 2px;
+
+    }
+
+    .logo_title {
+        font-size: 1.2em;
+        width: 100%;
+        display: block;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+        transition: all 0.25s ease;
+    }
+
+
+    ul.menu {
+        align-items: flex-start;
+        margin: 0px;
+        padding: 0px;
+    }
+
+}
+
+@media (max-width:400px) {
+    section.text {
+        height: 250px;
+    }
+
+    #all_cards {
+        width: 125px;
+        align-content: center;
+        padding: 5px;
+    }
+
+    .cards_hor {
+
+        display: none;
+    }
+
+    h1.title_principal {
+        font-size: 1.1em;
+
+    }
+
+    .logo_title {
+        font-size: 0.7em;
+        width: 100%;
+        display: block;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+        transition: all 0.25s ease;
+    }
+
+    ul.menu {
+        align-items: flex-start;
+        margin: 0px;
+        padding: 0px;
+    }
+
 }
