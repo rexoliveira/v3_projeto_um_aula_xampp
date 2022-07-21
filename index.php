@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <!-- Redirecionado para página principal.html -->
-    <meta http-equiv="refresh" content="0; URL='../page/principal.php'"/>
+    <meta http-equiv="refresh" content="0; URL='page/principal.php'"/>
 </head>
 <body>
     
