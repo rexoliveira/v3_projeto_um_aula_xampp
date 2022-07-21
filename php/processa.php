@@ -1,5 +1,5 @@
 <?php
-include_once("/php/conexao.php");
+require_once "conexao.php";
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
@@ -7,11 +7,11 @@ $telefone = $_POST['telefone'];
 $password = $_POST['password'];
 
 
-$sql = "insert into cliente (nome, sobrenome, email, telefone, password) values('$nome','$email','$telefone','$password' )";
+$sql = "insert into usuario (nome, email, tel, password) values('$nome','$email','$telefone','$password' )";
 
 $salvar = pg_query($conexao, $sql);
 
-$linhas = pg_affected_rows($conexao);
+$linhas = pg_affected_rows($salvar);
 
 pg_close($conexao);
 ?>
@@ -37,7 +37,7 @@ pg_close($conexao);
     <header>
         <nav>
             <ul>
-                <a href="index.php">
+                <a href="../page/cadastro.php">
                     <li>Cadastro</li>
                 </a>
                 <a href="consulta.php">
@@ -54,13 +54,13 @@ pg_close($conexao);
     <main>
 
         <?php
-            if ($linhas == 1) {
-                echo "<h2>Cadastro de ". $_POST['nome'] ." efetudo com sucesso!</h2>";
-            } else {
-                echo "<h2>Erro: Verifique o e-mail(". $_POST['email'] .") cadastrado!</h2>";
-            }
+        if ($linhas == 1) {
+            echo "<h2>Cadastro de ". $_POST['nome'] ." efetudo com sucesso!</h2>";
+        } else {
+            echo "<h2>Erro: Verifique o e-mail(". $_POST['email'] .") cadastrado!</h2>";
+        }
             
-            ?>
+        ?>
 
     </main>
 

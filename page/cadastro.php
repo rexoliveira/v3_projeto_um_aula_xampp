@@ -59,12 +59,13 @@
               <a class="cabecalho_menu_item" href="../page/login.php">Login</a>
             </button>
           </p>
-          <form id="form_cadastro" action="/php/processa.php" method="POST">
+          <form id="form_cadastro" action="../php/processa.php" method="POST">
             <section class="input_group">
               <label for="nome">Nome Completo</label>
               <input
                 type="text"
                 id="nome"
+                name="nome"
                 placeholder="Digite seu nome completo"
                 required
               />
@@ -74,6 +75,7 @@
               <input
                 type="email"
                 id="email"
+                name="email"
                 placeholder="Digite seu email"
                 required
               />
@@ -83,6 +85,7 @@
               <input
                 type="tel"
                 id="telefone"
+                name="telefone"
                 placeholder="Digite seu telefone"
                 required
               />
@@ -92,6 +95,7 @@
               <input
                 type="password"
                 id="senha"
+                name="password"
                 placeholder="Digite sua senha"
                 required
               />
