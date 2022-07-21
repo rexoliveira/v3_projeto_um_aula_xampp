@@ -1,10 +1,16 @@
 <?php
 
-include_once("/php/conexao.php");
+include_once("conexao.php");
 
 $filtro = isset($_GET['filtro']) ? $_GET['filtro'] : "";
-$where = $_GET['palavraFiltro'] ? $_GET['palavraFiltro'] : "email";
-$sql = "SELECT * FROM cliente WHERE $where LIKE '%$filtro%' ORDER BY NOME";
+$where = isset($_GET['palavraFiltro']) ? $_GET['palavraFiltro'] : "";
+
+
+if ($filtro != "todos" && $where != "") {
+    $sql = "SELECT * FROM usuario WHERE $where LIKE '%$filtro%' ORDER BY NOME";
+} {
+    $sql = "SELECT * FROM usuario";
+};
 
 $consulta = pg_query($conexao, $sql);
 $registros = pg_num_rows($consulta);
@@ -51,7 +57,7 @@ pg_close($conexao)
             <label id="label_filtro" for="filtro">Filtrar por</label>
 
             <select name="palavraFiltro" id="palavra">
-                <option value="">todos</option>
+                <option value="todos">todos</option>
                 <option value="email">E-mail</option>
                 <option value="nome">Nome</option>
                 <option value="sobrenome">Sobrenome</option>
@@ -72,17 +78,16 @@ pg_close($conexao)
 
             $id = $exibirRegistro[0];
             $nome = $exibirRegistro[1];
-            $email = $exibirRegistro[3];
-            $tel = $exibirRegistro[4];
-            
+            $email = $exibirRegistro[2];
+            $tel = $exibirRegistro[3];
+
 
             print "<article>";
             print "<h4>Dados do Cliente </h4>";
-            print "<h3>ID: $id - Nome: $nome $sobrenome</h3> ";
+            print "<h3>ID: $id - Nome: $nome</h3> ";
 
 
             print "<h3>E-mai: $email - Celular: $tel</h3>";
-           
         }
 
         /* mysqli_close($conexao) */
