@@ -76,7 +76,8 @@ pg_close($conexao) ?>
                     <option value="tel">Celular</option>
                 </select>
                 <input class="filtro" type="text" name="filtro" id="filtro" autofocus>
-                <input class="botao_filtro" type="submit" value="Filtrar">
+                <button class="button log"><input id="botao_filtro" class="item_menu" type="submit"
+                        value="Filtrar"></button>
             </form>
         </section>
 
