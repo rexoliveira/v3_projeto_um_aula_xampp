@@ -4,7 +4,7 @@ require_once "conexao.php";
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
-$password = $_POST['password'];
+$password = $_POST['senha'];
 
 
 $sql = "insert into usuario (nome, email, tel, password) values('$nome','$email','$telefone','$password' )";

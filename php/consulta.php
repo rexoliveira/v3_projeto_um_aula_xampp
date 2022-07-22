@@ -1,6 +1,6 @@
 <?php
 
-include_once("conexao.php");
+require_once "conexao.php";
 $filtro = isset($_GET['filtro']) ? $_GET['filtro'] : "";
 $where = isset($_GET['palavraFiltro']) ? $_GET['palavraFiltro'] : "";
 if ($filtro != "" && $where != "todos") {
@@ -20,8 +20,6 @@ pg_close($conexao) ?>
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
 
     <link rel="shortcut icon" href="../image/icon/smart-city-200.png" type="image/x-icon" />
 
