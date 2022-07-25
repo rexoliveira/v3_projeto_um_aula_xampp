@@ -45,6 +45,14 @@
                 </a>
                 <span class="tooltip menu">Dashboard</span>
             </li>
+            <!-- LINHA DE TESTE DASHBOARD -->
+            <li>
+                <a href=" ../parte_dash_figma/dash_figma.html">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip menu">Dashboard-2-TESTE</span>
+            </li>
 
             <li>
                 <a href="usuarios.php">
