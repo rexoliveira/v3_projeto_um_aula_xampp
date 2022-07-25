@@ -10,6 +10,9 @@
     --color-success: #41f1b6;
     --color-warning: #ffbb55;
     /* EU */
+    --color-analysis: #55b0ff;
+
+    /* EU */
     --color-card4: #55ffee;
     --color-card5: #5560ff;
     --color-card6: #eb55ff;
@@ -33,6 +36,16 @@
 
     --box-shadow: 0 2rem 3rem var(--color-light);
 
+}
+
+/* ==============THEMA DARK ====================*/
+.dark-theme-variables{
+    --color-background:#181a1e;
+    --color-white:#202528;
+    --color-dark:#edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light:rgba(0,0,0,0.4);
+    --box-shadow:0 2rem 3rem var(--color-light);
 }
 
 /* RESET */
@@ -59,14 +72,14 @@ body {
     background: var(--color-background);
     user-select: none;
     /* Tira a barra de rolagem lateral */
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     color: var(--color-dark);
 }
 
 .container {
     display: grid;
     /* Distancia sidebar da lateral esquerda */
-    width: 96%;
+    width: 100%;
     margin: 0 auto;
     gap: 1.8rem;
     /* define 3blocos/coluna */
@@ -89,7 +102,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 h3 {
@@ -143,23 +156,33 @@ b {
     color: var(--color-warning);
 }
 
+.analysis{
+    color: var(--color-analysis);
+}
+
 aside {
     height: 100vh;
+}
 
+/* EU */
+#menu-button {
+    display: none;
 }
 
 /* ESPAÇO DO LOGO/TEXT */
 aside .top {
-    background: white;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 1.4rem;
+    justify-content: start;
+    margin: 0.7rem 0 0.7rem 0;
 }
+
 
 aside .logo {
     display: flex;
-    gap: 0.8rem;
+    gap: 0.4rem;
+    margin: 0;
 }
 
 aside .logo img {
@@ -178,8 +201,9 @@ aside .close {
 aside .sidebar {
     display: flex;
     flex-direction: column;
-    height: 86vh;
-    position: relative;
+    height: 100vh;
+    /* Origin:position: relative; */
+    position: fixed;
     top: 3rem;
 }
 
@@ -385,4 +409,445 @@ main .insights .progress .number {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+main .insights small {
+    margin-top: 1.3rem;
+    display: block;
+}
+
+/* ==================== RECENTES SERVIÇOS====================== */
+
+main .recent-orders {
+    margin-top: 2rem;
+}
+
+main .recent-orders h2 {
+    margin-bottom: 0.8rem;
+}
+
+main .recent-orders table {
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-boder-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .recent-orders table:hover {
+    box-shadow: none;
+}
+
+main table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td {
+    border: none;
+}
+
+main a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+}
+
+/* ==================== LADO DIREITO====================== */
+
+.right {
+    margin-top: 1.4rem;
+}
+
+/* SESSÃO */
+.right .top {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+/* ESTÁ NA sidebar */
+.sidebar .theme-toggler {
+    background: var(--color-light);
+    height: 1.9rem;
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: var(--boder-radius-1);
+    /* EU */
+    margin-left: 2rem;
+    position: relative;
+    margin-top: 50% -1px;
+}
+
+/* ESTÁ NA sidebar */
+.sidebar .theme-toggler span {
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ESTÁ NA sidebar */
+.sidebar .theme-toggler span.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--boder-radius-1);
+}
+
+.right .top .profile {
+    display: flex;
+    gap: 1rem;
+    text-align: right;
+    /* EU */
+    align-items: center;
+}
+
+/* ==================== NOTÍCIAS====================== */
+
+.right .recent-updates {
+    margin-top: 1.4rem;
+}
+
+.right .recent-updates h2 {
+    margin-bottom: 0.8rem;
+}
+
+.right .recent-updates .updates {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-boder-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.right .recent-updates .updates:hover {
+    box-shadow: none;
+}
+
+.right .recent-updates .updates .update {
+    display: grid;
+    grid-template-columns: 2.6rem auto;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* ==================== ANALISE CITY====================== */
+
+.right .city-analytics {
+    margin-top: 2rem;
+
+}
+
+.right .city-analytics h2 {
+    margin-bottom: 0.8rem;
+}
+
+
+.right .city-analytics .item {
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 1.4rem var(--card-padding);
+    /* Original:--boder-radius-3 */
+    border-radius: var(--boder-radius-1);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.right .city-analytics .item:hover {
+    box-shadow: none;
+}
+
+.right .city-analytics .item .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 0;
+    width: 100%;
+}
+
+.right .city-analytics .item .icon {
+    padding: 0.6rem;
+    color: var(--color-white);
+    border-radius: 50%;
+    background: var(--color-primary);
+    display: flex;
+}
+
+.right .city-analytics .item.offline .icon {
+    background: var(--color-danger);
+}
+
+.right .city-analytics .item.customers .icon {
+    background: var(--color-success);
+}
+
+/* Minuto do vídeo 1:02:59 troca para classe: .add-analytics*/
+.right .city-analytics .add-analytics {
+    background-color: transparent;
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.right .city-analytics .add-analytics:hover{
+    background: var(--color-primary);
+    color: var(--color-white);
+    /* EU */
+    border: 2px dashed var(--color-white);
+}
+
+.right .city-analytics .add-analytics div {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.right .city-analytics .add-analytics div h3 {
+    font-weight: 600;
+}
+
+/* ==================== MEDIA QUERIES ====================== */
+
+/* 
+Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/
+1201px and more —  Extra large screens, TV 
+1025px — 1200px: Desktops, large screens
+769px — 1024px: Small screens, laptops
+481px — 768px: iPads, Tablets
+320px — 480px: Mobile devices
+*/
+
+
+/* ==================== DESKTOP====================== */
+/* EU 1430px */
+@media screen and (max-width: 1430px) {
+    .container {
+        width: 94%;
+        /* original:grid-template-columns: 8.2rem auto 23rem; */
+        grid-template-columns: 5.8rem auto 20rem;
+    }
+
+    /* ESTÁ NA sidebar */
+    .sidebar .theme-toggler {
+        /* EU */
+        margin-left: 0.5rem;
+    }
+
+    /* EU */
+    aside .top {
+        justify-content: center;
+    }
+
+    /* ESTÁ NA sidebar */
+.sidebar .theme-toggler {
+        /* EU */
+    margin-left: -0.2rem;
+    
+}
+
+    aside .logo h2 {
+        display: none;
+    }
+
+
+    aside .sidebar h3 {
+        display: none;
+    }
+
+    aside .sidebar a {
+        width: 5.6rem;
+    }
+
+    aside .sidebar a:last-child {
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+    main .insights {
+        /* eu */
+        /* Original:
+        grid-template-columns: 1fr;
+        gap: 0;
+        */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+
+    }
+
+    main .recent-orders {
+        width: 94%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 8.8rem;
+    }
+
+    main .recent-orders table {
+        width: 83vw;
+    }
+
+   
+
+
+    /* ==================== TABLETES PEQUENOS E MOBILE====================== */
+
+    @media screen and (max-width: 1024px) {
+        /* Era na resolução de cima */
+        main table thead tr th:last-child,
+        main table thead tr th:first-child {
+            display: none;
+        }
+    
+        main table tbody tr td:last-child,
+        main table tbody tr td:first-child {
+            display: none;
+        }
+        /*  */
+        .container {
+            width: 100%;
+            grid-template-columns: 1fr;
+        }
+
+        /* EU */
+        #menu-button {
+            display: block;
+        }
+
+        aside {
+            position: fixed;
+            /* Esconde sidebar */
+            left: -100%;
+            background: var(--color-white);
+            width: 18rem;
+            z-index: 3;
+            box-shadow: 1rem 3rem 4rem var(--color-light);
+            height: 100vh;
+            padding-right: var(--card-padding);
+            display: none;
+            animation: showMenu 400ms ease forwards;
+        }
+
+        @keyframes showMenu {
+            to{
+                left: 0;
+            }
+        }
+        
+        aside .logo {
+            margin-left: 1rem;
+        }
+
+        aside .logo h2 {
+            display: inline;
+        }
+
+        aside .sidebar h3 {
+            display: inline;
+        }
+
+        aside .sidebar a {
+            width: 100%;
+            height: 3.4rem;
+        }
+
+        aside .sidebar a:last-child {
+            position: absolute;
+            bottom: 5rem;
+        }
+
+        aside .close {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        main {
+            margin-top: 8rem;
+            padding: 0 1rem;
+        }
+
+        main .insights>div {
+            width: 100%;
+        }
+
+        main .recent-orders {
+            position: relative;
+            max-width: 3rem 0 0 0;
+            width: 100%;
+            /* EU */
+            margin-left: 0;
+        }
+
+        main .recent-orders table {
+            width: 100%;
+            margin: 0;
+        }
+
+        .right {
+            width: 94%;
+            margin: 0 auto 4rem;
+        }
+
+        .right .top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            align-items: center;
+            padding: 0 0.8rem;
+            height: 4.6rem;
+            background: var(--color-white);
+            width: 100%;
+            margin: 0;
+            z-index: 2;
+            box-shadow: 0 1rem 1rem var(--color-light);
+        }
+
+        .right .top .theme-toggler {
+            width: 4.4rem;
+            position: absolute;
+            left: 66%;
+        }
+
+        .right .profile .info {
+            display: none;
+        }
+
+        .right .top button {
+            display: inline-block;
+            background: transparent;
+            cursor: pointer;
+            color: var(--color-dark);
+            position: absolute;
+            left: 1rem;
+        }
+
+        .right .top button span {
+            font-size: 2rem;
+        }
+
+    }
+
+    /* Eu */
+    @media screen and (max-width: 550px) {
+        main .insights {
+            grid-template-columns: 1fr;
+            gap: 0;
+
+        }
+    }
 }
