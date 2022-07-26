@@ -81,6 +81,7 @@ header{
     position: fixed;
     background: red;
     width: 100vw;
+    height: 39px;
     z-index: 999;
 }
 
