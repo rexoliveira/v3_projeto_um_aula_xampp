@@ -78,6 +78,7 @@ body {
 }
 
 header{
+    position: fixed;
     background: red;
     width: 100vw;
     z-index: 999;
