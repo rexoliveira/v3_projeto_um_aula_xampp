@@ -77,23 +77,23 @@ body {
     color: var(--color-dark);
 }
 
-header{
+header {
     position: fixed;
     background: red;
     width: 100vw;
-    height: 39px;
+    height: 40px;
     z-index: 999;
 }
 
 .container {
     position: fixed;
-    top: 39px;
+    top: 40px;
     display: grid;
     /* Distancia sidebar da lateral esquerda */
     width: 100%;
     height: auto;
-    margin: 0px auto ;
-    gap: 1.8rem;
+    margin: 0px auto;
+    gap: 1.5rem;
     /* define 3blocos/coluna */
     grid-template-columns: 16.5rem auto 23rem;
 
@@ -283,9 +283,8 @@ aside .sidebar .message-count {
 /* ====================MAIN====================== */
 
 main {
-    
-    margin: 1.4rem;
-    
+    margin: 0 1.4rem;
+
 }
 
 main .date {
@@ -521,7 +520,7 @@ main a {
     text-align: right;
     /* EU */
     align-items: center;
-    
+
 }
 
 /* ==================== NOTÍCIAS====================== */
@@ -699,6 +698,8 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
         margin-top: 1.8rem;
     }
 
+
+
     main .insights {
         /* eu */
         /* Original:
@@ -799,7 +800,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
         }
 
         main {
-            margin-top: 8rem;
+            margin: 45px 0 0 0;
             padding: 0 1rem;
         }
 
