@@ -22,7 +22,7 @@ closeBtn.addEventListener('click', () => {
 
 /* Troca de tema */
 themeToggler.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme-variables')
+    document.body.classList.toggle('light-theme-variables')
 
     /* Troca a sinalização de icone ativo */
     themeToggler.querySelector('span:nth-child(1)').classList.toggle('active')
