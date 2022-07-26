@@ -77,11 +77,17 @@ body {
     color: var(--color-dark);
 }
 
+header{
+    background: red;
+    width: 100vw;
+    z-index: 999;
+}
+
 .container {
     display: grid;
     /* Distancia sidebar da lateral esquerda */
     width: 100%;
-    margin: 0 auto;
+    margin: 0px auto ;
     gap: 1.8rem;
     /* define 3blocos/coluna */
     grid-template-columns: 16.5rem auto 23rem;
@@ -508,6 +514,7 @@ main a {
     text-align: right;
     /* EU */
     align-items: center;
+    
 }
 
 /* ==================== NOTÍCIAS====================== */
@@ -785,6 +792,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
         main {
             margin-top: 8rem;
+            margin-right: 6rem;
             padding: 0 1rem;
         }
 
@@ -807,19 +815,18 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
         .right {
             width: 94%;
-            margin: 0 auto 4rem;
+            margin: 0 auto;
         }
 
         .right .top {
             position: fixed;
-            top: 0;
+            top: 40px;
             left: 0;
             align-items: center;
             padding: 0 0.8rem;
-            height: 4.6rem;
+            height: 3.0rem;
             background: var(--color-white);
             width: 100%;
-            margin: 0;
             z-index: 2;
             box-shadow: 0 1rem 1rem var(--color-light);
         }
@@ -851,10 +858,16 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
     /* Eu */
     @media screen and (max-width: 550px) {
+        main {
+            
+            margin-right: 4rem;
+            
+        }
         main .insights {
             grid-template-columns: 1fr;
             gap: 0;
 
         }
+
     }
 }
