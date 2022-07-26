@@ -86,9 +86,12 @@ header{
 }
 
 .container {
+    position: fixed;
+    top: 39px;
     display: grid;
     /* Distancia sidebar da lateral esquerda */
     width: 100%;
+    height: auto;
     margin: 0px auto ;
     gap: 1.8rem;
     /* define 3blocos/coluna */
@@ -280,7 +283,9 @@ aside .sidebar .message-count {
 /* ====================MAIN====================== */
 
 main {
+    
     margin: 1.4rem;
+    
 }
 
 main .date {
@@ -646,6 +651,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 /* EU 1430px */
 @media screen and (max-width: 1430px) {
     .container {
+        position: relative;
         width: 94%;
         /* original:grid-template-columns: 8.2rem auto 23rem; */
         grid-template-columns: 5.8rem auto 20rem;
@@ -709,11 +715,11 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        margin: 2rem 0 0 8.8rem;
+        margin: 2rem 0 0 6.4rem;
     }
 
     main .recent-orders table {
-        width: 83vw;
+        width: 84vw;
     }
 
 
