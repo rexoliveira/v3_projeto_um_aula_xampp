@@ -792,7 +792,6 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
         main {
             margin-top: 8rem;
-            margin-right: 6rem;
             padding: 0 1rem;
         }
 
@@ -858,11 +857,6 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
     /* Eu */
     @media screen and (max-width: 550px) {
-        main {
-            
-            margin-right: 4rem;
-            
-        }
         main .insights {
             grid-template-columns: 1fr;
             gap: 0;
