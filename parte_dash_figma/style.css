@@ -10,10 +10,9 @@
     --color-danger: #ff7782;
     --color-success: #41f1b6;
     --color-warning: #ffbb55;
+    
     /* EU */
     --color-analysis: #55b0ff;
-
-    /* EU */
     --color-card4: #55ffee;
     --color-card5: #5560ff;
     --color-card6: #eb55ff;
@@ -226,7 +225,7 @@ aside {
 }
 
 /* ESPAÇO DO LOGO/TEXT */
-aside .top {
+aside .sessao_usuario_topo {
     position: relative;
     display: flex;
     align-items: center;
@@ -519,7 +518,7 @@ main a {
 }
 
 /* SESSÃO */
-.right .top {
+.right .sessao_usuario_topo {
     display: flex;
     justify-content: end;
     gap: 2rem;
@@ -558,7 +557,7 @@ main a {
     border-radius: var(--boder-radius-1);
 }
 
-.right .top .profile {
+.right .sessao_usuario_topo .profile {
     display: flex;
     gap: 1rem;
     text-align: right;
@@ -703,7 +702,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
     }
 
     /* ESPAÇO DO LOGO/TEXT */
-    aside .top {
+    aside .sessao_usuario_topo {
         justify-content: center;
 
     }
@@ -715,7 +714,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
     }
 
     /* EU */
-    aside .top {
+    aside .sessao_usuario_topo {
         justify-content: center;
     }
 
@@ -870,7 +869,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             margin: 0 auto;
         }
 
-        .right .top {
+        .right .sessao_usuario_topo {
             position: fixed;
             top: 40px;
             left: 0;
@@ -883,7 +882,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             box-shadow: 0 1rem 1rem var(--color-light);
         }
 
-        .right .top .theme-toggler {
+        .right .sessao_usuario_topo .theme-toggler {
             width: 4.4rem;
             position: absolute;
             left: 66%;
@@ -893,7 +892,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             display: none;
         }
 
-        .right .top button {
+        .right .sessao_usuario_topo button {
             display: inline-block;
             background: transparent;
             cursor: pointer;
@@ -902,7 +901,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             left: 1rem;
         }
 
-        .right .top button span {
+        .right .sessao_usuario_topo button span {
             font-size: 2rem;
         }
 
