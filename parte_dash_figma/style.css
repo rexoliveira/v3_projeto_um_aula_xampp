@@ -682,8 +682,8 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
 
 /* ==================== DESKTOP====================== */
-/* EU 1430px */
-@media screen and (max-width: 1430px) {
+/* EU 1440px */
+@media screen and (max-width: 1440px) {
     .container {
         position: relative;
         width: 94%;
