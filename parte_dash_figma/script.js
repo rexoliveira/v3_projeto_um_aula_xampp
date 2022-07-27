@@ -39,10 +39,10 @@ servicos.forEach(service => {
 
     /* Escolhe o tipo de status basedo na cor do texto */
     const status =
-        service.situacao === 'Pendente' ? 'danger' :
-            service.situacao === 'Andamento' ? 'warning' :
-                service.situacao === 'Efetuado' ? 'success' :
-                    service.situacao === 'Analise' ? 'analysis' :
+        service.situacao === 'Pendente' ? 'perigo' :
+            service.situacao === 'Andamento' ? 'alerta' :
+                service.situacao === 'Efetuado' ? 'sucesso' :
+                    service.situacao === 'Analise' ? 'analise' :
                         'primary'
 
     /* Atribui a construção da tabela à váriável */
