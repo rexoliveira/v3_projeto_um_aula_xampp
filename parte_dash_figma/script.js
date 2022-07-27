@@ -5,7 +5,7 @@ const sideMenu = document.querySelector('aside')
 const menuBtn = document.querySelector('#menu-button')
 const closeBtn = document.querySelector('#close-btn')
 
-const themeToggler = document.querySelector("#theme-toggler")
+const themeToggler = document.querySelector("#tema-toggler")
 
 /* Abre sidebar */
 menuBtn.addEventListener('click', () => {
@@ -22,7 +22,7 @@ closeBtn.addEventListener('click', () => {
 
 /* Troca de tema */
 themeToggler.addEventListener('click', () => {
-    document.body.classList.toggle('light-theme-variables')
+    document.body.classList.toggle('claro-tema-variaveis')
 
     /* Troca a sinalização de icone ativo */
     themeToggler.querySelector('span:nth-child(1)').classList.toggle('active')
@@ -43,7 +43,7 @@ servicos.forEach(service => {
             service.situacao === 'Andamento' ? 'alerta' :
                 service.situacao === 'Efetuado' ? 'sucesso' :
                     service.situacao === 'Analise' ? 'analise' :
-                        'primary'
+                        'principal'
 
     /* Atribui a construção da tabela à váriável */
     const trContent =
@@ -52,7 +52,7 @@ servicos.forEach(service => {
                 <td>${service.numero}</td>
                 <td>${service.taxa}</td>
                 <td class="${status}">${service.situacao}</td>
-                <td class="primary"><a href="#" style="text-decoration:none">Detalhes</a></td>
+                <td class="principal"><a href="#" style="text-decoration:none">Detalhes</a></td>
                 `
     /* Cria as linha com o conteúdo da variável */
     tr.innerHTML = trContent

@@ -5,30 +5,31 @@
 /* ROOT VARIAVEIS */
 
 :root {
-    /* --color-primary: #7380ec; */
-    --color-primary: #53a2c7fe;
+    /* --color-principal: #7380ec; */
+    --color-principal: #53a2c7fe;
     --color-perigo: #ff7782;
     --color-sucesso: #41f1b6;
     --color-alerta: #ffbb55;
     
     /* EU */
     --color-analise: #55b0ff;
+    --color-logo-titulo:#61f889;
     --color-card4: #55ffee;
     --color-card5: #5560ff;
     --color-card6: #eb55ff;
 
-    --color-info-dark: #7d8da1;
-    --color-info-light: #dce1eb;
+    --color-info-escuro: #7d8da1;
+    --color-info-claro: #dce1eb;
 
-    --color-primary-variant: #111e88;
+    --color-principal-variante: #111e88;
 
-    /* dark-theme-variables { */
+    /* escuro-tema-variaveis { */
     --color-background: #181a1e;
     --color-white: #202528;
-    --color-dark: #edeffd;
-    --color-dark-variant: #a3bdcc;
-    --color-light: rgba(0, 0, 0, 0.4);
-    --box-shadow: 0 2rem 3rem var(--color-light);
+    --color-escuro: #edeffd;
+    --color-escuro-variante: #a3bdcc;
+    --color-claro: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-claro);
 
     --card-boder-radius: 0.5rem;
     --boder-radius-1: 0.4rem;
@@ -40,22 +41,22 @@
 }
 
 /* ==============THEMA DARK ====================*/
-.light-theme-variables {
+.claro-tema-variaveis {
     --color-background: #f6f6f9;
     --color-white: #fff;
-    --color-dark: #363949;
-    --color-dark-variant: #677483;
-    --color-light: rgba(132, 139, 200, 0.18);
-    --box-shadow: 0 2rem 3rem var(--color-light);
+    --color-escuro: #363949;
+    --color-escuro-variante: #677483;
+    --color-claro: rgba(132, 139, 200, 0.18);
+    --box-shadow: 0 2rem 3rem var(--color-claro);
 }
 
 /* EU */
 
 .genio{
-    color: var(--color-dark);
+    color: var(--color-escuro);
 }
 .digital{
-    color: var(--color-primary);
+    color: var(--color-principal);
 }
 
 /* RESET */
@@ -83,7 +84,7 @@ body {
     user-select: none;
     /* Tira a barra de rolagem lateral */
     overflow-x: hidden;
-    color: var(--color-dark);
+    color: var(--color-escuro);
 }
 /* ==============================HEADER===========================INÍCIO */
 /* EU */
@@ -119,7 +120,7 @@ header h1{
 }
 
 a {
-    color: var(--color-dark);
+    color: var(--color-escuro);
 }
 
 img {
@@ -184,19 +185,22 @@ small {
 
 
 .texto_base_card {
-    color: var(--color-info-dark);
+    color: var(--color-info-escuro);
 }
 
 p {
-    color: var(--color-dark-variant);
+    color: var(--color-escuro-variante);
 }
 
 b {
-    color: var(--color-dark);
+    color: var(--color-escuro);
 }
 
-.primary {
-    color: var(--color-primary);
+.principal {
+    color: var(--color-principal);
+}
+.logo-titulo{
+    color: var(--color-logo-titulo);
 }
 
 .perigo {
@@ -266,7 +270,7 @@ aside h3 {
 
 aside .sidebar a {
     display: flex;
-    color: var(--color-info-dark);
+    color: var(--color-info-escuro);
     margin-left: 2rem;
     gap: 1rem;
     align-items: center;
@@ -289,8 +293,8 @@ aside .sidebar a:last-child {
 
 /* QUANDO O ICONE NA SIDEBAR É SELECIONADO */
 aside .sidebar a.active {
-    background: var(--color-light);
-    color: var(--color-primary);
+    background: var(--color-claro);
+    color: var(--color-principal);
     margin-left: 0;
 }
 
@@ -298,23 +302,23 @@ aside .sidebar a.active:before {
     content: "";
     width: 6px;
     height: 100%;
-    background: var(--color-primary);
+    background: var(--color-principal);
 }
 
 aside .sidebar a.active span {
-    color: var(--color-primary);
+    color: var(--color-principal);
     margin-left: calc(1rem - 6px);
 }
 
 aside .sidebar a:hover {
-    color: var(--color-primary);
+    color: var(--color-principal);
 }
 
 aside .sidebar a:hover span {
     margin-left: 1rem;
 }
 
-aside .sidebar .message-count {
+aside .sidebar .mensagem-contador {
     background: var(--color-perigo);
     color: var(--color-white);
     padding: 1.5px 10px;
@@ -332,7 +336,7 @@ main {
 
 main .date {
     display: inline-block;
-    background: var(--color-light);
+    background: var(--color-claro);
     border-radius: var(--boder-radius-1);
     margin-top: 1rem;
     padding: 0.5rem 1.6rem;
@@ -340,7 +344,7 @@ main .date {
 
 main .date input[type="date"] {
     background: transparent;
-    color: var(--color-dark);
+    color: var(--color-escuro);
 }
 
 main .situacao_cidade {
@@ -363,7 +367,7 @@ main .situacao_cidade>div:hover {
 }
 
 main .situacao_cidade>div span {
-    background: var(--color-primary);
+    background: var(--color-principal);
     padding: 0.5rem;
     border-radius: 50%;
     color: var(--color-white);
@@ -413,7 +417,7 @@ main .situacao_cidade svg {
 
 main .situacao_cidade svg circle {
     fill: none;
-    stroke: var(--color-primary);
+    stroke: var(--color-principal);
     stroke-width: 14;
     stroke-linecap: round;
     transform: translate(5px, 5px);
@@ -496,8 +500,8 @@ main .recentes_servicos table:hover {
 
 main table tbody td {
     height: 2.8rem;
-    border-bottom: 1px solid var(--color-light);
-    color: var(--color-dark-variant);
+    border-bottom: 1px solid var(--color-claro);
+    color: var(--color-escuro-variante);
 }
 
 main table tbody tr:last-child td {
@@ -508,7 +512,7 @@ main a {
     text-align: center;
     display: block;
     margin: 1rem auto;
-    color: var(--color-primary);
+    color: var(--color-principal);
 }
 
 /* ==================== LADO DIREITO====================== */
@@ -525,8 +529,8 @@ main a {
 }
 
 /* ESTÁ NA sidebar */
-.sidebar .theme-toggler {
-    background: var(--color-light);
+.sidebar .tema-toggler {
+    background: var(--color-claro);
     height: 1.9rem;
     width: 88%;
     display: flex;
@@ -541,7 +545,7 @@ main a {
 }
 
 /* ESTÁ NA sidebar */
-.sidebar .theme-toggler span {
+.sidebar .tema-toggler span {
     font-size: 1.2rem;
     width: 100%;
     height: 100%;
@@ -551,8 +555,8 @@ main a {
 }
 
 /* ESTÁ NA sidebar */
-.sidebar .theme-toggler span.active {
-    background: var(--color-primary);
+.sidebar .tema-toggler span.active {
+    background: var(--color-principal);
     color: var(--color-white);
     border-radius: var(--boder-radius-1);
 }
@@ -637,7 +641,7 @@ main a {
     padding: 0.6rem;
     color: var(--color-white);
     border-radius: 50%;
-    background: var(--color-primary);
+    background: var(--color-principal);
     display: flex;
 }
 
@@ -656,8 +660,8 @@ main a {
 /* Minuto do vídeo 1:02:59 troca para classe: .adiciona_analise*/
 .aside_direito .cidade_analise .adiciona_analise {
     background-color: transparent;
-    border: 2px dashed var(--color-primary);
-    color: var(--color-primary);
+    border: 2px dashed var(--color-principal);
+    color: var(--color-principal);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -665,7 +669,7 @@ main a {
 }
 
 .aside_direito .cidade_analise .adiciona_analise:hover {
-    background: var(--color-primary);
+    background: var(--color-principal);
     color: var(--color-white);
     /* EU */
     border: 2px dashed var(--color-white);
@@ -712,7 +716,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
     }
 
     /* ESTÁ NA sidebar */
-    .sidebar .theme-toggler {
+    .sidebar .tema-toggler {
         /* EU */
         margin-left: 0.5rem;
     }
@@ -806,7 +810,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             background: var(--color-white);
             width: 18rem;
             z-index: 3;
-            box-shadow: 1rem 3rem 4rem var(--color-light);
+            box-shadow: 1rem 3rem 4rem var(--color-claro);
             height: 100vh;
             padding-right: var(--card-padding);
             display: none;
@@ -883,10 +887,10 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             background: var(--color-white);
             width: 100%;
             z-index: 2;
-            box-shadow: 0 1rem 1rem var(--color-light);
+            box-shadow: 0 1rem 1rem var(--color-claro);
         }
 
-        .aside_direito .sessao_usuario_topo .theme-toggler {
+        .aside_direito .sessao_usuario_topo .tema-toggler {
             width: 4.4rem;
             position: absolute;
             left: 66%;
@@ -900,7 +904,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             display: inline-block;
             background: transparent;
             cursor: pointer;
-            color: var(--color-dark);
+            color: var(--color-escuro);
             position: absolute;
             left: 1rem;
         }
