@@ -50,6 +50,15 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+/* EU */
+
+.genio{
+    color: var(--color-dark);
+}
+.digital{
+    color: var(--color-primary);
+}
+
 /* RESET */
 * {
     margin: 0;
