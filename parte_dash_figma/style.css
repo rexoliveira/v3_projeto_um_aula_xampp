@@ -92,9 +92,7 @@ header {
     position: fixed;
     background: var(--color-background);
     width: 100vw;
-    height: 40px;
     z-index: 999;
-    padding: 5px;
     box-shadow: var(--box-shadow);
     align-items: center;
     justify-content: center;
@@ -106,18 +104,34 @@ header h1{
 /* ==============================HEADER===========================FIM */
 
 .container {
+    padding: 0;
     position: fixed;
-    top: 40px;
     display: grid;
     /* Distancia sidebar da lateral esquerda */
     width: 100%;
     height: auto;
     margin: 0px auto;
-    gap: 1.5rem;
+    gap: 0 1.5rem 1.5rem 1.5rem;
     /* define 3blocos/coluna */
     grid-template-columns: 16.5rem auto 23rem;
 
+    grid-template-areas: "header header header"
+  "left main right";
+    grid-template-rows: 60px 1fr;
+
 }
+header {
+    grid-area: header;
+  }
+  .aside_esquerdo {
+    grid-area: left;
+  }
+  /*  */main {
+    grid-area: main;
+  }
+  .aside_direito {
+    grid-area: right;
+  }
 
 a {
     color: var(--color-escuro);
