@@ -10,10 +10,10 @@
     --color-perigo: #ff7782;
     --color-sucesso: #41f1b6;
     --color-alerta: #ffbb55;
-    
+
     /* EU */
     --color-analise: #55b0ff;
-    --color-logo-titulo:#61f889;
+    --color-logo-titulo: #61f889;
     --color-card4: #55ffee;
     --color-card5: #5560ff;
     --color-card6: #eb55ff;
@@ -52,10 +52,11 @@
 
 /* EU */
 
-.genio{
+.genio {
     color: var(--color-escuro);
 }
-.digital{
+
+.digital {
     color: var(--color-principal);
 }
 
@@ -76,8 +77,8 @@ html {
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     font-family: 'poppins', Arial, Helvetica, sans-serif;
     font-size: 0.88rem;
     background: var(--color-background);
@@ -86,6 +87,7 @@ body {
     overflow-x: hidden;
     color: var(--color-escuro);
 }
+
 /* ==============================HEADER===========================INÍCIO */
 /* EU */
 header {
@@ -98,9 +100,10 @@ header {
     justify-content: center;
 }
 
-header h1{
+header h1 {
     text-align: center;
 }
+
 /* ==============================HEADER===========================FIM */
 
 .container {
@@ -116,22 +119,27 @@ header h1{
     grid-template-columns: 16.5rem auto 23rem;
 
     grid-template-areas: "header header header"
-  "left main right";
+        "left main right";
     grid-template-rows: 60px 1fr;
 
 }
+
 header {
     grid-area: header;
-  }
-  .aside_esquerdo {
+}
+
+.aside_esquerdo {
     grid-area: left;
-  }
-  /*  */main {
+}
+
+/*  */
+main {
     grid-area: main;
-  }
-  .aside_direito {
+}
+
+.aside_direito {
     grid-area: right;
-  }
+}
 
 a {
     color: var(--color-escuro);
@@ -179,6 +187,7 @@ small {
     position: relative;
     background-color: #aaa;
 }
+
 /* EU */
 .perfil-foto img {
     position: absolute;
@@ -187,12 +196,12 @@ small {
     object-fit: cover;
 }
 
-#logout{
+#logout {
     color: var(--color-perigo);
     opacity: 0.7;
 }
 
-#logout:hover{
+#logout:hover {
     color: red;
     opacity: 1;
 }
@@ -213,7 +222,8 @@ b {
 .principal {
     color: var(--color-principal);
 }
-.logo-titulo{
+
+.logo-titulo {
     color: var(--color-logo-titulo);
 }
 
@@ -345,6 +355,7 @@ aside .sidebar .mensagem-contador {
 
 main {
     margin: 0 1.4rem;
+
 
 }
 
@@ -498,6 +509,11 @@ main .recentes_servicos h2 {
     margin-bottom: 0.8rem;
 }
 
+main .recentes_servicos table th{
+    text-align: center;
+    padding: 1rem;
+}
+
 main .recentes_servicos table {
     background: var(--color-white);
     width: 100%;
@@ -516,6 +532,7 @@ main table tbody td {
     height: 2.8rem;
     border-bottom: 1px solid var(--color-claro);
     color: var(--color-escuro-variante);
+    
 }
 
 main table tbody tr:last-child td {
@@ -680,6 +697,7 @@ main a {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    
 }
 
 .aside_direito .cidade_analise .adiciona_analise:hover {
@@ -720,7 +738,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
         /* original:grid-template-columns: 8.2rem auto 23rem; */
         grid-template-columns: 5.8rem auto 20rem;
         margin: auto auto auto 0;
-        
+
     }
 
     /* ESPAÇO DO LOGO/TEXT */
@@ -760,6 +778,10 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
     }
 
 
+    main {
+        margin-top: 0;
+        padding-top: 0;
+    }
 
     main .situacao_cidade {
         /* eu */
@@ -777,7 +799,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        margin: 2rem 0 0 6.4rem;
+        margin: 5rem 0 0 5rem;
     }
 
     main .recentes_servicos table {
@@ -807,17 +829,33 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
         }
 
         /*  */
-        .container {
+        /* .container {
             width: 100%;
-            grid-template-columns: 1fr;
-        }
+            grid-template-columns: auto;
+            grid-template-areas: "header"
+                "left""main""right";
+            grid-template-rows: 60px 1fr 1fr 1fr;
+        } */
 
+        .container {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            grid-template-areas: "header"
+            "main"
+            "right";
+            grid-template-columns: auto;
+            grid-template-rows: 60px 1fr 1fr;
+          }
+        
+              
+       
         /* EU */
         #menu-button {
             display: block;
         }
 
-        aside {
+        .aside_esquerdo {
             position: fixed;
             /* Esconde sidebar */
             left: -100%;
@@ -837,35 +875,39 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             }
         }
 
-        aside .logo {
+        .aside_esquerdo .logo {
             margin-left: 1rem;
         }
 
-        aside .logo h2 {
+        .aside_esquerdo .logo h2 {
             display: inline;
         }
 
-        aside .sidebar h3 {
+        .aside_esquerdo .sidebar h3 {
             display: inline;
         }
 
-        aside .sidebar a {
+        .aside_esquerdo .sidebar a {
             width: 100%;
             height: 3.4rem;
         }
 
-        aside .sidebar a:last-child {
+        .aside_esquerdo .sidebar a:last-child {
             position: absolute;
             bottom: 5rem;
         }
 
-        aside .close {
+        .aside_esquerdo .close {
             display: inline-block;
             cursor: pointer;
         }
 
+        header{
+            box-shadow: none;
+        }
+
         main {
-            margin: 45px 0 0 0;
+            margin-top: 7rem;
             padding: 0 1rem;
         }
 
@@ -893,7 +935,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
         .aside_direito .sessao_usuario_topo {
             position: fixed;
-            top: 40px;
+            top: 7.5rem;
             left: 0;
             align-items: center;
             padding: 0 0.8rem;
@@ -935,6 +977,15 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             grid-template-columns: 1fr;
             gap: 0;
 
+        }
+        main {
+            margin-top: 1rem;
+            
+        }
+          .aside_direito .sessao_usuario_topo {
+            
+            top: 1.4rem;
+            
         }
 
     }
