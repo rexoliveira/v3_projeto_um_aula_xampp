@@ -92,7 +92,7 @@ body {
 /* EU */
 header {
     position: fixed;
-    background: var(--color-background);
+    /* background: var(--color-background); */
     width: 100vw;
     z-index: 999;
     box-shadow: var(--box-shadow);
@@ -1011,20 +1011,27 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
     /* Eu */
     @media screen and (max-width: 530px) {
         header {
-            background: none;
-            position: relative;
+            width: 2rem;
+            background: red;
+            position: fixed;
+            right: 0;
+           
 
-        }
-
-    
-        main .recentes_servicos table {
-            width: 100%;
         }
 
         .aside_direito .sessao_usuario_topo {
             padding-right: 3rem;
             top: 0;
         }
+
+        .aside_esquerdo {
+            top: 3rem;
+        }
+    
+        main .recentes_servicos table {
+            width: 100%;
+        }
+
 
         main .situacao_cidade {
             grid-template-columns: 1fr;
