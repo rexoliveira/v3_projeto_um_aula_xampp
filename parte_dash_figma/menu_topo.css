@@ -76,10 +76,10 @@ a, a:hover, a.active, a:active, a:visited, a:focus{
 }
 
 .exo-menu{
+	position:relative;
 	width: 100%;
 	float: left;
 	list-style: none;
-	position:relative;
 	background: var(--color-background);
 }
 .exo-menu > li {	
@@ -88,6 +88,7 @@ a, a:hover, a.active, a:active, a:visited, a:focus{
 }
 .exo-menu > li > a{
 	color: var(--color-escuro);
+  background-color: var(--color-background);
 	text-decoration: none;
 	text-transform: uppercase;
 	/* border-right: 1px var(--color-escuro) dotted; */
@@ -133,7 +134,7 @@ li.drop-down>ul{
   top: 0;
   min-width: 230px;
   display: none;
-  border-left: 1px solid var(--color-claro);
+  border-left: 1px solid var(--color-escuro);
   }
 
 li.drop-down>ul>li>a,
@@ -143,7 +144,7 @@ li.drop-down>ul>li>a,
 	display: block;
 	padding: 20px 22px;
 	text-decoration: none;
-	background-color: var(--color-info-claro);
+	background-color: var(--color-background);
 	border-bottom: 1px dotted var(--color-claro-variante);
 	-webkit-transition: color 0.2s linear, background 0.2s linear;
 	-moz-transition: color 0.2s linear, background 0.2s linear;
@@ -180,7 +181,7 @@ h4.row.mega-title {
 .flyout-mega ul > li > a {
   font-size: 90%;
   line-height: 25px;
-  color: var(--color-white);
+  color: var(--color-escuro);
   font-family: inherit;
 }
 .flyout-mega ul > li > a:hover,
@@ -323,10 +324,11 @@ li.flyout-mega>a:hover +.flyout-mega-wrap{
 }
 a.toggle-menu{
   display: none;
-  background: red;
 }
 /*responsive*/
- @media (min-width:500px){
+ @media (min-width:530px){
+
+ 
   a.toggle-menu{
     display: block;
   }
@@ -346,7 +348,7 @@ a.toggle-menu{
 	right: 100%;
 }
  }
-@media (max-width:500px){
+@media (max-width:530px){
 	.exo-menu {
 		max-height: 30px;
 		background-color: var(--color-background);
@@ -373,11 +375,10 @@ a.toggle-menu{
 
 }
 a.toggle-menu{
-  
     position: absolute;
     top: 0px;
     right: 0px;
-    width: 5%;
+    width: 2.2rem;
     height: 3rem;
     padding: 5px;
     font-size: 22px;  

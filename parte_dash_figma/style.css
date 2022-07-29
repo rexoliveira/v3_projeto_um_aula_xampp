@@ -243,7 +243,7 @@ b {
     color: var(--color-analise);
 }
 
-aside {
+.aside_esquerdo {
     height: 100vh;
 }
 
@@ -253,96 +253,98 @@ aside {
 }
 
 /* ESPAÇO DO LOGO/TEXT */
-aside .sessao_usuario_topo {
+.aside_esquerdo .sessao_usuario_topo {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     margin: 0.7rem 0 0.7rem 0;
 }
 
 
-aside .logo {
+.aside_esquerdo .logo {
+    align-items: center;
+    justify-content: center;
     display: flex;
     gap: 0.4rem;
 
 }
 
-aside .logo img {
+.aside_esquerdo .logo img {
+    
     width: 2rem;
     height: 2rem;
 }
 
-/* VAI APARECER VIA JS */
-aside .close {
+.aside_esquerdo .close {
     display: none;
 }
 
 
 /* ====================SIDEBAR====================== */
 
-aside .sidebar {
+.aside_esquerdo .sidebar {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    position: relative
+    position: relative;
 }
 
-aside h3 {
+.aside_esquerdo h3 {
     font-weight: 500;
 }
 
-aside .sidebar a {
+.aside_esquerdo .sidebar a {
     display: flex;
     color: var(--color-info-escuro);
     margin-left: 2rem;
     gap: 1rem;
     align-items: center;
     position: relative;
-    height: 3.7rem;
+    height: 3.2rem;
     transition: all 300ms ease;
 }
 
 
-aside .sidebar a sapn {
+.aside_esquerdo .sidebar a sapn {
     font-size: 1.6rem;
     transition: all 300ms ease;
 }
 
-aside .sidebar a:last-child {
+.aside_esquerdo .sidebar a:last-child {
     position: absolute;
     bottom: 2rem;
     width: 100%;
 }
 
 /* QUANDO O ICONE NA SIDEBAR É SELECIONADO */
-aside .sidebar a.active {
+.aside_esquerdo .sidebar a.active {
     background: var(--color-claro);
     color: var(--color-principal);
     margin-left: 0;
 }
 
-aside .sidebar a.active:before {
+.aside_esquerdoide .sidebar a.active:before {
     content: "";
     width: 6px;
     height: 100%;
     background: var(--color-principal);
 }
 
-aside .sidebar a.active span {
+.aside_esquerdo .sidebar a.active span {
     color: var(--color-principal);
     margin-left: calc(1rem - 6px);
 }
 
-aside .sidebar a:hover {
+.aside_esquerdo .sidebar a:hover {
     color: var(--color-principal);
 }
 
-aside .sidebar a:hover span {
+.aside_esquerdo .sidebar a:hover span {
     margin-left: 1rem;
 }
 
-aside .sidebar .mensagem-contador {
+.aside_esquerdo .sidebar .mensagem-contador {
     background: var(--color-perigo);
     color: var(--color-white);
     padding: 1.5px 10px;
@@ -509,7 +511,7 @@ main .recentes_servicos h2 {
     margin-bottom: 0.8rem;
 }
 
-main .recentes_servicos table th{
+main .recentes_servicos table th {
     text-align: center;
     padding: 1rem;
 }
@@ -532,7 +534,7 @@ main table tbody td {
     height: 2.8rem;
     border-bottom: 1px solid var(--color-claro);
     color: var(--color-escuro-variante);
-    
+
 }
 
 main table tbody tr:last-child td {
@@ -697,7 +699,7 @@ main a {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    
+
 }
 
 .aside_direito .cidade_analise .adiciona_analise:hover {
@@ -742,7 +744,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
     }
 
     /* ESPAÇO DO LOGO/TEXT */
-    aside .sessao_usuario_topo {
+    .aside_esquerdo .sessao_usuario_topo {
         justify-content: center;
 
     }
@@ -754,25 +756,25 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
     }
 
     /* EU */
-    aside .sessao_usuario_topo {
+    .aside_esquerdo .sessao_usuario_topo {
         justify-content: center;
     }
 
 
-    aside .logo h2 {
+    .aside_esquerdo .logo h2 {
         display: none;
     }
 
 
-    aside .sidebar h3 {
+    .aside_esquerdo .sidebar h3 {
         display: none;
     }
 
-    aside .sidebar a {
+    .aside_esquerdo .sidebar a {
         width: 5.6rem;
     }
 
-    aside .sidebar a:last-child {
+    .aside_esquerdo .sidebar a:last-child {
         position: relative;
         margin-top: 1.8rem;
     }
@@ -842,14 +844,14 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             width: 100%;
             height: 100%;
             grid-template-areas: "header"
-            "main"
-            "right";
+                "main"
+                "right";
             grid-template-columns: auto;
             grid-template-rows: 30px 1fr 1fr;
-          }
-        
-              
-       
+        }
+
+
+
         /* EU */
         #menu-button {
             display: block;
@@ -857,6 +859,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
         .aside_esquerdo {
             position: fixed;
+            top: 105px;
             /* Esconde sidebar */
             left: -100%;
             background: var(--color-white);
@@ -898,11 +901,15 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
         }
 
         .aside_esquerdo .close {
+            padding: 0.9rem 0 0 0.5rem;
+            color: red;
+            align-items: center;
+            justify-content: center;
             display: inline-block;
             cursor: pointer;
         }
 
-        header{
+        header {
             box-shadow: none;
         }
 
@@ -972,36 +979,44 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
     }
 
-    @media screen and (max-width: 953px) { .aside_direito .sessao_usuario_topo {
-        top: 8.2rem;
-    }
-    main {
-        margin-top: 8.5rem;
-        
-    }
+    @media screen and (max-width: 1001px) {
+        .aside_direito .sessao_usuario_topo {
+            top: 8.2rem;
+        }
 
-}
+        
+
+        main {
+            margin-top: 8.5rem;
+
+        }
+
+    }
 
     /* Eu */
-    @media screen and (max-width: 553px) {
-        .aside_direito .sessao_usuario_topo {
-            
-            top: 0;
-            
-            width: 95%;
-           
+    @media screen and (max-width: 530px) {
+        header {
+            background: none;
+            position: relative;
+
         }
-        
+
+        .aside_direito .sessao_usuario_topo {
+            padding-right: 3rem;
+            top: 0;
+        }
+
         main .situacao_cidade {
             grid-template-columns: 1fr;
             gap: 0;
 
         }
+
         main {
             margin-top: 1rem;
-            
+
         }
-          
+
 
     }
 }
