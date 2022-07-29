@@ -845,7 +845,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             "main"
             "right";
             grid-template-columns: auto;
-            grid-template-rows: 60px 1fr 1fr;
+            grid-template-rows: 30px 1fr 1fr;
           }
         
               
@@ -907,7 +907,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
         }
 
         main {
-            margin-top: 7rem;
+            margin-top: 4.5rem;
             padding: 0 1rem;
         }
 
@@ -935,15 +935,16 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
         .aside_direito .sessao_usuario_topo {
             position: fixed;
-            top: 7.5rem;
             left: 0;
+            top: 4.1rem;
             align-items: center;
             padding: 0 0.8rem;
             height: 3.0rem;
-            background: var(--color-white);
             width: 100%;
+            background: var(--color-white);
             z-index: 2;
             box-shadow: 0 1rem 1rem var(--color-claro);
+            margin-top: 0;
         }
 
         .aside_direito .sessao_usuario_topo .tema-toggler {
@@ -971,8 +972,26 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
     }
 
+    @media screen and (max-width: 953px) { .aside_direito .sessao_usuario_topo {
+        top: 8.2rem;
+    }
+    main {
+        margin-top: 8.5rem;
+        
+    }
+
+}
+
     /* Eu */
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 553px) {
+        .aside_direito .sessao_usuario_topo {
+            
+            top: 0;
+            
+            width: 95%;
+           
+        }
+        
         main .situacao_cidade {
             grid-template-columns: 1fr;
             gap: 0;
@@ -982,11 +1001,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             margin-top: 1rem;
             
         }
-          .aside_direito .sessao_usuario_topo {
-            
-            top: 1.4rem;
-            
-        }
+          
 
     }
 }

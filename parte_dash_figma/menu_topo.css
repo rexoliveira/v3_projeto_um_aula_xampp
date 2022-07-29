@@ -83,8 +83,8 @@ a, a:hover, a.active, a:active, a:visited, a:focus{
 	background: var(--color-background);
 }
 .exo-menu > li {	
-  display: inline-block;
-  /* float:left; */
+  /* display: inline-block; */
+  float:left;
 }
 .exo-menu > li > a{
 	color: var(--color-escuro);
@@ -321,8 +321,15 @@ li.drop-down>a:hover +.drop-down-ul,
 li.flyout-mega>a:hover +.flyout-mega-wrap{
 	display:block;
 }
+a.toggle-menu{
+  display: none;
+  background: red;
+}
 /*responsive*/
- @media (min-width:555px){
+ @media (min-width:500px){
+  a.toggle-menu{
+    display: block;
+  }
   
 	.exo-menu > li > a{
 	display:block;
@@ -339,7 +346,7 @@ li.flyout-mega>a:hover +.flyout-mega-wrap{
 	right: 100%;
 }
  }
-@media (max-width:555px){
+@media (max-width:500px){
 	.exo-menu {
 		max-height: 30px;
 		background-color: var(--color-background);
@@ -366,12 +373,14 @@ li.flyout-mega>a:hover +.flyout-mega-wrap{
 
 }
 a.toggle-menu{
+  
     position: absolute;
     top: 0px;
     right: 0px;
-    height: 30px;
+    width: 5%;
+    height: 3rem;
     padding: 5px;
-    font-size: 15px;  
+    font-size: 22px;  
     background-color: var(--color-principal);
     color: #23364B;
 }
