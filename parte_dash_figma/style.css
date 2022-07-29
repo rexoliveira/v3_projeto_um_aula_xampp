@@ -1016,6 +1016,11 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
         }
 
+    
+        main .recentes_servicos table {
+            width: 100%;
+        }
+
         .aside_direito .sessao_usuario_topo {
             padding-right: 3rem;
             top: 0;
@@ -1031,6 +1036,12 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             margin-top: 1rem;
 
         }
+
+        .aside_direito {
+            width: 87%;
+            
+        }
+
 
 
     }
