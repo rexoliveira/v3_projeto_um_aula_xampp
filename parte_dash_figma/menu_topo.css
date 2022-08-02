@@ -71,8 +71,19 @@ ul{
 	padding: 0;
 }
 a, a:hover, a.active, a:active, a:visited, a:focus{
-	color:var(--color-claro);
+	color:var(--color-escuro);
 	text-decoration:none;
+  font-size: 1rem;
+  
+}
+
+a.texto_base_blog{
+  margin-bottom: 1rem;
+  color: var(--color-info-escuro);
+}
+
+a.texto_base_blog:hover{
+  color: var(--color-escuro-variante);
 }
 
 .exo-menu{
@@ -268,16 +279,16 @@ ul.icon-des li {
 	padding-bottom:15px;
   z-index: 999;
 }
-.Blog .blog-title{
+.Blog .blog-titulo{
 	color:var(--color-escuro);
-	font-size:15px;
+	font-size:1.5rem;
 	text-transform:uppercase;
 
 }
 .Blog .blog-des{
 	color:var(--color-escuro);
-	font-size:90%;
-	margin-top:15px;
+	font-size:1rem;
+	margin: 1rem 0 1rem 0;
 }
 .Blog a.view-more{
 	margin-top:0px;
