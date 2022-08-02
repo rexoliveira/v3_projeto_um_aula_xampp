@@ -74,11 +74,11 @@
             >
           </li>
           <li class="drop-down">
-            <a href="#"><i class="fa fa-cogs"></i> Flyout</a>
+            <a href="#"><i class="fa fa-cogs"></i> Menu</a>
             <!--Drop Down-->
             <ul class="drop-down-ul animated fadeIn">
               <li class="flyout-right">
-                <a href="#">Flyout Right</a
+                <a href="#">Submenu direito</a
                 ><!--Flyout Right-->
                 <ul class="animated fadeIn">
                   <li><a href="#">Mobile</a></li>
@@ -88,7 +88,7 @@
               </li>
 
               <li class="flyout-left">
-                <a href="#">Flyout Left</a
+                <a href="#">Submenu esquerdo</a
                 ><!--Flyout Left-->
                 <ul class="animated fadeIn">
                   <li><a href="#">Mobile</a></li>
@@ -97,18 +97,18 @@
                 </ul>
               </li>
 
-              <li><a href="#">No Flyout</a></li>
+              <li><a href="#">Não Submenu</a></li>
             </ul>
             <!--//End drop down-->
           </li>
           <li>
-            <a href="#"><i class="fa fa-cogs"></i> Services</a>
+            <a href="#"><i class="fa fa-cogs"></i> Serviços</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-briefcase"></i> Portfolio</a>
+            <a href="#"><i class="fa fa-briefcase"></i> Arquivos</a>
           </li>
           <li class="mega-drop-down">
-            <a href="#"><i class="fa fa-list"></i> Mega Menu</a>
+            <a href="#"><i class="fa fa-list"></i> Outros</a>
             <div class="animated fadeIn mega-menu">
               <div class="mega-menu-wrap">
                 <div class="row">
@@ -247,31 +247,31 @@
             </div>
           </li>
           <li class="images-drop-down">
-            <a href="#"><i class="fa fa-photo"></i> Images</a>
+            <a href="#"><i class="fa fa-photo"></i> Cultura</a>
             <div class="Images animated fadeIn">
               <div class="col-md-3">
-                <h4>Images Title</h4>
+                <h4>Imagens Título</h4>
                 <img
                   class="img-responsive"
                   src="https://2.bp.blogspot.com/-VG_e0pKfrDo/VcLb6JwZqfI/AAAAAAAAGCk/8ZgA9kZqTQ8/s1600/images3.jpg"
                 />
               </div>
               <div class="col-md-3">
-                <h4>Images Title</h4>
+                <h4>Imagens Título</h4>
                 <img
                   class="img-responsive"
                   src="https://3.bp.blogspot.com/-hUt5FrdZHio/VcLb5dlwTBI/AAAAAAAAGCU/UUH5N1JkoQc/s1600/images1.jpg"
                 />
               </div>
               <div class="col-md-3">
-                <h4>Images Title</h4>
+                <h4>Imagens Título</h4>
                 <img
                   class="img-responsive"
                   src="https://4.bp.blogspot.com/-A7U1uPlSq6Y/VcLb5kKHCkI/AAAAAAAAGCc/7WghyndTEuY/s1600/images2.jpg"
                 />
               </div>
               <div class="col-md-3">
-                <h4>Images Title</h4>
+                <h4>Imagens Título</h4>
                 <img
                   class="img-responsive"
                   src="https://3.bp.blogspot.com/-hGrnZIjzL2k/VcLb47kyQKI/AAAAAAAAGCQ/J6Q2IAHIQvQ/s1600/image4.jpg"
@@ -280,7 +280,7 @@
             </div>
           </li>
           <li>
-            <a href="#"><i class="fa fa-envelope"></i> Contact</a>
+            <a href="#"><i class="fa fa-envelope"></i> Contato</a>
             <div class="contact"></div>
           </li>
           <a href="#" class="toggle-menu visible-xs-block">|||</a>

@@ -3,7 +3,7 @@
 
 <head>
     <!-- Redirecionado para página principal.html -->
-    <meta http-equiv="refresh" content="0; URL='/parte_dash_figma/dash_figma.html'" />
+    <meta http-equiv="refresh" content="0; URL='/parte_dash_figma/dash_figma.php'" />
     <!--INICIAR A TELA FULL FOI DESATIVADA PARA MAIS TESTES A AJUSTES-->
     <!--Crédito tela full:http://phpbrasil.com/phorum/read.php?1,58112-->
     <!--   <script>
