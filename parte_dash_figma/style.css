@@ -60,6 +60,14 @@
     color: var(--color-principal);
 }
 
+/* EU */
+.genio{
+    color: var(--color-dark);
+}
+.digital{
+    color: var(--color-primary);
+}
+
 /* RESET */
 * {
     margin: 0;
