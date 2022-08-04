@@ -47,7 +47,7 @@
             </li>
             <!-- LINHA DE TESTE DASHBOARD -->
             <li>
-                <a href=" ../parte_dash_figma/dash_figma.html">
+                <a href=" ../parte_dash_figma/dash_figma.php">
                     <i class='bx bxs-dashboard'></i>
                     <span class="links_name">Dashboard</span>
                 </a>
