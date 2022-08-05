@@ -38,22 +38,22 @@ if (isset($_POST['enviar'])) {
          muito prolixo, não use para debugar SMTP, 
          apenas em problemas de baixo nível */
      
-    //Server settings
-    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;//Enable verbose debug output
-    $mail->SMTPDebug = SMTP::DEBUG_OFF;
-    $mail->isSMTP();     //Send using SMTP
-     //Set the SMTP server to send through
-    $mail->Host       = 'smtp.gmail.com';
-    $mail->SMTPAuth   = true;  //Enable SMTP authentication
-    //SMTP username
-    $mail->Username   = 'rex.oliveira15@gmail.com';
-    //SMTP password          
-    $mail->Password   = 'qdwslhyjuoldrrlx'; 
-    //Enable implicit TLS encryption                              
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    //TCP port to connect to; use 587 if you have set 
-    //`SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-    $mail->Port       = 465; 
+        //Server settings
+        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;//Enable verbose debug output
+        $mail->SMTPDebug = SMTP::DEBUG_OFF;
+        $mail->isSMTP();     //Send using SMTP
+        //Set the SMTP server to send through
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;  //Enable SMTP authentication
+        //SMTP username
+        $mail->Username   = 'rex.oliveira15@gmail.com';
+        //SMTP password          
+        $mail->Password   = ''; 
+        //Enable implicit TLS encryption                              
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        //TCP port to connect to; use 587 if you have set 
+        //`SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        $mail->Port       = 465; 
 
         //Recipients
         $mail->setFrom('rex.oliveira15@gmail.com', 'Dashborad');
