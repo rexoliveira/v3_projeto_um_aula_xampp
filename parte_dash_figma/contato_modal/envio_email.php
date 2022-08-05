@@ -46,7 +46,7 @@ try {
     //SMTP username
     $mail->Username   = 'rex.oliveira15@gmail.com';
     //SMTP password          
-    $mail->Password   = 'qdwslhyjuoldrrlx'; 
+    $mail->Password   = ''; 
     //Enable implicit TLS encryption                              
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     //TCP port to connect to; use 587 if you have set 
