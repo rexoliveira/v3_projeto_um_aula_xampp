@@ -61,10 +61,11 @@
 }
 
 /* EU */
-.genio{
+.genio {
     color: var(--color-dark);
 }
-.digital{
+
+.digital {
     color: var(--color-primary);
 }
 
@@ -838,7 +839,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
         margin: 1.4rem 0 0 0;
     }
 
-        /* ==================== TABLETES PEQUENOS E MOBILE====================== */
+    /* ==================== TABLETES PEQUENOS E MOBILE====================== */
 
     @media screen and (max-width: 1060px) {
 
@@ -1004,7 +1005,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
     }
 
     @media screen and (max-width: 1001px) {
-        
+
         .aside_direito .sessao_usuario_topo {
             top: 6.2rem;
         }
@@ -1062,3 +1063,9 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
     }
 }
+
+/* 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+*/
+

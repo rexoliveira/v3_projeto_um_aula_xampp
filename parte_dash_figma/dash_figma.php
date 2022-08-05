@@ -37,10 +37,32 @@
     <script src="servicos.js"></script>
     <script src="../script/data_hora.js"></script>
 
+    <!-- MODAL -->
+    <script src="./contato_modal/modal.js" defer></script>
+    <link rel="stylesheet" href="./contato_modal/modal.css">
+
     <title>Principal-Dashboard</title>
 </head>
 
 <body>
+    <section id="todo-modal">
+        
+        <!-- <button id="abrir-modal" >Abrir</button> -->
+
+        <!-- A transparência que divide o modal do conteudo de baixo -->
+        <section class="hide" id="fade"></section>
+
+
+        <section class="hide" id="modal-iframe">
+            <section class="modal-cabecalho">
+                <!-- <h2>Este é modal</h2> -->
+                <button id="fechar-modal" >Fechar</button>
+            </section>
+            <section class="modal-corpo">
+                <iframe src="./contato_modal/contato_modal.html" frameborder="0"></iframe>
+            </section>
+        </section>
+    </section>
     <section class="container">
         <!-- MENU-BOTÕES-TOPO -->
         <header>
@@ -251,7 +273,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="https://www.camaqua.rs.gov.br/portal/contato" target="_blank"><i
+                    <a href="#" id="abrir-modal"><i
                             class="fa fa-envelope"></i>
                         Contato</a>
                     <div class="contact"></div>
