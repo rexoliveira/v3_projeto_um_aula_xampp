@@ -16,74 +16,81 @@ use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 require '../../vendor/autoload.php';
 
-//Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
 
-try {
-    /*
-    Crédito: https://pt.stackoverflow.com/questions/400902/smtp-debug-com-phpmailer
-    SMTP::DEBUG_OFF (0): Desativar o debug 
-    (você pode deixar sem preencher este valor, uma vez que esta opção é o padrão).
-    SMTP::DEBUG_CLIENT (1): Imprimir mensagens enviadas pelo cliente.
-    SMTP::DEBUG_SERVER (2): 
-    similar ao 1, mais respostas recebidas dadas pelo servidor 
-    (esta é a opção mais usual).
-    SMTP::DEBUG_CONNECTION (3): 
-    similar ao 2, mais informações sobre a conexão inicial - 
-    este nível pode auxiliar na ajuda com falhas STARTTLS.
-    SMTP::DEBUG_LOWLEVEL (4): 
-    similar ao 3, mais informações de baixo nível,
-     muito prolixo, não use para debugar SMTP, 
-     apenas em problemas de baixo nível */
+if (isset($_POST['enviar'])) {
+    //Create an instance; passing `true` enables exceptions
+    $mail = new PHPMailer(true);
+
+    try {
+        /*
+        Crédito: https://pt.stackoverflow.com/questions/400902/smtp-debug-com-phpmailer
+        SMTP::DEBUG_OFF (0): Desativar o debug 
+        (você pode deixar sem preencher este valor, uma vez que esta opção é o padrão).
+        SMTP::DEBUG_CLIENT (1): Imprimir mensagens enviadas pelo cliente.
+        SMTP::DEBUG_SERVER (2): 
+        similar ao 1, mais respostas recebidas dadas pelo servidor 
+        (esta é a opção mais usual).
+        SMTP::DEBUG_CONNECTION (3): 
+        similar ao 2, mais informações sobre a conexão inicial - 
+        este nível pode auxiliar na ajuda com falhas STARTTLS.
+        SMTP::DEBUG_LOWLEVEL (4): 
+        similar ao 3, mais informações de baixo nível,
+         muito prolixo, não use para debugar SMTP, 
+         apenas em problemas de baixo nível */
      
-    //Server settings
-    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;//Enable verbose debug output
-    $mail->SMTPDebug = SMTP::DEBUG_OFF;
-    $mail->isSMTP();     //Send using SMTP
-     //Set the SMTP server to send through
-    $mail->Host       = 'smtp.gmail.com';
-    $mail->SMTPAuth   = true;  //Enable SMTP authentication
-    //SMTP username
-    $mail->Username   = 'rex.oliveira15@gmail.com';
-    //SMTP password          
-    $mail->Password   = 'qdwslhyjuoldrrlx'; 
-    //Enable implicit TLS encryption                              
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    //TCP port to connect to; use 587 if you have set 
-    //`SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-    $mail->Port       = 465; 
+        //Server settings
+        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;//Enable verbose debug output
+        $mail->SMTPDebug = SMTP::DEBUG_OFF;
+        $mail->isSMTP();     //Send using SMTP
+         //Set the SMTP server to send through
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;  //Enable SMTP authentication
+        //SMTP username
+        $mail->Username   = 'rex.oliveira15@gmail.com';
+        //SMTP password          
+        $mail->Password   = 'qdwslhyjuoldrrlx'; 
+        //Enable implicit TLS encryption                              
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        //TCP port to connect to; use 587 if you have set 
+        //`SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        $mail->Port       = 465; 
 
-    //Recipients
-    $mail->setFrom($email, $nome);
-    //Adicionar um destinatário
-    $mail->addAddress('rex.oliveira15@gmail.com', 'User Dashboard');     
-    //$mail->addAddress('ellen@example.com');               //Name is optional
-    //$mail->addReplyTo('info@example.com', 'Information');
-    //$mail->addCC('cc@example.com');
-    //$mail->addBCC('bcc@example.com');
+        //Recipients
+        $mail->setFrom('rex.oliveira15@gmail.com', 'Dashborad');
+        //Adicionar um destinatário
+        $mail->addAddress($email, $nome);     
+        //$mail->addAddress('ellen@example.com');               //Name is optional
+        //$mail->addReplyTo('info@example.com', 'Information');
+        //$mail->addCC('cc@example.com');
+        //$mail->addBCC('bcc@example.com');
 
-    //Attachments
-    /* $mail->addAttachment('/var/tmp/file.tar.gz');   */       //Add attachments
-    /* $mail->addAttachment('/tmp/image.jpg', 'new.jpg');  */   //Optional name
+        //Attachments
+        /* $mail->addAttachment('/var/tmp/file.tar.gz');   */       //Add attachments
+        /* $mail->addAttachment('/tmp/image.jpg', 'new.jpg');  */   //Optional name
 
-    //Content
-    $mail->isHTML(true); 
-    //Aqui está o assunto                                 //Set email format to HTML
-    $mail->Subject = $assunto;
-    //Este é o corpo da mensagem HTML <b>em negrito!</b>
-    $mail->Body    = $mensagem;
-    //Este é o corpo em texto simples para clientes de e-mail não HTML
-    $mail->AltBody = '';
+        //Content
+        $mail->isHTML(true); 
+        //Aqui está o assunto                                 //Set email format to HTML
+        $mail->Subject = $assunto;
+        //Este é o corpo da mensagem HTML <b>em negrito!</b>
+        $mail->Body    = $mensagem;
+        //Este é o corpo em texto simples para clientes de e-mail não HTML
+        $mail->AltBody = '';
 
-    $mail->send();
+        $mail->send();
     
-    //Atualiza a página depois do envio
-    /* header("Refresh: 0; url=contato_modal.html"); */
-    $retorno = "E-mail enviado!";
-} catch (Exception $e) {
-    $retorno = "A mensagem não pôde ser enviada. 
+        //Atualiza a página depois do envio
+        /* header("Refresh: 0; url=contato_modal.html"); */
+        $retorno = "E-mail enviado!";
+    } catch (Exception $e) {
+        $retorno = "A mensagem não pôde ser enviada. 
     Erro de correspondência: {$mail->ErrorInfo}";
-}?>
+    }
+} else {
+    $retorno = "Acesso negado pela url.";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -142,7 +149,10 @@ try {
       <h2><?php echo "Nome do remetente: " . "<span>".$nome."</span>" ?><br/></h2>
       <h2><?php echo "Email de retorno: " . "<span>".$email."</span>" ?><br/></h2>
       <h2><?php echo "Assunto: " . "<span>".$assunto."</span>"?><br /></h2>
-      <h2><?php echo "Mensagem: " . "<span class=\"mensagem_texto\">".$mensagem."</span>" ?><br /></h2>
+      <h2><?php echo "Mensagem: " . "<span class=\"mensagem_texto\">
+      ".$mensagem."</span>" ?>
+      <br /></h2>
     </section>
   </body>
 </html>
+    
