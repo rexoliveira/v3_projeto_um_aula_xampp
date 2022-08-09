@@ -333,6 +333,7 @@ li.drop-down>a:hover +.drop-down-ul,
 .mega-drop-down a:hover+.mega-menu,
 li.flyout-mega>a:hover +.flyout-mega-wrap{
 	display:block;
+  z-index: 2000;
 }
 a.toggle-menu{
   display: none;

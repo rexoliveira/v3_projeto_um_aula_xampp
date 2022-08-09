@@ -52,22 +52,50 @@
 
 /* EU */
 
+.digital {
+    color: var(--color-escuro);
+    font-size: 2rem;
+}
+
+/* #############################GENIO################################### */
+/* .genio {
+    color: var(--color-principal);
+} */
+
 .genio {
     color: var(--color-escuro);
+    position: relative;
+    font-size: 2rem;
+    -webkit-text-stroke: 0.05vw var(--color-escuro);
+    text-transform: uppercase;
 }
 
-.digital {
+.genio::before {
     color: var(--color-principal);
+    content: 'Gênio';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 0%;
+    height: 65%;
+    -webkit-text-stroke: 0vw var(--color-principal);
+    border-right: 3px solid var(--color-principal);
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+    -webkit-animation: animate 6s linear infinite;
 }
 
-/* EU */
-.genio {
-    color: var(--color-dark);
+@keyframes animate{
+    0% {
+        width: 0%;
+    }
+
+    70% {
+        width: 100%;
+    }
 }
 
-.digital {
-    color: var(--color-primary);
-}
+/* #################################################################### */
 
 /* RESET */
 * {
@@ -1034,7 +1062,8 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
         }
 
         .aside_esquerdo {
-            top: 3rem;
+            top: 0rem;
+            width: 67%;
         }
 
         main {
@@ -1068,4 +1097,3 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 */
-
