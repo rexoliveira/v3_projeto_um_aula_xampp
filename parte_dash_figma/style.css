@@ -74,7 +74,7 @@
     color: var(--color-principal);
     content: 'Gênio';
     position: absolute;
-    top: 5px;
+    top: 4.5px;
     left: 0;
     width: 0%;
     height: 65%;
@@ -90,8 +90,8 @@
         width: 0%;
     }
 
-    70% {
-        width: 100%;
+    50% {
+        width:378%;
     }
 }
 
