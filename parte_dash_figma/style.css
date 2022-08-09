@@ -1062,9 +1062,12 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
         }
 
         .aside_esquerdo {
-            top: 0rem;
+            top: -1rem;
             width: 67%;
+            height: 105%;
+            
         }
+
 
         main {
             margin-top: 0;
