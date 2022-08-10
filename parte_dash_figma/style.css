@@ -963,6 +963,9 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
         }
 
         header {
+            /* eu */
+            position: relative;
+
             box-shadow: none;
         }
 
@@ -994,7 +997,8 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
         }
 
         .aside_direito .sessao_usuario_topo {
-            position: fixed;
+            /* position: fixed; */
+            position: absolute;
             left: 0;
             top: 6.2rem;
             align-items: center;
