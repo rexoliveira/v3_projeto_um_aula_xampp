@@ -1,16 +1,16 @@
 <?php
 
-require_once "../php/conexao.php";
-$filtro = isset($_GET['filtro']) ? $_GET['filtro'] : "";
-$where = isset($_GET['palavraFiltro']) ? $_GET['palavraFiltro'] : "";
-if ($filtro != "" && $where != "todos") {
-    $sql = "SELECT * FROM usuario WHERE $where LIKE '%$filtro%' ORDER BY nome";
-} else {
-    $sql = "SELECT * FROM usuario ORDER BY nome;";
-};
-$consulta = pg_query($conexao, $sql);
-$registros = pg_num_rows($consulta);
-pg_close($conexao) ?>
+//require_once "../php/conexao.php";
+// $filtro = isset($_GET['filtro']) ? $_GET['filtro'] : "";
+// $where = isset($_GET['palavraFiltro']) ? $_GET['palavraFiltro'] : "";
+// if ($filtro != "" && $where != "todos") {
+//     $sql = "SELECT * FROM usuario WHERE $where LIKE '%$filtro%' ORDER BY nome";
+// } else {
+//     $sql = "SELECT * FROM usuario ORDER BY nome;";
+// };
+// $consulta = pg_query($conexao, $sql);
+// $registros = pg_num_rows($consulta);
+// pg_close($conexao) ?>
 
 <html lang="pt-BR">
 
