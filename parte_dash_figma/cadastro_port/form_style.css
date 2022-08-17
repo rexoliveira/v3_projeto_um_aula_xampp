@@ -1,4 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap');
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ROOT VARIAVEIS */
+
+:root {
+    /* --color-principal: #7380ec; */
+    --color-principal: #53a2c7fe;
+    --color-perigo: #ff7782;
+    --color-sucesso: #41f1b6;
+    --color-alerta: #ffbb55;
+
+    /* EU */
+    --color-analise: #55b0ff;
+    --color-logo-titulo: #61f889;
+    --color-card4: #55ffee;
+    --color-card5: #5560ff;
+    --color-card6: #eb55ff;
+
+    --color-info-escuro: #7d8da1;
+    --color-info-claro: #dce1eb;
+
+    --color-principal-variante: #111e88;
+
+    /* escuro-tema-variaveis { */
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-escuro: #edeffd;
+    --color-escuro-variante: #a3bdcc;
+    --color-claro: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-claro);
+
+    --card-boder-radius: 0.5rem;
+    --boder-radius-1: 0.4rem;
+    --boder-radius-2: 0.8rem;
+    --boder-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+}
+
+/* ==============THEMA DARK ====================*/
+.claro-tema-variaveis {
+    --color-background: #f6f6f9;
+    --color-white: #fff;
+    --color-escuro: #363949;
+    --color-escuro-variante: #677483;
+    --color-claro: rgba(132, 139, 200, 0.18);
+    --box-shadow: 0 2rem 3rem var(--color-claro);
+}
+
 
 * {
     padding: 0;
@@ -42,7 +93,9 @@
     margin-bottom: 5%;
     width: 50%;
     display: flex;
-    background-color: rgba(105, 147, 163, 0.8);
+    /* Original */
+    /* background-color: rgba(105, 147, 163, 0.8); */
+    background-color: var(--color-escuro);
     flex-wrap: wrap;
     align-items: center;
     padding: 90px;
@@ -56,9 +109,9 @@
     margin-bottom: 5%;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(105, 147, 163, 1);
+    background-color: var(--color-white);
     backdrop-filter: blur(40px);
-    padding: 30px 40px;
+    padding: 10px 20px;
     width: 50%;
     border-radius: 0 20px 20px 0;
 }
@@ -69,12 +122,13 @@
 
 .box_form p {
     font-weight: bold;
-    color: #3d3d3d;
+    color: var(--color-principal);
+    align-items: flex-end;
 }
 
 
 .box_form p a {
-    color: #03e8f8;
+    color: var(--color-escuro);
     text-decoration: none;
 }
 
@@ -87,7 +141,7 @@ form .input_group {
 }
 
 form .input_group label {
-    color: #3d3d3d;
+    color: var(--color-escuro);
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
@@ -96,7 +150,7 @@ form .input_group label {
 form .input_group input {
     width: 100%;
     height: 47px;
-    background-color: rgba(255, 255, 255, 0.32);
+    background-color: var(--color-escuro);
     border-radius: 10px;
     outline: none;
     border: 2px solid transparent;
@@ -107,25 +161,25 @@ form .input_group input {
 }
 
 form .input_group input:focus {
-    border-color: #03e8f8;
+    border-color: var(--color-principal);
 }
 
 form .input_group button:hover {
     /* hover passar o mouse por cima */
     box-shadow: 0 0 10px 0 #ecd6c4 inset, 0 0 10px 4px #ecd6c4;
-    color: rgb(0, 255, 47);
+    color: var(--color-white)
 }
 
 form .input_group button {
     font-weight: bold;
     width: 100%;
     height: 47px;
-    background: #03e8f8;
+    background: var(--color-principal);
     border-radius: 10px;
     outline: none;
     border: none;
     margin-top: 15px;
-    color: white;
+    color: var(--color-white);
     cursor: pointer;
     font-size: 16px;
 }
@@ -176,11 +230,11 @@ form .input_group button {
     
     .title{
         font-size: 30px;
-        color: white;
+        color: var(--color-white);
     }
 
     .box_form p a {
-        color: white;
+        color: var(--color-white);
         
     }
     
