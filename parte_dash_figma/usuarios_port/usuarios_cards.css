@@ -50,39 +50,44 @@
     --box-shadow: 0 2rem 3rem var(--color-claro);
 }
 
-.c-card {
-    background-color: var(--color-claro);
-    border-radius: 5px;
-    display: flex;
-    
-    flex-direction: column;
-    min-height: 200px;
-    min-width: 100px;
-    max-width: 400px;
-    border-width: 4px;
-    border-style: solid;
-    border-image:
-        linear-gradient(to bottom,
-        var(--color-principal),
-            rgba(0, 0, 0, 0)) 1 100%;
-            padding-top: 0px;
-}
-
-.imagem{
+.cartoes {
+    position: relative;
     width: 100%;
-}
-
-.l-cards {
     display: grid;
-    gap: 30px;
+    flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-content: center;
     justify-items: center;
     padding: 30px;
+    gap: 30px;
 }
 
-.u-text-placeholder {
+.c-card {
+    background-color: var(--color-claro);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    min-width: 100px;
+    max-width: 200px;
+    border-width: 4px;
+    border-style: solid;
+    border-image:
+        linear-gradient(to bottom,
+            var(--color-principal),
+            rgba(0, 0, 0, 0)) 1 100%;
+    padding-top: 0px;
+}
+
+.imagem {
+    max-width: 100%;
+}
+
+.u-text-placeholder h2 {
+    padding: 0.5rem;
+    word-wrap: break-word;
     color: var(--color-escuro);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .formF {
@@ -101,7 +106,7 @@
     background: var(--color-background);
     outline: none;
     user-select: none;
-    
+
 }
 
 
@@ -125,18 +130,33 @@
 
 h5 {
     margin: 10px 0px 0px 30px;
-    color:var(--color-escuro);
+    color: var(--color-escuro);
     font-weight: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9rem;
 }
 
-#botao_filtro{
+#botao_filtro {
     background: var(--color-escuro);
     color: var(--color-white);
     border-radius: 5px;
     font-size: 15px;
     cursor: pointer;
     padding: 0.2rem;
-    
+
+}
+
+
+@media screen and (max-width : 770px) {
+    .formF {
+        margin: 3rem 0 0 1.5rem;
+        padding: 0.6rem;
+        
+    }
+}
+
+@media screen and (max-width : 535px) {
+    .formF {
+        margin: 5rem 0 0 1.5rem;
+    }
 }
