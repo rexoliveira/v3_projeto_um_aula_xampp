@@ -14,7 +14,7 @@ if ($filtro != "" && $where != "todos") {
 
 $consulta = pg_query($conexao, $sql);
 $registros = pg_num_rows($consulta);
-pg_close($conexao) ?>
+pg_close($conexao) 
 
 ?>
 <!DOCTYPE html>

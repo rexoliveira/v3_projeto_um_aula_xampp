@@ -13,9 +13,6 @@ if (!$conexao) {
     die("Não foi possível se conectar ao banco de dados.");
 }
 
-
-
-
 //PDO
 // $servidor = "ec2-3-219-229-143.compute-1.amazonaws.com";
 // $porta = 5432;
