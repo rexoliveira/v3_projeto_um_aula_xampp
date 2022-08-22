@@ -72,6 +72,7 @@
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   transition: all 0.5s ease;
+  
 
 }
 
@@ -100,6 +101,8 @@
 .content-table th,
 .content-table td {
   padding: 12px 15px;
+  text-align: center;
+  border-bottom: 0.1rem solid var(--color-escuro);
 }
 
 .content-table tbody tr {
@@ -147,12 +150,14 @@
     transition: all 0.5s ease;
     padding: 1rem 0.3rem;
   }
-
-  .content-table tbody tr td {
+  /* Transforma em coluna na responsividade */
+  /* .content-table tbody tr td {
     display: flex;
     flex-direction: column;
     transition: all 0.5s ease;
-  }
+  } */
+
+  
 
   .title_iti {
     justify-content: none;

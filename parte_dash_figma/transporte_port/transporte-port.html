@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0" />
 
     <link
       rel="shortcut icon"
@@ -13,10 +13,6 @@
 
     <link rel="stylesheet" href="form_style.css" />
 
-    <!--Script abaixo faz parte da configuração de valida email- -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="../../script/mascaras.js" defer></script>
-    <script src="../../script/valida_senha.js" defer></script>
     <script src="../../script/validate_email.js" defer></script>
 
     <link
@@ -27,6 +23,10 @@
 
     <link rel="stylesheet" href="../menu_topo.css" />
     <script src="../menu_topo.js" defer></script>
+
+    <!-- Se sua tag de script estiver na cabeça, o JavaScript será carregado antes do seu HTML, portanto, o elemento que você está tentando acessar ainda não existe no DOM. Você precisará adicionar deferao seu script -->
+    <script src="dados_transportes.js" defer></script>
+    <script src="script_dados_transportes.js" defer></script>
     <!-- ####################################################################################################### -->
 
     <!-- MATERIAL CDN - ICONS DO GOOGLE -->
@@ -34,8 +34,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
-
-    <script src="../script.js" defer></script>
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="table_style.css" />
@@ -100,51 +98,51 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th >01</th>
-              <th >10:00</th>
-              <th >10:15</th>
-              <th >Trex</th>
-              <th >Segunda/Sexta</th>
+            <!-- <tr>
+              <td >01</td>
+              <td >10:00</td>
+              <td >10:15</td>
+              <td >Trex</td>
+              <td >Segunda/Sexta</td>
             </tr>
             <tr>
-              <th>02</th>
-              <th>11:00</th>
-              <th>11:15</th>
-              <th>Trex</th>
-              <th>Sabado/Domingo</th>
-            </tr>
+              <td>02</td>
+              <td>11:00</td>
+              <td>11:15</td>
+              <td>Trex</td>
+              <td>Sabado/Domingo</td>
+            </tr> -->
             <!-- dar um exemplo de linha ativa -->
-            <tr class="active-row">
-              <th>03</th>
-              <th>12:00</th>
-              <th>12:15</th>
-              <th>Trex</th>
-              <th>Feriados</th>
+           <!--  <tr class="active-row">
+              <td>03</td>
+              <td>12:00</td>
+              <td>12:15</td>
+              <td>Trex</td>
+              <td>Feriados</td>
             </tr>
 
             <tr>
-              <th>04</th>
-              <th>9:00</th>
-              <th>9:15</th>
-              <th>Trex</th>
-              <th>Segunda/Sexta</th>
+              <td>04</td>
+              <td>9:00</td>
+              <td>9:15</td>
+              <td>Trex</td>
+              <td>Segunda/Sexta</td>
             </tr>
             <tr>
-              <th>05</th>
-              <th>10:00</th>
-              <th>10:15</th>
-              <th>Trex</th>
-              <th>Sabado/Domingo</th>
-            </tr>
+              <td>05</td>
+              <td>10:00</td>
+              <td>10:15</td>
+              <td>Trex</td>
+              <td>Sabado/Domingo</td>
+            </tr> -->
             <!-- dar um exemplo de linha ativa -->
-            <tr class="active-row">
-              <th>06</th>
-              <th>11:00</th>
-              <th>11:15</th>
-              <th>Trex</th>
-              <th>Feriados</th>
-            </tr>
+            <!-- <tr class="active-row">
+              <td>06</td>
+              <td>11:00</td>
+              <td>11:15</td>
+              <td>Trex</td>
+              <td>Feriados</td>
+            </tr> -->
           </tbody>
         </table>
       </main>
