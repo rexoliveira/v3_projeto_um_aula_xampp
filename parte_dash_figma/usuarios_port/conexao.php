@@ -27,9 +27,9 @@ try {
     $dsn = "pgsql:host=$servidor;port=$porta;dbname=$bancoDeDados;";
 
     
-$pdo = new PDO($dsn, $usuario, $senha, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+$conexao = new PDO($dsn, $usuario, $senha, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
-    if ($pdo) {
+    if ($conexao) {
         //echo "Conectado ao banco de dados $db com sucesso!";
     }
 }
@@ -37,7 +37,7 @@ catch (PDOException $e) {
     die($e->getMessage());
 }
 finally {
-    if ($pdo) {
-        $pdo = null;
+    if ($conexao) {
+        $conexao = null;
     }
 }
