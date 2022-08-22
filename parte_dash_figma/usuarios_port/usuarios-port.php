@@ -12,9 +12,9 @@ if ($filtro != "" && $where != "todos") {
     $sql = "SELECT * FROM usuario ORDER BY nome;";
 };
 
-$consulta = pg_query($conexao, $sql);
-$registros = pg_num_rows($consulta);
-pg_close($conexao) ?>
+$consulta = $conexao->query($sql);
+//$registros = pg_num_rows($consulta);
+//pg_close($conexao) ?>
 
 
 <!DOCTYPE html>
