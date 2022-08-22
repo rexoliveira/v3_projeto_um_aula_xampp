@@ -129,7 +129,6 @@ body {
 
 .container {
     padding: 0;
-    position: fixed;
     display: grid;
     /* Distancia sidebar da lateral esquerda */
     width: 100%;

@@ -41,9 +41,8 @@ pg_close($conexao) ?>
 />
 
 <link rel="stylesheet" href="style.css" />
-
-<link rel="stylesheet" href="usuarios_cards.css">
 <script src="script.js"defer></script>
+<link rel="stylesheet" href="usuarios_cards.css">
     <title>Usuários-port</title>
   </head>
 
@@ -109,11 +108,11 @@ pg_close($conexao) ?>
             $n_filtro = "Celular";
         }
         if ($filtro != "" && $where != "todos") {
-            print "<h5>Resultado do filtro \"$n_filtro\" contendo \"$filtro\". </h5>";
+            print "<h5>Resultado do filtro '$n_filtro' contendo '$filtro'. </h5>";
         }else{
-            print "<h5>Escolha outro filtro no lugar de \"todos\" para uma informação específica. </h5>";
+            print "<h5>Escolha outro filtro no lugar de 'todos' para uma informação específica. </h5>";
         }
-        print '<section class="l-cards">';
+        print "<section class=\"cartoes\">";
         /* print "<h2>$registros resgistros encontrados.</h2>" */
         while ($exibirRegistro = pg_fetch_array($consulta)) {
 
@@ -122,21 +121,16 @@ pg_close($conexao) ?>
             $email = $exibirRegistro[2];
             $tel = $exibirRegistro[3];
 
-
-            /* print "<article>";
-            print "<h4>Dados do Cliente </h4>";
-            print "<h3>ID: $id - Nome: $nome</h3> ";
-            print "<h3>E-mai: $email - Celular: $tel</h3>"; */
-            print "<article class=\"c-card\">";
-            print "<section class=\"c-card_image\">";
-            print "<img class=\"imagem\"src=\"https://as1.ftcdn.net/v2/jpg/01/71/25/36/1000_F_171253635_8svqUJc0BnLUtrUOP5yOMEwFwA8SZayX.jpg\" alt=\"image placeholder\">";
+            print "<article class='c-card'>";
+            print "<section class='c-card_image'>";
+            print "<img class='imagem'src='https://as1.ftcdn.net/v2/jpg/01/71/25/36/1000_F_171253635_8svqUJc0BnLUtrUOP5yOMEwFwA8SZayX.jpg' alt='image placeholder'>";
             print "</section>";
-            print "<section class=\"c-card_content\">";
+            print "<section class='c-card_content'>";
 
-            print "<span class=\"u-text-placeholder\" style=\"width: 30%\"><h2 class='dados'>$nome</h2></span>";
+            print "<span class='u-text-placeholder' ><h2 class='dados'>$nome</h2></span>";
 
-            print " <span class=\"u-text-placeholder\" style=\"width: 85%\"><h2 class='dados'>$email</h2></span>";
-            print "<span class=\"u-text-placeholder\" style=\"width: 60%\"><h2 class='dados'>$tel</h2></span>";
+            print " <span class='u-text-placeholder' ><h2 class='dados'>$email</h2></span>";
+            print "<span class='u-text-placeholder' ><h2 class='dados'>$tel</h2></span>";
             print "</section>";
             print "</article>";
         }
