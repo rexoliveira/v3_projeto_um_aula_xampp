@@ -12,11 +12,14 @@ if ($filtro != "" && $where != "todos") {
     $sql = "SELECT * FROM usuario ORDER BY nome;";
 };
 
-$consulta = pg_query($conexao, $sql);
+/* $consulta = pg_query($conexao, $sql);
 $registros = pg_num_rows($consulta);
-pg_close($conexao) ?>
+pg_close($conexao) ?> */
 
-
+/* PDO */
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -117,7 +120,10 @@ pg_close($conexao) ?>
         }
         print "<section class=\"cartoes\">";
         /* print "<h2>$registros resgistros encontrados.</h2>" */
-        while ($exibirRegistro = pg_fetch_array($consulta)) {
+
+        /* PDO */
+        while($exibirRegistro = $stmt->fetch()){
+        //while ($exibirRegistro = pg_fetch_array($consulta)) {
 
             $id = $exibirRegistro[0];
             $nome = $exibirRegistro[1];
