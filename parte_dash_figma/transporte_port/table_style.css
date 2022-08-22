@@ -114,7 +114,7 @@
 }
 
 .content-table tbody tr:last-of-type {
-  border-bottom: 2px solid var(--color-card4);
+  border-bottom: 2px solid var(--color-principal);
 }
 
 .content-table tbody tr.active-row {
