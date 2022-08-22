@@ -51,9 +51,9 @@ servicos.forEach(function (service) {
 /* GERA TELA EM FULLSCREEN */
 
 function genioFullScreen() {
-  if (!document.fullscreenElement && // alternative standard method
+  if (!document.fullscreenElement && // método padrão alternativo
   !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
-    // current working methods
+    // métodos de trabalho atuais
     if (document.documentElement.requestFullscreen) {
       document.documentElement.requestFullscreen();
     } else if (document.documentElement.msRequestFullscreen) {
