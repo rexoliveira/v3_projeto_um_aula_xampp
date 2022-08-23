@@ -64,28 +64,33 @@
     justify-content: center;
     padding-top: 38px;
     max-height: 65vh;
+    transition: all 0.5s ease;
 }
 
-.button_cadas_login{
-    padding: 5px ;
+.button_cadas_login {
+    padding: 5px;
     background: none;
     border-style: none;
+    transition: all 0.5s ease;
 }
 
 .w50 {
     width: 50%;
     float: left;
+    transition: all 0.5s ease;
 
 }
 
 .c_senha {
     padding-left: 10px;
+    transition: all 0.5s ease;
 }
 
 .box {
     display: flex;
     flex-wrap: wrap;
-   max-width: 930px;
+    max-width: 930px;
+    transition: all 0.5s ease;
 }
 
 .box_image {
@@ -93,13 +98,12 @@
     margin-bottom: 5%;
     width: 50%;
     display: flex;
-    /* Original */
-    /* background-color: rgba(105, 147, 163, 0.8); */
     background-color: var(--color-escuro);
     flex-wrap: wrap;
     align-items: center;
     padding: 90px;
     border-radius: 20px 0 0 20px;
+    
 }
 
 
@@ -114,30 +118,36 @@
     padding: 10px 20px;
     width: 50%;
     border-radius: 0 20px 20px 0;
+    
 }
 
 .box_form h2 {
     font-size: 30px;
+    
 }
 
 .box_form p {
     font-weight: bold;
     color: var(--color-principal);
     align-items: flex-end;
+    
 }
 
 
 .box_form p a {
     color: var(--color-escuro);
     text-decoration: none;
+   
 }
 
 .box_form form {
     margin: 20px 0;
+   
 }
 
 form .input_group {
     margin-bottom: 15px;
+    transition: all 0.5s ease;
 }
 
 form .input_group label {
@@ -145,6 +155,7 @@ form .input_group label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
+    transition: all 0.5s ease;
 }
 
 form .input_group input {
@@ -156,18 +167,21 @@ form .input_group input {
     border: 2px solid transparent;
     padding: 15px;
     font-size: 15px;
-    color: #616161;
+    color: var(--color-background);
     transition: all 0.4s ease;
+    transition: all 0.5s ease;
 }
 
 form .input_group input:focus {
     border-color: var(--color-principal);
+    transition: all 0.5s ease;
 }
 
 form .input_group button:hover {
     /* hover passar o mouse por cima */
     box-shadow: 0 0 10px 0 #ecd6c4 inset, 0 0 10px 4px #ecd6c4;
-    color: var(--color-white)
+    color: var(--color-white);
+    transition: all 0.5s ease;
 }
 
 form .input_group button {
@@ -182,6 +196,7 @@ form .input_group button {
     color: var(--color-white);
     cursor: pointer;
     font-size: 16px;
+    transition: all 0.5s ease;
 }
 
 
@@ -196,47 +211,82 @@ form .input_group button {
     .box {
         width: 100%;
         margin: 10%;
+        transition: all 0.5s ease;
     }
 
     .box_form {
         width: 100%;
         border-radius: 20px;
         margin: 10%;
+        transition: all 0.5s ease;
     }
 }
 
-@media (max-width:705px) {
-    .w50 {
-        width: 100%;
-        padding: 0;
-    }
+@media (max-width:590px) {
     .box {
-        width: 100%;
-        margin: 10%;
-        
+        margin: 1rem;
+        position: absolute;
+        top: 2rem;
+        padding: 1rem;
+        overflow-y: scroll;
+        height: 100vh;
+
     }
 
     .box_form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0.5rem;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .texto_acima_form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.5s ease;
+    }
+
+    .texto_acima_form h2 {
+        font-size: 1.5rem;
+        margin-left: 0.4rem;
+        transition: all 0.5s ease;
+    }
+
+    .texto_acima_form p {
+        font-size: 1rem;
+        margin-left: 0.4rem;
+        transition: all 0.5s ease;
+    }
+
+    #form_cadastro {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        /*  height: 100%; */
+        margin-top: 0;
+        margin-bottom: 0;
+        flex-wrap: nowrap;
+        padding: 0.5rem;
         width: 100%;
-        border-radius: 20px;
-        margin: 10%;
+        background-color: var(--color-background);
+        border-radius: 0.5rem;
+        transition: all 0.5s ease;
+
     }
 
-    
-
-}
-
-@media (max-width:437px) {
-    
-    .title{
-        font-size: 30px;
-        color: var(--color-white);
+    .input_group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        transition: all 0.5s ease;
     }
 
-    .box_form p a {
-        color: var(--color-white);
-        
-    }
-    
+
 
 }

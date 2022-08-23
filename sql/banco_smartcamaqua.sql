@@ -39,8 +39,8 @@ SET default_table_access_method = heap;
 
 CREATE TABLE public.usuario (
     id integer NOT NULL,
-    nome character varying(20) NOT NULL,
-    email character varying(150) NOT NULL,
+    nome character varying(255) NOT NULL,
+    email character varying(255) NOT NULL,
     tel character varying(15) NOT NULL,
     password character varying(1000) NOT NULL
 );

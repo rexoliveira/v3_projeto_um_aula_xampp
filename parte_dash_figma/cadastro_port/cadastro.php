@@ -113,22 +113,24 @@
             />
           </section>
           <section class="box_form">
-            <h2>Criar Conta</h2>
-            <p>
-              Já é um menbro?
-              <!-- <a href="#">Login</a> --><button
-                class="button_cadas_login"
-                type="button"
-              >
-                <a class="cabecalho_menu_item" href="../page/login.php"
-                  >Login</a
+            <section class="texto_acima_form">
+              <h2>Criar Conta</h2>
+              <p>
+                Já é um menbro?
+                <!-- <a href="#">Login</a> --><button
+                  class="button_cadas_login"
+                  type="button"
                 >
-              </button>
-            </p>
+                  <a class="cabecalho_menu_item" href=""
+                    >Login</a
+                  >
+                </button>
+              </p>
+            </section>
             <form
               name="cadastro_form"
               id="form_cadastro"
-              action="../php/processa.php"
+              action="processa.php"
               method="POST"
             >
               <section class="input_group">
