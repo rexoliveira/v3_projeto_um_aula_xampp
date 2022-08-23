@@ -7,19 +7,17 @@ $filtro = isset($_GET['filtro']) ? $_GET['filtro'] : "";
 $where = isset($_GET['palavraFiltro']) ? $_GET['palavraFiltro'] : "";
 
 if ($filtro != "" && $where != "todos") {
-    $sql = "SELECT * FROM usuario WHERE $where LIKE '%$filtro%' ORDER BY nome";
-} else {
-    $sql = "SELECT * FROM usuario ORDER BY nome;";
-};
-
-/* $consulta = pg_query($conexao, $sql);
-$registros = pg_num_rows($consulta);
-pg_close($conexao); */ 
+  $sql = "SELECT * FROM usuario WHERE $where LIKE '%$filtro%' ORDER BY nome";
+}
+else {
+  $sql = "SELECT * FROM usuario ORDER BY nome;";
+}
+;
 
 /* PDO */
-$resultado =  $conexao->prepare($sql);
+$resultado = $conexao->prepare($sql);
 $resultado->execute();
-var_dump($resultado);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -76,7 +74,7 @@ var_dump($resultado);
         <!-- BARRA-LATERAL-ESQUERDA -->
         <section class="sidebar" id="sidebar">
           <!-- Removido função class="active" -->
-          <a href="../dash_figma.html">
+          <a href="../dash_figma.php">
             <span class="material-symbols-outlined"> space_dashboard </span>
             <h3>Retornar a Dashboard</h3>
           </a>
@@ -107,46 +105,49 @@ var_dump($resultado);
         </section>
 
         <?php
-        if ($where == 'email') {
-            $n_filtro = 'E-mail';
-        } elseif ($where == 'nome') {
-            $n_filtro = "Nome";
-        } elseif ($where == 'tel') {
-            $n_filtro = "Celular";
-        }
-        if ($filtro != "" && $where != "todos") {
-            print "<h5>Resultado do filtro '$n_filtro' contendo '$filtro'. </h5>";
-        }else{
-            print "<h5>Escolha outro filtro no lugar de 'todos' para uma informação específica. </h5>";
-        }
-        print "<section class=\"cartoes\">";
-        /* print "<h2>$registros resgistros encontrados.</h2>" */
-        /* while ($exibirRegistro = pg_fetch_array($consulta)) { */
-        while($sql = $sql_conteudo ->fetch(PDO::FETCH_ASSOC))  {
+if ($where == 'email') {
+  $n_filtro = 'E-mail';
+}
+elseif ($where == 'nome') {
+  $n_filtro = "Nome";
+}
+elseif ($where == 'tel') {
+  $n_filtro = "Celular";
+}
+if ($filtro != "" && $where != "todos") {
+  print "<h5>Resultado do filtro '$n_filtro' contendo '$filtro'. </h5>";
+}
+else {
+  print "<h5>Escolha outro filtro no lugar de 'todos' para uma informação específica. </h5>";
+}
+print "<section class=\"cartoes\">";
+/* print "<h2>$registros resgistros encontrados.</h2>" */
 
-            $id = $sql_conteudo['id'];
-            $nome = $sql_conteudo['nome'];
-            $email = $sql_conteudo['email'];
-            $tel = $sql_conteudo['tel'];
+  while ($sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC)) {
 
-            print "<article class='c-card'>";
-            print "<section class='c-card_image'>";
-            print "<img class='imagem'src='https://as1.ftcdn.net/v2/jpg/01/71/25/36/1000_F_171253635_8svqUJc0BnLUtrUOP5yOMEwFwA8SZayX.jpg' alt='image placeholder'>";
-            print "</section>";
-            print "<section class='c-card_content'>";
+  $id = $sql_conteudo['id'];
+  $nome = $sql_conteudo['nome'];
+  $email = $sql_conteudo['email'];
+  $tel = $sql_conteudo['tel'];
 
-            print "<span class='u-text-placeholder' ><h2 class='dados'>$nome</h2></span>";
+  print "<article class='c-card'>";
+  print "<section class='c-card_image'>";
+  print "<img class='imagem'src='https://as1.ftcdn.net/v2/jpg/01/71/25/36/1000_F_171253635_8svqUJc0BnLUtrUOP5yOMEwFwA8SZayX.jpg' alt='image placeholder'>";
+  print "</section>";
+  print "<section class='c-card_content'>";
 
-            print " <span class='u-text-placeholder' ><h2 class='dados'>$email</h2></span>";
-            print "<span class='u-text-placeholder' ><h2 class='dados'>$tel</h2></span>";
-            print "</section>";
-            print "</article>";
-        }
-        print "</section>";
+  print "<span class='u-text-placeholder' ><h2 class='dados'>$nome</h2></span>";
 
-        /* mysqli_close($conexao); */
+  print " <span class='u-text-placeholder' ><h2 class='dados'>$email</h2></span>";
+  print "<span class='u-text-placeholder' ><h2 class='dados'>$tel</h2></span>";
+  print "</section>";
+  print "</article>";
+}
+print "</section>";
 
-        ?>
+/* mysqli_close($conexao); */
+
+?>
     </main>
 
       <!-- ----------------------FIM MAIN---------------------- -->

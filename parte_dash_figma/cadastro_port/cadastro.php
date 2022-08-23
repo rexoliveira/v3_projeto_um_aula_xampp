@@ -62,7 +62,7 @@
         </section>
         <section class="modal-corpo">
           <iframe
-            src="../contato_modal/contato_modal.html"
+            src="../contato_modal/contato_modal.php"
             frameborder="0"
           ></iframe>
         </section>
@@ -90,7 +90,7 @@
         <!-- BARRA-LATERAL-ESQUERDA -->
         <section class="sidebar" id="sidebar">
           <!-- Removido função class="active" -->
-          <a href="../dash_figma.html">
+          <a href="../dash_figma.php">
             <span class="material-symbols-outlined"> space_dashboard </span>
             <h3>Retornar a Dashboard</h3>
           </a>

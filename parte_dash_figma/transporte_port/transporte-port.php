@@ -65,7 +65,7 @@
         <!-- BARRA-LATERAL-ESQUERDA -->
         <section class="sidebar" id="sidebar">
           <!-- Removido função class="active" -->
-          <a href="../dash_figma.html">
+          <a href="../dash_figma.php">
             <span class="material-symbols-outlined"> space_dashboard </span>
             <h3>Retornar a Dashboard</h3>
           </a>

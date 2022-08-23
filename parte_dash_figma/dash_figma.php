@@ -84,7 +84,7 @@
         </section>
         <section class="modal-corpo">
           <iframe
-            src="./contato_modal/contato_modal.html"
+            src="./contato_modal/contato_modal.php"
             frameborder="0"
           ></iframe>
         </section>
@@ -136,7 +136,7 @@
           </li>
           <li>
             <a
-              href="transporte_port/transporte-port.html"
+              href="transporte_port/transporte-port.php"
               ><i class="fa fa-bus"></i> Transporte</a
             >
           </li>
@@ -377,7 +377,7 @@
         <!-- BARRA-LATERAL-ESQUERDA -->
         <section class="sidebar" id="sidebar">
           <!-- Removido função class="active" -->
-          <a href="./cadastro_port/cadastro.html">
+          <a href="./cadastro_port/cadastro.php">
             <span class="material-symbols-outlined"> person_add </span>
             <h3>Cadastra Usuário</h3>
           </a>
