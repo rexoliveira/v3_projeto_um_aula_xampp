@@ -11,36 +11,29 @@
       type="image/x-icon"
     />
 
-    <link rel="stylesheet" href="form_style.css" />
-
+    
     <!--Script abaixo faz parte da configuração de valida email- -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="../../script/mascaras.js" defer></script>
-    <script src="../../script/valida_senha.js" defer></script>
-    <script src="../../script/validate_email.js" defer></script>
+    <script src="mascaras.js" defer></script>
+    <script src="valida_senha.js" defer></script>
+    <script src="validate_email.js" defer></script>
+    <script src="cadastro.js" defer></script>
 
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,300,700"
       rel="stylesheet"
       type="text/css"
-    />
-
-    <link rel="stylesheet" href="../menu_topo.css" />
-    <script src="../menu_topo.js" defer></script>
-    <!-- ####################################################################################################### -->
-
+      />
+      <link rel="stylesheet" href="form_style.css" />
+      <link rel="stylesheet" href="style.css" />
+    
+    
     <!-- MATERIAL CDN - ICONS DO GOOGLE -->
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-    />
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>   
 
-    <link rel="stylesheet" href="style.css" />
-
-    <script src="../script.js" defer></script>
-    <script src="../servicos.js"></script>
-    <script src="../../script/data_hora.js"></script>
-
+  
     <!-- MODAL -->
     <script src="../contato_modal/modal.js" defer></script>
     <link rel="stylesheet" href="../contato_modal/modal.css" />
