@@ -26,7 +26,7 @@ try {
 $conexao = new PDO($dsn, $usuario, $senha, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
     if ($conexao) {
-        echo "Conectado ao banco de dados $db com sucesso!";
+        //echo "Conectado ao banco de dados $db com sucesso!";
     }
 }
 catch (PDOException $e) {
