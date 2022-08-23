@@ -12,9 +12,13 @@ if ($filtro != "" && $where != "todos") {
     $sql = "SELECT * FROM usuario ORDER BY nome;";
 };
 
-$consulta = pg_query($conexao, $sql);
+/* $consulta = pg_query($conexao, $sql);
 $registros = pg_num_rows($consulta);
-pg_close($conexao) 
+pg_close($conexao); */ 
+
+/* PDO */
+$resultado =  $conexao->prepare($sql);
+$resultado->execute();
 
 ?>
 <!DOCTYPE html>
@@ -117,12 +121,13 @@ pg_close($conexao)
         }
         print "<section class=\"cartoes\">";
         /* print "<h2>$registros resgistros encontrados.</h2>" */
-        while ($exibirRegistro = pg_fetch_array($consulta)) {
+        /* while ($exibirRegistro = pg_fetch_array($consulta)) { */
+        while($sql = $sql_conteudo ->fetch(PDO::FETCH_ASSOC))  {
 
-            $id = $exibirRegistro[0];
-            $nome = $exibirRegistro[1];
-            $email = $exibirRegistro[2];
-            $tel = $exibirRegistro[3];
+            $id = $sql_conteudo['id'];
+            $nome = $sql_conteudo['nome'];
+            $email = $sql_conteudo['email'];
+            $tel = $sql_conteudo['tel'];
 
             print "<article class='c-card'>";
             print "<section class='c-card_image'>";
