@@ -122,8 +122,10 @@ else {
 }
 print "<section class=\"cartoes\">";
 /* print "<h2>$registros resgistros encontrados.</h2>" */
-
+  $contadorImg = 0 ;
   while ($sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC)) {
+
+  $contadorImg++;
 
   $id = $sql_conteudo['id'];
   $nome = $sql_conteudo['nome'];
@@ -132,7 +134,12 @@ print "<section class=\"cartoes\">";
 
   print "<article class='c-card'>";
   print "<section class='c-card_image'>";
-  print "<img class='imagem'src='https://as1.ftcdn.net/v2/jpg/01/71/25/36/1000_F_171253635_8svqUJc0BnLUtrUOP5yOMEwFwA8SZayX.jpg' alt='image placeholder'>";
+  /* print "<img class='imagem'src='https://as1.ftcdn.net/v2/jpg/01/71/25/36/1000_F_171253635_8svqUJc0BnLUtrUOP5yOMEwFwA8SZayX.jpg' alt='image placeholder'>"; */
+  print"<a href='' class='btn_editar'>
+  <span class='material-symbols-outlined'> edit </span></a>";
+  print"<a href='' class='btn_delete'>
+  <span class='material-symbols-outlined'> delete </span></a>";
+  print "<img class='imagem'src='../../image/avatar/${contadorImg}.png' alt='image avatar'>";
   print "</section>";
   print "<section class='c-card_content'>";
 
@@ -140,6 +147,8 @@ print "<section class=\"cartoes\">";
 
   print " <span class='u-text-placeholder' ><h2 class='dados'>$email</h2></span>";
   print "<span class='u-text-placeholder' ><h2 class='dados'>$tel</h2></span>";
+  print"<a href='' class='btn_detalhes'>
+  <span class='material-symbols-outlined'> loupe </span></a>";
   print "</section>";
   print "</article>";
 }
