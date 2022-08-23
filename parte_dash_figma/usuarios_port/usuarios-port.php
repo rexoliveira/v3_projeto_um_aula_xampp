@@ -19,7 +19,7 @@ pg_close($conexao); */
 /* PDO */
 $resultado =  $conexao->prepare($sql);
 $resultado->execute();
-
+var_dump($resultado);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
