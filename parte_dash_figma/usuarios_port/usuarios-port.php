@@ -17,6 +17,7 @@ $registros = pg_num_rows($consulta);
 pg_close($conexao); */ 
 
 /* PDO */
+
 $resultado =  $conexao->prepare($sql);
 $resultado->execute();
 
