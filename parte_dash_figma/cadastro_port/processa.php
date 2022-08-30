@@ -1,16 +1,24 @@
 <?php
 require_once "conexao.php";
 
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$telefone = $_POST['telefone'];
-$password = $_POST['senha'];
+$nome = isset($_POST['nome']) ? isset($_POST['nome']) : "";
+$email = isset($_POST['email']) ? isset($_POST['email']) : "";
+$telefone = isset($_POST['telefone']) ? isset($_POST['telefone']) : "";
+$password = isset($_POST['senha']) ? isset($_POST['senha']) : "";
 
+$nome = filter_input_array($nome, FILTER_SANITIZE_STRING);
+$email = filter_input_array($email, FILTER_VALIDATE_EMAIL);
+$telefone = filter_input_array($telefone,FILTER_SANITIZE_STRING);
+$password = filter_input_array($password,FILTER_SANITIZE_STRING);
 
-$sql = "insert into usuario (nome, email, tel, password) values('$nome','$email','$telefone','$password' )";
+$sql = 'INSERT INTO usuario (nome, email, tel, password) VALUES(:nome,:email,:telefone,:password )';
 
 /* PDO */
 $resultado = $conexao->prepare($sql);
+$resultado-> bindParam(':nome', $nome, PDO::PARAM_STR);
+$resultado-> bindParam(':email', $email, PDO::PARAM_STR);
+$resultado-> bindParam(':telefone', $telefone, PDO::PARAM_STR);
+$resultado-> bindValue(':password', $password, PDO::PARAM_STR);
 $resultado->execute();
 
 ?>
@@ -117,20 +125,20 @@ $resultado->execute();
       <main>
         <?php
 
-          // $sqlQuery = "INSERT INTO employee(user_id,name,address,city) VALUES(:user_id,:name,:address,:city) RETURNING employee_id";
+// $sqlQuery = "INSERT INTO employee(user_id,name,address,city) VALUES(:user_id,:name,:address,:city) RETURNING employee_id";
 
-          // $statement = $this->prepare($sqlQuery);
+// $statement = $this->prepare($sqlQuery);
 
-          // $a = "2002-03-11 12:01AM";
+// $a = "2002-03-11 12:01AM";
 
-          // $statement->bindParam(":user_id", $employee->getUserId(), PDO::PARAM_INT);
-          // $statement->bindParam(":name", $employee->getName(), PDO::PARAM_STR);
-          // $statement->bindParam(":address", $employee->getAddress(), PDO::PARAM_STR);
-          // $statement->bindParam(":city", $employee->getCity(), PDO::PARAM_STR);
-          // $statement->execute();
+// $statement->bindParam(":user_id", $employee->getUserId(), PDO::PARAM_INT);
+// $statement->bindParam(":name", $employee->getName(), PDO::PARAM_STR);
+// $statement->bindParam(":address", $employee->getAddress(), PDO::PARAM_STR);
+// $statement->bindParam(":city", $employee->getCity(), PDO::PARAM_STR);
+// $statement->execute();
 
-          // $result = $statement->fetch(PDO::FETCH_ASSOC);
-          // return $result["employee_id"];
+// $result = $statement->fetch(PDO::FETCH_ASSOC);
+// return $result["employee_id"];
 /* if ($linhas == 1) { */
 if (true) {
   echo "<h2>Cadastro de " . $_POST['nome'] . " efetudo com sucesso!</h2>";
