@@ -1,24 +1,24 @@
 <?php
 require_once "conexao.php";
 
-$nome = isset($_POST['nome']) ? isset($_POST['nome']) : "";
-$email = isset($_POST['email']) ? isset($_POST['email']) : "";
-$telefone = isset($_POST['telefone']) ? isset($_POST['telefone']) : "";
-$password = isset($_POST['senha']) ? isset($_POST['senha']) : "";
+$nome = isset($_POST['nome']) ? $_POST['nome'] : "";
+$email = isset($_POST['email']) ? $_POST['email'] : "";
+$telefone = isset($_POST['telefone']) ? $_POST['telefone'] : "";
+$password = isset($_POST['senha']) ? $_POST['senha'] : "";
 
-$nome = filter_input_array($nome, FILTER_SANITIZE_STRING);
-$email = filter_input_array($email, FILTER_VALIDATE_EMAIL);
-$telefone = filter_input_array($telefone,FILTER_SANITIZE_STRING);
-$password = filter_input_array($password,FILTER_SANITIZE_STRING);
+$nomeFilter = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+$emailFilter = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+$telefoneFilter = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING);
+$passwordFilter = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
 
 $sql = 'INSERT INTO usuario (nome, email, tel, password) VALUES(:nome,:email,:telefone,:password )';
 
 /* PDO */
 $resultado = $conexao->prepare($sql);
-$resultado-> bindParam(':nome', $nome, PDO::PARAM_STR);
-$resultado-> bindParam(':email', $email, PDO::PARAM_STR);
-$resultado-> bindParam(':telefone', $telefone, PDO::PARAM_STR);
-$resultado-> bindValue(':password', $password, PDO::PARAM_STR);
+$resultado-> bindParam(':nome', $nomeFilter, PDO::PARAM_STR);
+$resultado-> bindParam(':email', $emailFilter, PDO::PARAM_STR);
+$resultado-> bindParam(':telefone', $telefoneFilter, PDO::PARAM_STR);
+$resultado-> bindValue(':password', $passwordFilter, PDO::PARAM_STR);
 $resultado->execute();
 
 ?>
