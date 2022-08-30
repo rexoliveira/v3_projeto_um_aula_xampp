@@ -6,10 +6,10 @@ $email = isset($_POST['email']) ? $_POST['email'] : "";
 $telefone = isset($_POST['telefone']) ? $_POST['telefone'] : "";
 $password = isset($_POST['senha']) ? $_POST['senha'] : "";
 
-$nomeFilter = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-$emailFilter = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-$telefoneFilter = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING);
-$passwordFilter = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
+$nomeFilter = filter_input( $nome, FILTER_SANITIZE_STRING);
+$emailFilter = filter_input($email, FILTER_VALIDATE_EMAIL);
+$telefoneFilter = filter_input($telefone, FILTER_SANITIZE_STRING);
+$passwordFilter = filter_input($password, FILTER_SANITIZE_STRING);
 
 $sql = 'INSERT INTO usuario (nome, email, tel, password) VALUES(:nome,:email,:telefone,:password )';
 
