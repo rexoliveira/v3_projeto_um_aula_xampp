@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -68,6 +73,7 @@
       src="//code.tidio.co/1aqgswzm5wfvfba4mfj0anecdshqfdcq.js"
       async
     ></script>
+    
   </head>
 
   <body>

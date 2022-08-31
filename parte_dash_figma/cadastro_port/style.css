@@ -12,6 +12,7 @@
     --color-alerta: #ffbb55;
 
     /* EU */
+    --color-erro:#cc0000;
     --color-analise: #55b0ff;
     --color-logo-titulo: #61f889;
     --color-card4: #55ffee;
@@ -48,6 +49,11 @@
     --color-escuro-variante: #677483;
     --color-claro: rgba(132, 139, 200, 0.18);
     --box-shadow: 0 2rem 3rem var(--color-claro);
+}
+
+#erro{
+    font-size: 1rem;
+    color: var(--color-erro);
 }
 
 /* EU */
