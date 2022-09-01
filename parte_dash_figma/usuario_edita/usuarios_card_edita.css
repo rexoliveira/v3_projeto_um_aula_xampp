@@ -50,41 +50,32 @@
     --box-shadow: 0 2rem 3rem var(--color-claro);
 }
 
-.cartoes {
+.cartao {
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 100%;
-    max-height: 80%;
-    display: flex;
-    flex-direction: column;
+    max-width: 100%;
+    max-height: 100%;
     justify-content: center;
     justify-items: center;
-    padding: 30px;
-    gap: 30px;
 }
 
-
-.edicao-sucesso{
+.edicao-sucesso {
     position: relative;
-    top: -18rem;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%);
     color: var(--color-card4);
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
+
 .c-card {
     position: relative;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%);
     background-color: var(--color-claro);
     border-radius: 5px;
-    
+
     height: 40rem;
     width: 25rem;
     border-width: 4px;
@@ -97,34 +88,37 @@
 }
 
 
+
 .c-card_image {
-    display: flex;
     position: relative;
+    display: flex;
     justify-content: space-between;
     top: 0%;
     left: 0%;
-    transform: translate(-0%,-0%);
+    transform: translate(-0%, -0%);
     height: 25%;
     width: 100%;
     background-color: var(--color-claro);
 }
 
-.dados-card.id{
+.dados-card.id {
     position: relative;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 2rem;
+    transform: translate(-50%);
     color: var(--color-escuro);
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    max-width: 6rem;
+    max-height: 3rem;
 }
 
-.btn_editar{
+.btn_editar {
     position: absolute;
     color: var(--color-sucesso);
     left: 19.5rem;
 }
+
 .btn_editar:hover:after {
     content: "Editar";
     display: block;
@@ -134,23 +128,24 @@
     width: 2rem;
     color: var(--color-escuro);
 }
-.btn_delete{
+
+.btn_delete {
     position: absolute;
     color: var(--color-perigo);
     left: 22rem;
 }
 
 .btn_delete:hover:after {
+    position: absolute;
     content: "Deletar";
     display: block;
-    position: absolute;
     top: -20px;
     right: -2.5px;
     width: 2.5rem;
     color: var(--color-escuro);
 }
 
-.btn_detalhes{
+.btn_detalhes {
     position: absolute;
     color: var(--color-analise);
     top: 27.9rem;
@@ -172,7 +167,7 @@
     max-height: 10rem;
 }
 
-.dados-card h2.dados{
+.dados-card h2.dados {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -180,14 +175,15 @@
     font-weight: none;
     letter-spacing: 0.1rem;
     padding: 0.5rem;
-    overflow-wrap: break-word;  
-    word-wrap: break-word; 
-    word-break: break-word;   
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
 
 }
-.c-card_content{
+
+.c-card_content {
     position: relative;
-    height: 50%;
+    height: 70%;
     padding: 1rem;
 }
 
@@ -255,16 +251,64 @@ h5 {
 }
 
 
-@media screen and (max-width : 770px) {
-    .formF {
-        margin: 3rem 0 0 1.5rem;
-        padding: 0.6rem;
-
+@media screen and (max-width : 485px) {
+    html, main .container {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        max-height: 100%;
     }
-}
 
-@media screen and (max-width : 535px) {
-    .formF {
-        margin: 5rem 0 0 1.5rem;
+    .tit_confirma_cadastro {
+        display: none;
+    }
+
+    .cartao {
+        position: absolute;
+        left: 55%;
+        transform: translateX(-55%);
+        max-width: 100%;
+        max-height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .edicao-sucesso {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0;
+        font-size: 1rem;
+        text-align: center;
+        transition: all 0.5s ease;
+    }
+
+    .imagem {
+        width: 7rem;
+        transition: all 0.5s ease;
+    }
+
+    .btn_editar {
+        position: absolute;
+        left: 13.5rem;
+    }
+
+    .btn_delete {
+        position: absolute;
+        left: 15.5rem;
+    }
+
+    .btn_detalhes {
+        position: absolute;
+        top: 18.9rem;
+        left: 15.5rem;
+    }
+
+    .c-card {
+        position: relative;
+        height: 28rem;
+        max-width: 18rem;
+        transition: all 0.5s ease;
     }
 }

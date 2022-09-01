@@ -142,8 +142,8 @@ $_SESSION['erros'] = ""
       $resultado->bindParam(':id',$_POST['id']);
       $resultado->execute();
       
-      echo "<section class=\"cartoes\">";
-      echo "<h2 class='edicao-sucesso'>Edição de " . $_POST['nome'] . " efetudo com sucesso!</h2>";
+        echo "<section class='cartao'>";
+          echo "<h2 class='edicao-sucesso'>Edição de " . $_POST['nome'] . " efetudo com sucesso!</h2>";
           $sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC);
         
           $id = $_POST['id'];
@@ -151,30 +151,30 @@ $_SESSION['erros'] = ""
           $email = $sql_conteudo['email'];
           $tel = $sql_conteudo['tel'];
         
-          echo "<article class='c-card'>";
+          echo "<section class='c-card'>";
 
-          echo "<section class='c-card_image'>";
+            echo "<section class='c-card_image'>";
 
-          echo"<a href='../usuario_edita/edita.php?id=$id' class='btn_editar'>
-          <span class='material-symbols-outlined'> edit </span></a>";
-          echo"<a href='' class='btn_delete'>
-          <span class='material-symbols-outlined'> delete </span></a>";
-          echo "<img class='imagem'src='../../image/avatar/0.png' alt='image avatar'>";
-          echo "<span class='dados-card id' ><h2 class='dados'>ID: $id</h2></span>";
+              echo"<a href='../usuario_edita/edita.php?id=$id' class='btn_editar'>
+              <span class='material-symbols-outlined'> edit </span></a>";
+              echo"<a href='' class='btn_delete'>
+              <span class='material-symbols-outlined'> delete </span></a>";
+              echo "<img class='imagem'src='../../image/avatar/0.png' alt='image avatar'>";
+              echo "<span class='dados-card id' ><h2 class='dados'>ID: $id</h2></span>";
+
+            echo "</section>";
+
+              echo "<section class='c-card_content'>";
+
+                echo "<span class='dados-card' ><h2 class='dados'>Nome: $nome</h2></span>";
+                echo " <span class='dados-card' ><h2 class='dados'>E-mail: $email</h2></span>";
+                echo "<span class='dados-card' ><h2 class='dados'>Contato: $tel</h2></span>";
+                echo"<a href='' class='btn_detalhes'>
+                <span class='material-symbols-outlined'> loupe </span></a>";
+
+              echo "</section>";
 
           echo "</section>";
-
-          echo "<section class='c-card_content'>";
-
-          echo "<span class='dados-card' ><h2 class='dados'>Nome: $nome</h2></span>";
-          echo " <span class='dados-card' ><h2 class='dados'>E-mail: $email</h2></span>";
-          echo "<span class='dados-card' ><h2 class='dados'>Contato: $tel</h2></span>";
-          echo"<a href='' class='btn_detalhes'>
-          <span class='material-symbols-outlined'> loupe </span></a>";
-
-          echo "</section>";
-
-          echo "</article>";
         
         echo "</section>";
 
