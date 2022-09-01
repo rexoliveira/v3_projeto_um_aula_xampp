@@ -12,7 +12,7 @@
     --color-alerta: #ffbb55;
 
     /* EU */
-    --color-erro:#cc0000;
+    --color-erro: #cc0000;
     --color-analise: #55b0ff;
     --color-logo-titulo: #61f889;
     --color-card4: #55ffee;
@@ -51,7 +51,7 @@
     --box-shadow: 0 2rem 3rem var(--color-claro);
 }
 
-#erro{
+#erro {
     font-size: 1rem;
     color: var(--color-erro);
 }
@@ -144,7 +144,7 @@ body {
     gap: 0 1.5rem 1.5rem 1.5rem;
     /* define 3blocos/coluna */
     grid-template-columns: 16.5rem auto 16.5rem;
-    grid-template-areas: 
+    grid-template-areas:
         "left main right";
     grid-template-rows: 60px 1fr;
 
@@ -197,7 +197,7 @@ small {
     font-size: 0.75rem;
 }
 
-.perfil{
+.perfil {
     height: 4rem;
 }
 
@@ -382,15 +382,15 @@ b {
 /* ====================MAIN====================== */
 
 main {
+    position: relative;
     margin: 0 1.4rem;
     display: flex;
-
     align-items: center;
     justify-content: center;
-height: 100vh;
+    height: 100vh;
 }
 
-.tit_confirma_cadastro{
+.tit_confirma_cadastro {
     text-align: center;
 }
 
@@ -521,14 +521,14 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
     }
 
 
-   
-   
+
+
 
     .aside_direito {
         margin: 0.5rem 0 0 0;
     }
 
-    .aside_direito p, .aside_direito .texto_base_card{
+    .aside_direito p, .aside_direito .texto_base_card {
         display: flex;
         flex-wrap: wrap;
     }
@@ -537,13 +537,13 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
     @media screen and (max-width: 1060px) {
 
-        
 
-         .container {
+
+        .container {
             display: grid;
             width: 100%;
             height: 100%;
-            grid-template-areas: 
+            grid-template-areas:
                 "main"
                 "right";
             grid-template-columns: auto;
@@ -559,7 +559,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
         .aside_esquerdo {
             position: fixed;
-            
+
             /* Esconde sidebar */
             left: -100%;
             background: var(--color-white);
@@ -610,9 +610,9 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             cursor: pointer;
         }
 
-       
+
         main {
-            
+
             padding: 1rem 1rem 0 1rem;
         }
 
@@ -660,10 +660,10 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
     }
 
-   
+
     /* Eu */
     @media screen and (max-width: 530px) {
-       
+
         .aside_direito .sessao_usuario_topo {
             margin-top: 0;
             padding: 0 3rem 0 0;
@@ -682,7 +682,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             margin-top: 0;
             padding-top: 0;
         }
- 
+
         .aside_direito {
             width: 87%;
 

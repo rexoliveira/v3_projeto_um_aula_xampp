@@ -1,5 +1,28 @@
 <?php
 session_start();
+include_once("conexao.php");
+function redireciona($erro)
+{
+  $_SESSION['erros'] = "Erro: $erro";
+  header('Location: ../usuarios_port/usuarios-port.php');
+}
+
+$id = isset($_GET['id']) ? $_GET['id'] : redireciona("Sem ID");
+(!empty($_GET['id']))?"":redireciona("Sem ID");
+$idFilter = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING, FILTER_FLAG_NONE) ?? redireciona("Erro na entrada -'id'");
+
+$sql = "SELECT id, nome, email, tel, password FROM public.usuario WHERE id = :id LIMIT 1";
+
+/* PDO */
+$resultado = $conexao->prepare($sql);
+$resultado->bindParam(':id', $idFilter, PDO::PARAM_STR);
+$resultado->execute();
+$_SESSION['erros'] = ""; 
+
+
+$usuario = $resultado->fetch(PDO::FETCH_ASSOC);
+extract($usuario);
+
 ?>
 
 <!DOCTYPE html>
@@ -23,37 +46,16 @@ session_start();
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="form_style.css" />
   <link rel="stylesheet" href="style.css" />
-
-
+  
+  
   <!-- MATERIAL CDN - ICONS DO GOOGLE -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-
-  <!-- MODAL -->
-  <!-- <script src="../contato_modal/modal.js" defer></script> -->
-  <!-- <link rel="stylesheet" href="../contato_modal/modal.css" /> -->
 
   <title>Edita usuário</title>
 </head>
 
 <body>
-  <!-- <section id="todo-modal">
-    <button id="abrir-modal" >Abrir</button>
-
-    A transparência que divide o modal do conteudo de baixo
-    <section class="hide" id="fade"></section>
-
-    <section class="hide" id="modal-iframe">
-      <section class="modal-cabecalho">
-        <h2>Este é modal</h2>
-        <button id="fechar-modal">Fechar</button>
-      </section>
-      <section class="modal-corpo">
-        <iframe src="../contato_modal/contato_modal.php" frameborder="0"></iframe>
-      </section>
-    </section>
-  </section> -->
   <section class="container">
     <!-- MENU-BOTÕES-TOPO -->
     <header></header>
@@ -107,16 +109,27 @@ session_start();
           <section>
             <!-- <span class="erro"><?php /* echo $_SESSION['erros'];  */?></span> -->
           </section>
-          <form name="cadastro_form" id="form_cadastra" action="processa.php" method="POST">
+          <form name="edita_form" id="form_edita" action="processa.php" method="POST">
+          <section class="input_group">
+              <input style="display:none" type="text" id="id" name="id"
+              value='<?php echo "$id"?>'
+              required
+               />
+            </section>
             <section class="input_group">
               <label for="nome">Nome Completo</label>
               <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"
-              
+              value='<?php echo "$nome"?>'
+              minlength="5"
+              maxlength="30"
+              required
                />
             </section>
             <section class="input_group">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="Digite seu email" 
+              <input type="email" id="email" name="email" placeholder="Digite seu email"
+              value='<?php echo "$email"?>' 
+              required
               />
               <span id="alert_email"></span>
             </section>
@@ -124,11 +137,15 @@ session_start();
               <label for="telefone">Telefone</label>
               <input type="text" id="telefone" name="telefone" onkeypress="mask(this, mphone);"
                 onblur="mask(this, mphone);" th:value="${usuario.telefone}" placeholder="(00) 00000-0000" 
+                value='<?php echo "$tel"?>'
+                minlength="14"
+                maxlength="15"
+                required
                />
             </section>
             <section class="input_group w50">
               <label for="senha">Senha</label>
-              <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required />
+              <input type="password" id="senha" name="senha" placeholder="Digite sua senha"/>
             </section>
             <section class="input_group w50 c_senha">
               <label for="confirmar_senha">Confirmar a Senha</label>

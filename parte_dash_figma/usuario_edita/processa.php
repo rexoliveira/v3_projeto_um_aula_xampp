@@ -8,19 +8,32 @@ $email = isset($_POST['email']) ? $_POST['email'] : redireciona("name:email");
 $telefone = isset($_POST['telefone']) ? $_POST['telefone'] : redireciona("name:telefone");
 $password = isset($_POST['senha']) ? $_POST['senha'] : redireciona("neme:senha");
 
-function redireciona($erro)
-{
-  $_SESSION['erros'] = "Erro: $erro";
-  header('Location: edita.php');
+$array = filter_input_array(INPUT_POST);
+
+foreach ($array as $chave => $valor) {
+  //Exemplo- [$array['telefone']) < 14] -> (51) 0000-2300
+  if (empty($valor) && strlen($array['telefone']) < 14) {
+    redireciona("Campo $chave vazio!");
+  };
 }
 
-$idFilter = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING, FILTER_FLAG_NONE) ?? redireciona("Erro na entrada -'id'");
+$idFilter = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING, FILTER_FLAG_NONE) ?? redireciona("Erro na entrada -'id'");
 $nomeFilter = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING, FILTER_FLAG_NONE) ?? redireciona("Erro na entrada -'nome'");
 $emailFilter = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL)?? redireciona("Erro na entrada -'email'");;
 $telefoneFilter = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING)?? redireciona("Erro na entrada -'telefone'");;
-$passwordFilter = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING)?? redireciona("Erro na entrada -'senha'");;
+$passwordFilter = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING)?? redireciona("Erro na entrada -'senha'");
+function redireciona($erro)
+{
+  $_SESSION['erros'] = "Erro: $erro";
+  header('Location: ../usuarios_port/usuarios-port.php');
+  die();
+}
 
+if(!empty($passwordFilter)){
 $sql = 'UPDATE public.usuario SET  nome=:nome, email=:email, tel=:telefone, password=:password WHERE id=:id';
+}else{
+  $sql = 'UPDATE public.usuario SET  nome=:nome, email=:email, tel=:telefone WHERE id=:id';
+} 
 
 /* PDO */
 $resultado = $conexao->prepare($sql);
@@ -28,7 +41,7 @@ $resultado->bindParam(':id', $idFilter, PDO::PARAM_STR);
 $resultado->bindParam(':nome', $nomeFilter, PDO::PARAM_STR);
 $resultado->bindParam(':email', $emailFilter, PDO::PARAM_STR);
 $resultado->bindParam(':telefone', $telefoneFilter, PDO::PARAM_STR);
-$resultado->bindValue(':password', $passwordFilter, PDO::PARAM_STR);
+(!empty($passwordFilter))?$resultado->bindValue(':password', $passwordFilter, PDO::PARAM_STR):"";
 $resultado->execute();
 $_SESSION['erros'] = ""
 ?>
@@ -49,11 +62,8 @@ $_SESSION['erros'] = ""
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
   <!-- [CSS] -->
-  <link rel="stylesheet" href="../menu_topo.css" />
-  <link rel="stylesheet" href="form_style.css" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="table_style.css" />
-  <link rel="stylesheet" href="data_hora_style.css" />
+  <link rel="stylesheet" href="usuarios_card_edita.css" />
 
   <!-- [JS] -->
   <!-- Se sua tag de script estiver na cabeça, o JavaScript será
@@ -61,7 +71,7 @@ $_SESSION['erros'] = ""
       portanto, o elemento que você está tentando acessar ainda não existe no DOM. 
       Você precisará adicionar deferao seu script -->
   <script src="../menu_topo.js" defer></script>
-  <script src="cadastro.js" defer></script>
+  <script src="edita.js" defer></script>
   <!-- async = Você faz um carregamento assíncrono, ou seja, sem bloquear a página -->
   <script src="../../script/data_hora.js" async></script>
 
@@ -125,10 +135,48 @@ $_SESSION['erros'] = ""
 
     <main>
       <?php
+      
+      $sql = "SELECT * FROM usuario WHERE id=:id";
+           
+      $resultado = $conexao->prepare($sql);
+      $resultado->bindParam(':id',$_POST['id']);
+      $resultado->execute();
+      
+      echo "<section class=\"cartoes\">";
+      echo "<h2 class='edicao-sucesso'>Edição de " . $_POST['nome'] . " efetudo com sucesso!</h2>";
+          $sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC);
+        
+          $id = $_POST['id'];
+          $nome = $sql_conteudo['nome'];
+          $email = $sql_conteudo['email'];
+          $tel = $sql_conteudo['tel'];
+        
+          echo "<article class='c-card'>";
 
-      if (true) {
-        echo "<h2>Edição de " . $_POST['nome'] . " efetudo com sucesso!</h2>";
-      }
+          echo "<section class='c-card_image'>";
+
+          echo"<a href='../usuario_edita/edita.php?id=$id' class='btn_editar'>
+          <span class='material-symbols-outlined'> edit </span></a>";
+          echo"<a href='' class='btn_delete'>
+          <span class='material-symbols-outlined'> delete </span></a>";
+          echo "<img class='imagem'src='../../image/avatar/0.png' alt='image avatar'>";
+          echo "<span class='dados-card id' ><h2 class='dados'>ID: $id</h2></span>";
+
+          echo "</section>";
+
+          echo "<section class='c-card_content'>";
+
+          echo "<span class='dados-card' ><h2 class='dados'>Nome: $nome</h2></span>";
+          echo " <span class='dados-card' ><h2 class='dados'>E-mail: $email</h2></span>";
+          echo "<span class='dados-card' ><h2 class='dados'>Contato: $tel</h2></span>";
+          echo"<a href='' class='btn_detalhes'>
+          <span class='material-symbols-outlined'> loupe </span></a>";
+
+          echo "</section>";
+
+          echo "</article>";
+        
+        echo "</section>";
 
       ?>
     </main>

@@ -10,8 +10,8 @@ $servidor = "127.0.0.1";
 $porta = 5432;
 $bancoDeDados = "usuarios";
 $usuario = "postgres";
-$senha = "postgres";//Banco IFSUL
-//$senha = "12070205";
+//$senha = "postgres";//Banco IFSUL
+$senha = "12070205";
 try {
     $dsn = "pgsql:host=$servidor;port=$porta;dbname=$bancoDeDados;";
 

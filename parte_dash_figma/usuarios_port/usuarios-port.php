@@ -1,6 +1,5 @@
 <?php
-
-
+session_start();
 require_once "conexao.php";
 
 $filtro = isset($_GET['filtro']) ? $_GET['filtro'] : "";
