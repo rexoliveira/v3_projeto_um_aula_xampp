@@ -135,7 +135,7 @@ print "<section class=\"cartoes\">";
   print "<article class='c-card'>";
   print "<section class='c-card_image'>";
   /* print "<img class='imagem'src='https://as1.ftcdn.net/v2/jpg/01/71/25/36/1000_F_171253635_8svqUJc0BnLUtrUOP5yOMEwFwA8SZayX.jpg' alt='image placeholder'>"; */
-  print"<a href='' class='btn_editar'>
+  print"<a href='../usuario_edita/edita.php?id=$id' class='btn_editar'>
   <span class='material-symbols-outlined'> edit </span></a>";
   print"<a href='' class='btn_delete'>
   <span class='material-symbols-outlined'> delete </span></a>";
