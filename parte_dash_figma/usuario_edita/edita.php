@@ -82,6 +82,18 @@ extract($usuario);
           <span class="material-symbols-outlined"> space_dashboard </span>
           <h3>Retornar a Dashboard</h3>
         </a>
+        <a href="../cadastro_port/cadastro.php">
+          <span class="material-symbols-outlined"> person_add </span>
+          <h3>Cadastra Usuário</h3>
+        </a>
+        <a href="../usuarios_port/usuarios-port.php">
+          <span class="material-symbols-outlined"> groups </span>
+          <h3>Lista Usuários</h3>
+        </a>
+        <a href="#" onclick="genioFullScreen()" id="btn">
+          <span class="material-symbols-outlined"> fullscreen </span>
+          <h3>Tela Grande</h3>
+        </a>
         <div class="tema-toggler" id="tema-toggler">
           <span class="material-symbols-outlined"> light_mode </span>
           <span class="material-symbols-outlined active"> dark_mode </span>
@@ -94,7 +106,7 @@ extract($usuario);
     <main>
       <section class="box">
         <section class="box_image">
-          <img class="image_cadastro" src="../../image/icon/image_cadastro.png" alt="image_cadastro" />
+          <img class="image_cadastro" src="../../image/icon/image_editar.png" alt="image_cadastro" />
         </section>
         <section class="box_form">
           <section class="texto_acima_form">
