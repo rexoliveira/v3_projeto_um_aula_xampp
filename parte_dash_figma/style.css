@@ -868,8 +868,9 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
     }
 
     /* ==================== TABLETES PEQUENOS E MOBILE====================== */
-
-    @media screen and (max-width: 1060px) {
+    /* Aplicação original */
+    /* @media screen and (max-width: 1060px) { */
+    @media screen and (max-width: 1255px) {
 
         /* Era na resolução de cima */
         main table thead tr th:last-child,
@@ -1049,7 +1050,9 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
 
     /* Eu */
-    @media screen and (max-width: 530px) {
+    /* Aplicação original */
+    /* @media screen and (max-width: 530px) { */
+    @media screen and (max-width: 630px) {
         header {
             width: 2rem;
             background: red;

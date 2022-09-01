@@ -388,14 +388,6 @@ session_start();
         <!-- BARRA-LATERAL-ESQUERDA -->
         <section class="sidebar" id="sidebar">
           <!-- Removido função class="active" -->
-          <!-- <a href="./cadastro_port/cadastro.php">
-            <span class="material-symbols-outlined"> person_add </span>
-            <h3>Cadastra Usuário</h3>
-          </a> -->
-          <a href="#">
-            <span class="material-symbols-outlined"> add_photo_alternate </span>
-            <h3>Adiciona Imagem</h3>
-          </a>
           <a href="#">
             <span class="material-symbols-outlined"> apartment </span>
             <h3>Situação da Cidade</h3>
@@ -418,8 +410,12 @@ session_start();
             <span class="mensagem-contador">69</span>
           </a>
           <a href="#">
-            <span class="material-symbols-outlined"> settings </span>
-            <h3>Configuração</h3>
+            <span class="material-symbols-outlined"> map </span>
+            <h3>Mapa da Região</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined"> add_photo_alternate </span>
+            <h3>Adiciona Imagem</h3>
           </a>
           <a href="#">
             <span class="material-symbols-outlined"> snippet_folder </span>
@@ -428,6 +424,10 @@ session_start();
           <a href="#">
             <span class="material-symbols-outlined"> help </span>
             <h3>Suporte</h3>
+          </a>
+          <a href="#">
+            <span class="material-symbols-outlined"> settings </span>
+            <h3>Configuração</h3>
           </a>
 
           <div class="tema-toggler" id="tema-toggler">
