@@ -141,6 +141,11 @@ session_start();
             >
           </li>
           <li>
+            <a href="./cadastro_port/cadastro.php"
+              ><i class="fa fa-user-plus"></i> Cadastra Usuário</a
+            >
+          </li>
+          <li>
             <a
               href="transporte_port/transporte-port.php"
               ><i class="fa fa-bus"></i> Transporte</a
@@ -383,10 +388,10 @@ session_start();
         <!-- BARRA-LATERAL-ESQUERDA -->
         <section class="sidebar" id="sidebar">
           <!-- Removido função class="active" -->
-          <a href="./cadastro_port/cadastro.php">
+          <!-- <a href="./cadastro_port/cadastro.php">
             <span class="material-symbols-outlined"> person_add </span>
             <h3>Cadastra Usuário</h3>
-          </a>
+          </a> -->
           <a href="#">
             <span class="material-symbols-outlined"> add_photo_alternate </span>
             <h3>Adiciona Imagem</h3>
