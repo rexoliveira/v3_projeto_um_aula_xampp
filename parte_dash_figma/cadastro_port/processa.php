@@ -22,9 +22,9 @@ foreach ($array as $chave => $valor) {
 }
 
 $nomeFilter = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING, FILTER_FLAG_NONE) ?? redireciona("Erro na entrada -'nome'");
-$emailFilter = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-$telefoneFilter = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING);
-$passwordFilter = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
+$emailFilter = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL)?? redireciona("Erro na entrada -'email'");;
+$telefoneFilter = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING)?? redireciona("Erro na entrada -'telefone'");;
+$passwordFilter = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING)?? redireciona("Erro na entrada -'senha'");;
 
 $sql = 'INSERT INTO usuario (nome, email, tel, password) VALUES(:nome,:email,:telefone,:password )';
 
@@ -131,29 +131,11 @@ $_SESSION['erros'] = ""
     <main>
       <?php
 
-// $sqlQuery = "INSERT INTO employee(user_id,name,address,city) VALUES(:user_id,:name,:address,:city) RETURNING employee_id";
+      if (true) {
+        echo "<h2>Cadastro de " . $_POST['nome'] . " efetudo com sucesso!</h2>";
+      }
 
-// $statement = $this->prepare($sqlQuery);
-
-// $a = "2002-03-11 12:01AM";
-
-// $statement->bindParam(":user_id", $employee->getUserId(), PDO::PARAM_INT);
-// $statement->bindParam(":name", $employee->getName(), PDO::PARAM_STR);
-// $statement->bindParam(":address", $employee->getAddress(), PDO::PARAM_STR);
-// $statement->bindParam(":city", $employee->getCity(), PDO::PARAM_STR);
-// $statement->execute();
-
-// $result = $statement->fetch(PDO::FETCH_ASSOC);
-// return $result["employee_id"];
-/* if ($linhas == 1) { */
-if (true) {
-  echo "<h2>Cadastro de " . $_POST['nome'] . " efetudo com sucesso!</h2>";
-}
-else {
-  echo "<h2>Erro: Verifique o e-mail(" . $_POST['email'] . ") cadastrado!</h2>";
-}
-
-?>
+      ?>
     </main>
     <aside class="aside_direito">
       <section class="sessao_usuario_topo">
