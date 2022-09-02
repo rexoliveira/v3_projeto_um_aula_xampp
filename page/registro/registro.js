@@ -1,3 +1,4 @@
+//Crédito:https://www.devmedia.com.br/forum/verificar-se-o-email-preenchido-ja-existe-no-banco-de-dados-em-tempo-real/563411
 
 //JQuery e JavaScript
 const validateEmailExiste = () => {
