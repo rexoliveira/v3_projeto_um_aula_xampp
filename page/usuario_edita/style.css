@@ -1,0 +1,697 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ROOT VARIAVEIS */
+
+:root {
+    /* --color-principal: #7380ec; */
+    --color-principal: #53a2c7fe;
+    --color-perigo: #ff7782;
+    --color-sucesso: #41f1b6;
+    --color-alerta: #ffbb55;
+
+    /* EU */
+    --color-erro: #cc0000;
+    --color-analise: #55b0ff;
+    --color-logo-titulo: #61f889;
+    --color-card4: #55ffee;
+    --color-card5: #5560ff;
+    --color-card6: #eb55ff;
+
+    --color-info-escuro: #7d8da1;
+    --color-info-claro: #dce1eb;
+
+    --color-principal-variante: #111e88;
+
+    /* escuro-tema-variaveis { */
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-escuro: #edeffd;
+    --color-escuro-variante: #a3bdcc;
+    --color-claro: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-claro);
+
+    --card-boder-radius: 0.5rem;
+    --boder-radius-1: 0.4rem;
+    --boder-radius-2: 0.8rem;
+    --boder-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+}
+
+/* ==============THEMA DARK ====================*/
+.claro-tema-variaveis {
+    --color-background: #f6f6f9;
+    --color-white: #fff;
+    --color-escuro: #363949;
+    --color-escuro-variante: #677483;
+    --color-claro: rgba(132, 139, 200, 0.18);
+    --box-shadow: 0 2rem 3rem var(--color-claro);
+}
+
+#erro {
+    font-size: 1rem;
+    color: var(--color-erro);
+}
+
+/* EU */
+
+.digital {
+    color: var(--color-escuro);
+    font-size: 2rem;
+}
+
+/* #############################GENIO################################### */
+/* .genio {
+    color: var(--color-principal);
+} */
+
+.genio {
+    color: var(--color-escuro);
+    position: relative;
+    font-size: 2rem;
+    -webkit-text-stroke: 0.05vw var(--color-escuro);
+    text-transform: uppercase;
+}
+
+.genio::before {
+    color: var(--color-principal);
+    content: 'Gênio';
+    position: absolute;
+    top: 4.5px;
+    left: 0;
+    width: 0%;
+    height: 65%;
+    -webkit-text-stroke: 0vw var(--color-principal);
+    border-right: 3px solid var(--color-principal);
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+    -webkit-animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 378%;
+    }
+}
+
+/* #################################################################### */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'poppins', Arial, Helvetica, sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    /* Tira a barra de rolagem lateral */
+    overflow-x: hidden;
+    color: var(--color-escuro);
+}
+
+
+
+.container {
+    padding: 0;
+    position: fixed;
+    display: grid;
+    /* Distancia sidebar da lateral esquerda */
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    gap: 0 1.5rem 1.5rem 1.5rem;
+    /* define 3blocos/coluna */
+    grid-template-columns: 16.5rem auto 16.5rem;
+    grid-template-areas:
+        "left main right";
+    grid-template-rows: 60px 1fr;
+
+}
+
+.aside_esquerdo {
+    grid-area: left;
+}
+
+/*  */
+main {
+    grid-area: main;
+}
+
+.aside_direito {
+    grid-area: right;
+}
+
+a {
+    color: var(--color-escuro);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 0.87rem;
+}
+
+h4 {
+    font-size: 0.8rem;
+}
+
+h5 {
+    font-size: 0.77rem;
+}
+
+small {
+    font-size: 0.75rem;
+}
+
+.perfil {
+    height: 4rem;
+}
+
+.perfil-foto {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    /* EU */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #aaa;
+}
+
+/* EU */
+.perfil-foto img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#logout {
+    color: var(--color-perigo);
+    opacity: 0.7;
+}
+
+#logout:hover {
+    color: red;
+    opacity: 1;
+}
+
+
+.texto_base_card {
+    color: var(--color-info-escuro);
+}
+
+p {
+    color: var(--color-escuro-variante);
+}
+
+b {
+    color: var(--color-escuro);
+}
+
+.principal {
+    color: var(--color-principal);
+}
+
+.logo-titulo {
+    color: var(--color-logo-titulo);
+}
+
+.perigo {
+    color: var(--color-perigo);
+}
+
+.sucesso {
+    color: var(--color-sucesso);
+}
+
+.alerta {
+    color: var(--color-alerta);
+}
+
+.analise {
+    color: var(--color-analise);
+}
+
+.aside_esquerdo {
+    height: 100vh;
+}
+
+/* EU */
+#menu-button {
+    display: none;
+}
+
+/* ESPAÇO DO LOGO/TEXT */
+.aside_esquerdo .sessao_usuario_topo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.7rem auto 0.7rem 2rem;
+}
+
+
+.aside_esquerdo .logo {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 0.4rem;
+
+}
+
+.aside_esquerdo .logo img {
+
+    width: 2rem;
+    height: 2rem;
+}
+
+.aside_esquerdo .close {
+    display: none;
+}
+
+
+/* ====================SIDEBAR====================== */
+
+.aside_esquerdo .sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+
+.aside_esquerdo h3 {
+    font-weight: 500;
+}
+
+.aside_esquerdo .sidebar a {
+    display: flex;
+    color: var(--color-info-escuro);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.2rem;
+    transition: all 300ms ease;
+}
+
+
+.aside_esquerdo .sidebar a sapn {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+.aside_esquerdo .sidebar a:last-child {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+/* QUANDO O ICONE NA SIDEBAR É SELECIONADO */
+.aside_esquerdo .sidebar a.active {
+    background: var(--color-claro);
+    color: var(--color-principal);
+    margin-left: 0;
+}
+
+.aside_esquerdo.sidebar a.active:before {
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: var(--color-principal);
+}
+
+.aside_esquerdo .sidebar a.active span {
+    color: var(--color-principal);
+    margin-left: calc(1rem - 6px);
+}
+
+.aside_esquerdo .sidebar a:hover {
+    color: var(--color-principal);
+}
+
+.aside_esquerdo .sidebar a:hover span {
+    margin-left: 1rem;
+}
+
+.aside_esquerdo .sidebar .mensagem-contador {
+    background: var(--color-perigo);
+    color: var(--color-white);
+    padding: 1.5px 10px;
+    font-size: 0.7rem;
+    border-radius: var(--boder-radius-1);
+}
+
+
+/* ====================MAIN====================== */
+
+main {
+    position: relative;
+    margin: 0 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.tit_confirma_cadastro {
+    text-align: center;
+}
+
+
+
+/* ==================== LADO DIREITO====================== */
+
+.aside_direito {
+    margin: 0 1.4rem 0 0;
+}
+
+/* SESSÃO */
+.aside_direito .sessao_usuario_topo {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+/* ESTÁ NA sidebar */
+.sidebar .tema-toggler {
+    background: var(--color-claro);
+    height: 1.9rem;
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: var(--boder-radius-1);
+    /* EU */
+    margin-left: 2rem;
+    position: relative;
+    margin-top: 50% -1px;
+}
+
+/* ESTÁ NA sidebar */
+.sidebar .tema-toggler span {
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ESTÁ NA sidebar */
+.sidebar .tema-toggler span.active {
+    background: var(--color-principal);
+    color: var(--color-white);
+    border-radius: var(--boder-radius-1);
+}
+
+.aside_direito .sessao_usuario_topo .perfil {
+    display: flex;
+    gap: 1rem;
+    text-align: right;
+    /* EU */
+    align-items: center;
+
+}
+
+
+
+
+
+/* ==================== MEDIA QUERIES ====================== */
+
+/* 
+Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/
+1201px and more —  Extra large screens, TV 
+1025px — 1200px: Desktops, large screens
+769px — 1024px: Small screens, laptops
+481px — 768px: iPads, Tablets
+320px — 480px: Mobile devices
+*/
+
+
+/* ==================== DESKTOP====================== */
+/* EU 1440px */
+@media screen and (max-width: 1440px) {
+    .container {
+        position: relative;
+        width: 98%;
+        /* original:grid-template-columns: 8.2rem auto 23rem; */
+        grid-template-columns: 6.9rem auto 14rem;
+        gap: 20px;
+        margin-right: 20px;
+
+    }
+
+
+    /* ESPAÇO DO LOGO/TEXT */
+    .aside_esquerdo .sessao_usuario_topo {
+        justify-content: center;
+
+    }
+
+
+
+    /* ESTÁ NA sidebar */
+    .sidebar .tema-toggler {
+        /* EU */
+        margin-left: 0.5rem;
+    }
+
+    /* EU */
+    .aside_esquerdo .sessao_usuario_topo {
+        justify-content: center;
+        margin: 0.7rem auto;
+    }
+
+
+    .aside_esquerdo .logo h2 {
+        display: none;
+    }
+
+
+    .aside_esquerdo .sidebar h3 {
+        display: none;
+    }
+
+    .aside_esquerdo .sidebar a {
+        width: 5.6rem;
+    }
+
+    .aside_esquerdo .sidebar a:last-child {
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+
+
+
+
+    .aside_direito {
+        margin: 0.5rem 0 0 0;
+    }
+
+    .aside_direito p, .aside_direito .texto_base_card {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* ==================== TABLETES PEQUENOS E MOBILE====================== */
+
+    @media screen and (max-width: 1060px) {
+
+
+
+        .container {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            grid-template-areas:
+                "main"
+                "right";
+            grid-template-columns: auto;
+            grid-template-rows: 30px 1fr 0.5fr;
+        }
+
+
+
+        /* EU */
+        #menu-button {
+            display: block;
+        }
+
+        .aside_esquerdo {
+            position: fixed;
+
+            /* Esconde sidebar */
+            left: -100%;
+            background: var(--color-white);
+            width: 18rem;
+            z-index: 3;
+            box-shadow: 1rem 3rem 4rem var(--color-claro);
+            height: 100vh;
+            padding-right: var(--card-padding);
+            display: none;
+            animation: showMenu 400ms ease forwards;
+        }
+
+        @keyframes showMenu {
+            to {
+                left: 0;
+            }
+        }
+
+        .aside_esquerdo .logo {
+            margin-left: 1rem;
+        }
+
+        .aside_esquerdo .logo h2 {
+            display: inline;
+        }
+
+        .aside_esquerdo .sidebar h3 {
+            display: inline;
+        }
+
+        .aside_esquerdo .sidebar a {
+            color: var(--color-escuro);
+            width: 100%;
+            height: 3.4rem;
+        }
+
+        .aside_esquerdo .sidebar a:last-child {
+            position: absolute;
+            bottom: 5rem;
+        }
+
+        .aside_esquerdo .close {
+            padding: 0.9rem 0 0 0.5rem;
+            color: var(--color-escuro);
+            align-items: center;
+            justify-content: center;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+
+        main {
+
+            padding: 1rem 1rem 0 1rem;
+        }
+
+        .aside_direito {
+            width: 94%;
+            margin: 0 auto;
+        }
+
+        .aside_direito .sessao_usuario_topo {
+            /* position: fixed; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            align-items: center;
+            padding: 0 0.8rem;
+            height: 3.5rem;
+            width: 100%;
+            background: var(--color-white);
+            z-index: 2;
+            box-shadow: 0 1rem 1rem var(--color-claro);
+        }
+
+        .aside_direito .sessao_usuario_topo .tema-toggler {
+            width: 4.4rem;
+            position: absolute;
+            left: 66%;
+        }
+
+        .aside_direito .perfil .info {
+            display: none;
+        }
+
+        .aside_direito .sessao_usuario_topo button {
+            display: inline-block;
+            background: transparent;
+            cursor: pointer;
+            color: var(--color-escuro);
+            position: absolute;
+            left: 1rem;
+        }
+
+        .aside_direito .sessao_usuario_topo button span {
+            font-size: 2rem;
+        }
+
+    }
+
+
+    /* Eu */
+    @media screen and (max-width: 530px) {
+
+        .aside_direito .sessao_usuario_topo {
+            margin-top: 0;
+            padding: 0 3rem 0 0;
+            top: 0;
+        }
+
+        .aside_esquerdo {
+            top: -1rem;
+            width: 67%;
+            height: 105%;
+
+        }
+
+
+        main {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .aside_direito {
+            width: 87%;
+
+        }
+
+    }
+}
+
+/* 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+*/

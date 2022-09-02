@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /* --color-principal: #7380ec; */
+  --color-principal: #53a2c7fe;
+  --color-perigo: #ff7782;
+  --color-sucesso: #41f1b6;
+  --color-alerta: #ffbb55;
+
+  /* EU */
+  --color-erro:#cc0000;
+  --color-analise: #55b0ff;
+  --color-logo-titulo: #61f889;
+  --color-card4: #55ffee;
+  --color-card5: #5560ff;
+  --color-card6: #eb55ff;
+
+  --color-info-escuro: #7d8da1;
+  --color-info-claro: #dce1eb;
+
+  --color-principal-variante: #111e88;
+
+  /* escuro-tema-variaveis { */
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-escuro: #edeffd;
+  --color-escuro-variante: #a3bdcc;
+  --color-claro: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-claro);
+
+  --card-boder-radius: 0.5rem;
+  --boder-radius-1: 0.4rem;
+  --boder-radius-2: 0.8rem;
+  --boder-radius-3: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+}
+
+/* ==============THEMA DARK ====================*/
+.claro-tema-variaveis {
+  --color-background: #f6f6f9;
+  --color-white: #fff;
+  --color-escuro: #363949;
+  --color-escuro-variante: #677483;
+  --color-claro: rgba(132, 139, 200, 0.18);
+  --box-shadow: 0 2rem 3rem var(--color-claro);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+::selection{
+  color: var(--color-claro);
+  background: var(--color-background);
+}
+.containerCadastroCompleto{
+  width: 29rem;
+  background-color: var(--color-white);
+  text-align: center;
+  border-radius: 10px;
+  padding: 50px 35px 10px 35px;
+}
+.containerCadastroCompleto h1{
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+  color: var(--color-escuro);
+}
+.containerCadastroCompleto .form-outer{
+  width: 100%;
+  overflow: hidden;
+}
+.containerCadastroCompleto .form-outer form{
+  display: flex;
+  width: 400%;
+}
+.form-outer form .pagina{
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+.form-outer form .pagina .title{
+  text-align: left;
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: var(--color-escuro);
+}
+.form-outer form .pagina .entrada{
+  width: 330px;
+  height: 45px;
+  margin: 45px 0;
+  display: flex;
+  position: relative;
+}
+form .pagina .entrada .label{
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--color-escuro);
+}
+form .pagina .entrada input{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 15px;
+  font-size: 16px;
+  background-color: var(--color-escuro);
+  color: var(--color-background);
+}
+form .pagina .entrada select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: var(--color-escuro);
+  color: var(--color-background);
+}
+form .pagina .entrada button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: var(--color-principal);
+  margin-top: -20px;
+  border-radius: 10px;
+  color:var(--color-background);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .pagina .entrada button:hover{
+  background: var(--color-escuro);
+}
+form .pagina .btns button{
+  margin-top: -20px!important;
+}
+form .pagina .btns button.prev{
+  margin-right: 3px;
+  font-size: 17px;
+}
+form .pagina .btns button.next{
+  margin-left: 3px;
+}
+.containerCadastroCompleto .progress-bar{
+  display: flex;
+  margin: 40px 0;
+  user-select: none;
+}
+.containerCadastroCompleto .progress-bar .step{
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.containerCadastroCompleto .progress-bar .step h2{
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-principal);
+  margin-bottom: 8px;
+}
+.progress-bar .step .bullet{
+  height: 30px;
+  width: 30px;
+  border: 3px solid var(--color-alerta);
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+}
+.progress-bar .step .bullet.active{
+  border: var(--color-principal);
+  background: var(--color-logo-titulo);
+}
+.progress-bar .step .bullet span{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color:var(--color-escuro) ;
+}
+.progress-bar .step .bullet.active span{
+  display: none;
+}
+
+.progress-bar .step .bullet.active:after{
+  background: var(--color-logo-titulo);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+  display: none;
+}
+.progress-bar .step h2.active{
+  color: var(--color-principal);
+  transition: 0.2s linear;
+}
+.progress-bar .step .check{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progress-bar .step .check.active{
+  display: block;
+  color: var(--color-escuro);
+}
+
+
+@media screen and (max-width: 500px){
+  main{
+    margin: 1rem;
+    padding: 0;
+  }
+  .containerCadastroCompleto{
+    position: absolute;
+    top: 2.5rem;
+    max-width: 22rem;
+    max-height: 37rem;
+    padding: 10px;
+  }
+
+  .containerCadastroCompleto h1{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  form .pagina .entrada input{
+    padding-left: 10px;
+  }
+
+  .form-outer form .pagina .entrada{
+    max-width: 100%;
+    height: 3rem;
+    margin: 3rem 0;
+    display: flex;
+    position: relative;
+  }
+
+  .form-outer form .pagina .title{
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-height: 570px){
+  
+  .containerCadastroCompleto{
+    position: relative;
+    
+  }
+}
