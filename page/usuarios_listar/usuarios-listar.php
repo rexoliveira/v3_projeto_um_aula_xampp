@@ -66,7 +66,7 @@ $resultado->execute();
       <!-- BARRA-LATERAL-ESQUERDA -->
       <section class="sidebar" id="sidebar">
         <!-- Removido função class="active" -->
-        <a href="../dash_figma.php">
+        <a href="../home_dash.php">
           <span class="material-symbols-outlined"> space_dashboard </span>
           <h3>Retornar a Dashboard</h3>
         </a>

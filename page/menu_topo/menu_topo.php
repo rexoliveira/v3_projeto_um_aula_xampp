@@ -10,12 +10,12 @@
             >
           </li>
           <li>
-            <a href="./cadastro_port/cadastro.php"
+            <a href="cadastro_port/cadastro.php"
             ><i class="fa fa-user-plus"></i> Cadastra Usuário</a
             >
           </li>
           <li>
-            <a href="../parte_dash_figma/cadas_completo/cadas_completo.html"
+            <a href="cadas_completo/cadas_completo.php"
             ><i class="fa fa-check-square"></i> Cadastro Detalhado</a
             >
           </li>
