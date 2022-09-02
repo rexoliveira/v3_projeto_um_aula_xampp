@@ -227,12 +227,11 @@ form .pagina .btns button.next{
     padding: 0;
   }
   .containerCadastroCompleto{
-    position: fixed;
+    position: absolute;
     top: 2.5rem;
     max-width: 22rem;
     max-height: 37rem;
     padding: 10px;
-    overflow-y: scroll;
   }
 
   .containerCadastroCompleto h1{
