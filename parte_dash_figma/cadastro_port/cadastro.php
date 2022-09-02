@@ -80,7 +80,7 @@ session_start();
           <span class="material-symbols-outlined"> space_dashboard </span>
           <h3>Retornar a Dashboard</h3>
         </a>
-        <a href="../usuarios_port/usuarios-port.php">
+        <a href="../usuarios_listar/usuarios-listar.php">
           <span class="material-symbols-outlined"> groups </span>
           <h3>Lista Usuários</h3>
         </a>
