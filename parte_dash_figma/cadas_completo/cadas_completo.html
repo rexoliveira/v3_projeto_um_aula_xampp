@@ -30,6 +30,7 @@ session_start();
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <link rel="stylesheet" href="style_cadas_completo.css">
+    <script src="script_cadas_completo.js" defer></script>
   <title>Cadastro-port</title>
 </head>
 
@@ -124,74 +125,89 @@ session_start();
         <form action="#" name="cadastro_completo">
 
           <section class="pagina slide-pagina">
+
             <label class="title">Informação básica:</label>
             <div class="entrada">
               <label for="primeiroNome" class="label">Primeiro nome</label>
-              <input id="pnome" type="text" name="primeiroNome">
+              <input id="ipnome" type="text" name="primeiroNome" placeholder="Digite o primeiro nome">
             </div>
+
             <div class="entrada">
               <label for="sobreNome" class="label">Sobrenome</label>
-              <input id="snome" type="text" name="sobreNome">
+              <input id="isnome" type="text" name="sobreNome" placeholder="Digite o segundo nome">
             </div>
+
             <div class="entrada">
               <button type="submit" class="firstNext next">Próximo</button>
             </div>
           </section>
 
           <section class="pagina">
+
             <label class="title">Informações de contato</label>
             <div class="entrada">
-              <label class="label">Endereço de e-mail</label>
-              <input type="email">
+              <label for="email" class="label">Endereço de e-mail</label>
+              <input id="iemail" type="email" name="email" placeholder="Digite seu e-mail">
             </div>
+
             <div class="entrada">
-              <label class="label">Número de telefone</label>
-              <input type="tel">
+              <label for="telefone" class="label">Número de telefone</label>
+              <input id="itelefone" type="tel" name="telefone" placeholder="(00) 00000-0000">
             </div>
+
             <div class="entrada btns">
               <button class="prev-1 prev">Anterior</button>
               <button class="next-1 next">Próximo</button>
             </div>
+
           </section>
 
           <section class="pagina">
+
             <label class="title">Nascimento:</label>
             <div class="entrada">
-              <label class="label">Data</label>
-              <input type="date">
+              <label for="nascimento"  class="label">Data</label>
+              <input id="inascimento" type="date" name="nascimento">
             </div>
+
             <div class="entrada">
-              <label class="label">Gênero</label>
+              <label for="genero" class="label">Gênero</label>
               <select>
-                <option>Outros</option>
+                <option>Outro nenhum</option>
                 <option>Masculino</option>
                 <option>Feminino</option>
               </select>
             </div>
+
             <div class="entrada btns">
               <button class="prev-2 prev">Anterior</button>
               <button class="next-2 next">Próximo</button>
             </div>
+
           </section>
 
           <section class="pagina">
-            <div class="title">Senha:</div>
+
+            <label class="title">Senha:</label>
             <div class="entrada">
-              <div class="label">Senha</div>
-              <input type="password">
+              <label for="senha" class="label">Senha</label>
+              <input id="isenha" type="password" name="senha" placeholder="Digite sua senha">
             </div>
+
             <div class="entrada">
-              <div class="label">Comfirma Senha</div>
-              <input type="password">
+              <label for="confirmeSenha" class="label">Confirme a Senha</label>
+              <input id="iconfirmeSenha" type="password" name="confirmeSenha" placeholder="Repita sua senha">
             </div>
+
             <div class="entrada btns">
               <button class="prev-3 prev">Anterior</button>
               <button class="submit">Enviar</button>
             </div>
+
           </section>
         </form>
       </section>
-      <script src="script_cadas_completo.js" ></script>
+      
     </section>
     </main>
 

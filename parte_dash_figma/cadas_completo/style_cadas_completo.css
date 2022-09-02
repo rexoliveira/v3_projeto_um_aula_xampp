@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   /* --color-principal: #7380ec; */
@@ -47,15 +47,22 @@
   --box-shadow: 0 2rem 3rem var(--color-claro);
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 ::selection{
   color: var(--color-claro);
   background: var(--color-background);
 }
 .containerCadastroCompleto{
   width: 29rem;
-  background: var(--color-claro);
+  background-color: var(--color-white);
   text-align: center;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 50px 35px 10px 35px;
 }
 .containerCadastroCompleto h1{
@@ -78,7 +85,7 @@
 }
 .form-outer form .pagina .title{
   text-align: left;
-  font-size: 25px;
+  font-size: 1.9rem;
   font-weight: 500;
   color: var(--color-escuro);
 }
@@ -99,10 +106,11 @@ form .pagina .entrada .label{
 form .pagina .entrada input{
   height: 100%;
   width: 100%;
-  border: 1px solid var(--color-escuro-variante);
-  border-radius: 5px;
+  border-radius: 10px;
   padding-left: 15px;
-  font-size: 18px;
+  font-size: 16px;
+  background-color: var(--color-escuro);
+  color: var(--color-background);
 }
 form .pagina .entrada select{
   width: 100%;
@@ -114,19 +122,19 @@ form .pagina .entrada button{
   width: 100%;
   height: calc(100% + 5px);
   border: none;
-  background: var(--color-escuro);
+  background: var(--color-principal);
   margin-top: -20px;
-  border-radius: 5px;
+  border-radius: 10px;
   color:var(--color-background);
   cursor: pointer;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: 0.5s ease;
 }
 form .pagina .entrada button:hover{
-  background: var(--color-principal);
+  background: var(--color-escuro);
 }
 form .pagina .btns button{
   margin-top: -20px!important;
@@ -150,7 +158,7 @@ form .pagina .btns button.next{
 }
 .containerCadastroCompleto .progress-bar .step h2{
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--color-principal);
   margin-bottom: 8px;
 }
@@ -163,7 +171,7 @@ form .pagina .btns button.next{
   position: relative;
   transition: 0.2s;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 25px;
 }
 .progress-bar .step .bullet.active{
@@ -210,4 +218,50 @@ form .pagina .btns button.next{
 .progress-bar .step .check.active{
   display: block;
   color: var(--color-escuro);
+}
+
+
+@media screen and (max-width: 500px){
+  main{
+    margin: 1rem;
+    padding: 0;
+  }
+  .containerCadastroCompleto{
+    position: fixed;
+    top: 2.5rem;
+    max-width: 22rem;
+    max-height: 37rem;
+    padding: 10px;
+  }
+
+  .containerCadastroCompleto h1{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  form .pagina .entrada input{
+    padding-left: 10px;
+  }
+
+  .form-outer form .pagina .entrada{
+    max-width: 100%;
+    height: 3rem;
+    margin: 3rem 0;
+    display: flex;
+    position: relative;
+  }
+
+  .form-outer form .pagina .title{
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-height: 570px){
+  
+  .containerCadastroCompleto{
+    position: relative;
+    
+  }
 }
