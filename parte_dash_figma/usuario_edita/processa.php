@@ -107,7 +107,7 @@ $_SESSION['erros'] = ""
           <span class="material-symbols-outlined"> space_dashboard </span>
           <h3>Retornar a Dashboard</h3>
         </a>
-        <a href="cadastro.php">
+        <a href="../cadastro_port/cadastro.php">
           <span class="material-symbols-outlined"> person_add </span>
           <h3>Cadastra Usuário</h3>
         </a>
