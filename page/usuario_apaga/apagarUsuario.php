@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("conexao.php");
+require_once "../PDO/conexao.php";
 
 //Verifica se propriedade ID existe
 $id = isset($_GET['id']) ? $_GET['id'] : redireciona("Sem ID");
