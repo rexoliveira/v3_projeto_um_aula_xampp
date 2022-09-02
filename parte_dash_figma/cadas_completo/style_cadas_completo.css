@@ -115,8 +115,11 @@ form .pagina .entrada input{
 form .pagina .entrada select{
   width: 100%;
   padding-left: 10px;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 500;
+  border-radius: 10px;
+  background-color: var(--color-escuro);
+  color: var(--color-background);
 }
 form .pagina .entrada button{
   width: 100%;
