@@ -6,21 +6,21 @@ const validateEmail = (email) => {
   };
   
   const validate = () => {
-    const $result = $('#alert_email');
-    const email = $('#email').val();
+    const $result = $('#ialert_email');
+    const email = $('#iemail').val();
     $result.text('');
     $result.css('font-size', '12px');
     $result.css('margin', '5px 0px 0px 0px');
     $result.css('font-family', 'Arial, Helvetica, sans-serif');
   
     if (validateEmail(email)) {
-      $result.text(email + ' - E-mail valido');
+      $result.text(email + ' - Formato valido!');
       $result.css('color', '#30dc30');
     } else {
-      $result.text(email + ' - E-mail invalido');
+      $result.text(email + ' - Formato invalido!');
       $result.css('color', '#dc3030');
     }
     return false;
   }
   
-  $('#email').on('input', validate)
+  $('#iemail').on('input', validate)

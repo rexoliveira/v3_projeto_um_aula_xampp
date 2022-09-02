@@ -13,6 +13,12 @@ function redireciona($erro)
   header('Location: cadastro.php');
 }
 
+
+$nomeFilter = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING, FILTER_FLAG_NONE) ?? redireciona("Erro na entrada -'nome'");
+$emailFilter = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL)?? redireciona("Erro na entrada -'email'");;
+$telefoneFilter = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING)?? redireciona("Erro na entrada -'telefone'");;
+$passwordFilter = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING)?? redireciona("Erro na entrada -'senha'");;
+
 $array = filter_input_array(INPUT_POST);
 foreach ($array as $chave => $valor) {
   if (empty($valor)) {
@@ -21,12 +27,8 @@ foreach ($array as $chave => $valor) {
   ;
 }
 
-$nomeFilter = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING, FILTER_FLAG_NONE) ?? redireciona("Erro na entrada -'nome'");
-$emailFilter = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL)?? redireciona("Erro na entrada -'email'");;
-$telefoneFilter = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING)?? redireciona("Erro na entrada -'telefone'");;
-$passwordFilter = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING)?? redireciona("Erro na entrada -'senha'");;
-
 $sql = 'INSERT INTO usuario (nome, email, tel, password) VALUES(:nome,:email,:telefone,:password )';
+
 
 /* PDO */
 $resultado = $conexao->prepare($sql);
@@ -35,7 +37,11 @@ $resultado->bindParam(':email', $emailFilter, PDO::PARAM_STR);
 $resultado->bindParam(':telefone', $telefoneFilter, PDO::PARAM_STR);
 $resultado->bindValue(':password', $passwordFilter, PDO::PARAM_STR);
 $resultado->execute();
-$_SESSION['erros'] = ""
+$_SESSION['erros'] = "";
+
+//Retorna o ID 
+$chave = $conexao->lastInsertId();
+
 ?>
 
 <!DOCTYPE html>
@@ -54,23 +60,13 @@ $_SESSION['erros'] = ""
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
   <!-- [CSS] -->
-  <link rel="stylesheet" href="../menu_topo.css" />
   <link rel="stylesheet" href="form_style.css" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="table_style.css" />
-  <link rel="stylesheet" href="data_hora_style.css" />
+  <link rel="stylesheet" href="./usuarios_card_cadastra.css">
 
   <!-- [JS] -->
-  <!-- Se sua tag de script estiver na cabeça, o JavaScript será
-      carregado antes do seu HTML, 
-      portanto, o elemento que você está tentando acessar ainda não existe no DOM. 
-      Você precisará adicionar deferao seu script -->
-  <script src="../menu_topo.js" defer></script>
   <script src="cadastro.js" defer></script>
-  <!-- async = Você faz um carregamento assíncrono, ou seja, sem bloquear a página -->
-  <script src="../../script/data_hora.js" async></script>
-
-  <link rel="stylesheet" href="style.css" />
+  <script src="../usuario_apaga/apagarUsuario.js" defer></script>
 
   <title>Confirma Cadastro</title>
 </head>
@@ -131,11 +127,54 @@ $_SESSION['erros'] = ""
     <main>
       <?php
 
-      if (true) {
-        echo "<h2>Cadastro de " . $_POST['nome'] . " efetudo com sucesso!</h2>";
-      }
+      $sql = "SELECT * FROM usuario WHERE id=:id";
+           
+      $resultado = $conexao->prepare($sql);
+      $resultado->bindParam(':id',$chave);
+      $resultado->execute();
+      
+      $sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC);
+      
+
+      $id = !empty($sql_conteudo['id'])?$sql_conteudo['id']:"";
+      $nome = !empty($sql_conteudo['nome'])?$sql_conteudo['nome']:"";
+      $email = !empty($sql_conteudo['email'])?$sql_conteudo['email']:"";
+      $tel = !empty($sql_conteudo['tel'])?$sql_conteudo['tel']:"";
+
+        echo "<section class='cartao'>";
+        echo "<h2 id='avisoDelete'></h2>";
+          echo "<h2 class='edicao-sucesso'>Cadastro de " . $_POST['nome'] . " efetudo com sucesso!</h2>";
+        
+          echo "<section class='c-card'>";
+
+            echo "<section class='c-card_image'>";
+
+              echo"<a href='../usuario_edita/edita.php?id=$id' class='btn_editar'>
+              <span class='material-symbols-outlined'> edit </span></a>";
+              /* Não faz sentido estar aqui - reavaliação futura */
+              /* echo"<a href='#' class='btn_delete' onclick='apagarUsuario($id)'>
+              <span class='material-symbols-outlined'> delete </span></a>"; */
+              echo "<img class='imagem'src='../../image/avatar/0.png' alt='image avatar'>";
+              echo "<span class='dados-card id' ><h2 class='dados'>ID: $id</h2></span>";
+
+            echo "</section>";
+
+              echo "<section class='c-card_content'>";
+
+                echo "<span class='dados-card' ><h2 class='dados'>Nome: $nome</h2></span>";
+                echo " <span class='dados-card' ><h2 class='dados'>E-mail: $email</h2></span>";
+                echo "<span class='dados-card' ><h2 class='dados'>Contato: $tel</h2></span>";
+                echo"<a href='' class='btn_detalhes'>
+                <span class='material-symbols-outlined'> loupe </span></a>";
+
+              echo "</section>";
+
+          echo "</section>";
+        
+        echo "</section>";
 
       ?>
+
     </main>
     <aside class="aside_direito">
       <section class="sessao_usuario_topo">

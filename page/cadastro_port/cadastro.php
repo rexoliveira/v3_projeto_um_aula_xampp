@@ -19,6 +19,7 @@ session_start();
   <script src="valida_senha.js" defer></script>
   <script src="validate_email.js" defer></script>
   <script src="cadastro.js" defer></script>
+  <script src="../registro/registro.js" defer></script>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="form_style.css" />
@@ -29,31 +30,11 @@ session_start();
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-
-  <!-- MODAL -->
-  <!-- <script src="../contato_modal/modal.js" defer></script> -->
-  <!-- <link rel="stylesheet" href="../contato_modal/modal.css" /> -->
-
   <title>Cadastro-port</title>
 </head>
 
 <body>
-  <!-- <section id="todo-modal">
-    <button id="abrir-modal" >Abrir</button>
-
-    A transparência que divide o modal do conteudo de baixo
-    <section class="hide" id="fade"></section>
-
-    <section class="hide" id="modal-iframe">
-      <section class="modal-cabecalho">
-        <h2>Este é modal</h2>
-        <button id="fechar-modal">Fechar</button>
-      </section>
-      <section class="modal-corpo">
-        <iframe src="../contato_modal/contato_modal.php" frameborder="0"></iframe>
-      </section>
-    </section>
-  </section> -->
+  
   <section class="container">
     <!-- MENU-BOTÕES-TOPO -->
     <header></header>
@@ -115,7 +96,7 @@ session_start();
           <section>
             <!-- <span class="erro"><?php /* echo $_SESSION['erros'];  */?></span> -->
           </section>
-          <form name="cadastro_form" id="form_cadastro" action="processa.php" method="POST">
+          <form name="cadastro_form" id="iform_cadastro" action="processa.php" method="POST">
             <section class="input_group">
               <label for="nome">Nome Completo</label>
               <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"
@@ -124,27 +105,28 @@ session_start();
             </section>
             <section class="input_group">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="Digite seu email" required
+              <input type="email" id="iemail" name="email" placeholder="Digite seu email" required
               />
-              <span id="alert_email"></span>
+              <span id="ialert_email"></span>
+              <span id="iresposta"></span>
             </section>
             <section class="input_group">
               <label for="telefone">Telefone</label>
-              <input type="text" id="telefone" name="telefone" onkeypress="mask(this, mphone);"
+              <input type="text" id="itelefone" name="telefone" onkeypress="mask(this, mphone);"
                 onblur="mask(this, mphone);" th:value="${usuario.telefone}" placeholder="(00) 00000-0000" required
                />
             </section>
             <section class="input_group w50">
               <label for="senha">Senha</label>
-              <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required />
+              <input type="password" id="isenha" name="senha" placeholder="Digite sua senha" required />
             </section>
             <section class="input_group w50 c_senha">
               <label for="confirmar_senha">Confirmar a Senha</label>
-              <input type="password" id="confirma_senha" name="confirma_senha" placeholder="Confirme a senha" required
+              <input type="password" id="iconfirma_senha" name="confirma_senha" placeholder="Confirme a senha" required
                 />
             </section>
             <section class="input_group">
-              <button onclick="fechaAviso()" type="submit" >Cadastrar</button>
+              <button type="submit" >Cadastrar</button>
             </section>
           </form>
         </section>

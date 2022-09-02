@@ -7,7 +7,7 @@ const validateEmail = (email) => {
   
   const validate = () => {
     const $result = $('#alert_email');
-    const email = $('#email').val();
+    const email = $('#iemail').val();
     $result.text('');
     $result.css('font-size', '12px');
     $result.css('margin', '5px 0px 0px 0px');
@@ -23,4 +23,4 @@ const validateEmail = (email) => {
     return false;
   }
   
-  $('#email').on('input', validate)
+  $('#iemail').on('input', validate)

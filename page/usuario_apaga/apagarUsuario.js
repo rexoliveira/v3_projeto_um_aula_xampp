@@ -19,13 +19,13 @@ async function apagarUsuario(id) {
             // Recarrega a página atual sem usar o cache
             setInterval(function () {
                 document.location.reload(true);
-            }, 5000);
+            }, 10000);
         } else {
             document.location.reload(true);
-            document.getElementById("avisoDelete").innerHTML = "<span>" + msg + "</span>"
+            document.getElementById("avisoDelete").innerHTML = "<span style='color:yellow'>" + msg + "</span>"
             setInterval(function () {
                 document.location.reload(true);
-            }, 5000);
+            }, 10000);
         }
     } else {
         document.getElementById("avisoDelete").innerHTML = "<span style='color:green'>Exclusão cancelada!</span>"

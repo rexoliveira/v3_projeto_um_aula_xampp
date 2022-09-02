@@ -42,6 +42,7 @@ extract($usuario);
   <script src="valida_senha.js" defer></script>
   <script src="validate_email.js" defer></script>
   <script src="edita.js" defer></script>
+  <script src="../registro/registro.js" defer></script>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="form_style.css" />
@@ -139,11 +140,12 @@ extract($usuario);
             </section>
             <section class="input_group">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="Digite seu email"
+              <input type="email" id="iemail" name="email" placeholder="Digite seu email"
               value='<?php echo "$email"?>' 
               required
               />
               <span id="alert_email"></span>
+              <span id="iresposta"></span>
             </section>
             <section class="input_group">
               <label for="telefone">Telefone</label>

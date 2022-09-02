@@ -33,13 +33,13 @@ function apagarUsuario(id) {
 
             setInterval(function () {
               document.location.reload(true);
-            }, 5000);
+            }, 10000);
           } else {
             document.location.reload(true);
-            document.getElementById("avisoDelete").innerHTML = "<span>" + msg + "</span>";
+            document.getElementById("avisoDelete").innerHTML = "<span style='color:yellow'>" + msg + "</span>";
             setInterval(function () {
               document.location.reload(true);
-            }, 5000);
+            }, 10000);
           }
 
           _context.next = 15;
