@@ -146,6 +146,11 @@ session_start();
             >
           </li>
           <li>
+            <a href="../parte_dash_figma/cadas_completo/cadas_completo.html"
+              ><i class="fa fa-check-square"></i> Cadastro Detalhado</a
+            >
+          </li>
+          <li>
             <a
               href="transporte_port/transporte-port.php"
               ><i class="fa fa-bus"></i> Transporte</a

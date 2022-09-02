@@ -1,4 +1,4 @@
-const slidePage = document.querySelector(".slide-page");
+const slidePage = document.querySelector(".slide-pagina");
 const nextBtnFirst = document.querySelector(".firstNext");
 const prevBtnSec = document.querySelector(".prev-1");
 const nextBtnSec = document.querySelector(".next-1");
@@ -6,7 +6,7 @@ const prevBtnThird = document.querySelector(".prev-2");
 const nextBtnThird = document.querySelector(".next-2");
 const prevBtnFourth = document.querySelector(".prev-3");
 const submitBtn = document.querySelector(".submit");
-const progressText = [...document.querySelectorAll(".step p")];
+const progressText = [...document.querySelectorAll(".step h2")];
 const progressCheck = [...document.querySelectorAll(".step .check")];
 const bullet = [...document.querySelectorAll(".step .bullet")];
 let max = 4;
@@ -39,7 +39,7 @@ submitBtn.addEventListener("click", function(){
   progressText[current - 1].classList.add("active");
   current += 1;
   setTimeout(function(){
-    alert("Your Form Successfully Signed up");
+    alert("Usuário cadastrado com sucesso!");
     location.reload();
   },800);
 });

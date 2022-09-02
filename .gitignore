@@ -3,4 +3,7 @@ apagar.html
 apagar.css
 apagar.js
 conexao.php
-
+parte_dash_figma/usuario_apaga/conexao.php
+parte_dash_figma/usuarios_listar/conexao.php
+parte_dash_figma/usuario_edita/conexao.php
+parte_dash_figma/cadastro_port/conexao.php
