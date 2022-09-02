@@ -50,6 +50,17 @@
     --box-shadow: 0 2rem 3rem var(--color-claro);
 }
 
+#avisoDelete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    font-weight: none;
+    margin: 0;
+    color: red;
+}
+
 .cartoes {
     position: relative;
     width: 100%;

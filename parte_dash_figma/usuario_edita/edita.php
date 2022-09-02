@@ -4,7 +4,7 @@ include_once("conexao.php");
 function redireciona($erro)
 {
   $_SESSION['erros'] = "Erro: $erro";
-  header('Location: ../usuarios_port/usuarios-port.php');
+  header('Location: ../usuarios_listar/usuarios-listar.php');
 }
 
 $id = isset($_GET['id']) ? $_GET['id'] : redireciona("Sem ID");
@@ -86,7 +86,7 @@ extract($usuario);
           <span class="material-symbols-outlined"> person_add </span>
           <h3>Cadastra Usuário</h3>
         </a>
-        <a href="../usuarios_port/usuarios-port.php">
+        <a href="../usuarios_listar/usuarios-listar.php">
           <span class="material-symbols-outlined"> groups </span>
           <h3>Lista Usuários</h3>
         </a>

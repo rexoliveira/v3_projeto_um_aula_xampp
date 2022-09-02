@@ -47,7 +47,7 @@ $resultado->execute();
 <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="usuarios_cards.css">
 
-<script src="./apagarUsuario.js"defer></script>
+<script src="../usuario_apaga/apagarUsuario.js" defer></script>
 <script src="script.js"defer></script>
     <title>Lista de usuários</title>
   </head>
@@ -111,9 +111,11 @@ $resultado->execute();
                 <input id="botao_filtro" class="item_menu" type="submit"
                         value="Filtrar">
             </form>
-        </section>
+          </section>
+          
+          <?php
 
-        <?php
+
 if ($where == 'email') {
   $n_filtro = 'E-mail';
 }
@@ -129,6 +131,8 @@ if ($filtro != "" && $where != "todos") {
 else {
   print "<h5>Escolha outro filtro no lugar de 'todos' para uma informação específica. </h5>";
 }
+echo "<h2 id='avisoDelete'></h2>";
+
 print "<section class=\"cartoes\">";
 /* print "<h2>$registros resgistros encontrados.</h2>" */
   $contadorImg = 0 ;
