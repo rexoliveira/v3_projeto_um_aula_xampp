@@ -232,6 +232,7 @@ form .pagina .btns button.next{
     max-width: 22rem;
     max-height: 37rem;
     padding: 10px;
+    overflow-y: scroll;
   }
 
   .containerCadastroCompleto h1{
