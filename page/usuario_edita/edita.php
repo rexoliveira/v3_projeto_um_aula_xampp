@@ -42,6 +42,7 @@ extract($usuario);
   <script src="valida_senha.js" defer></script>
   <script src="validate_email.js" defer></script>
   <script src="edita.js" defer></script>
+  <!-- Verifica se e-mail já não está cadastrado -->
   <script src="../registro/registro.js" defer></script>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css" />
@@ -83,7 +84,7 @@ extract($usuario);
           <span class="material-symbols-outlined"> space_dashboard </span>
           <h3>Retornar a Dashboard</h3>
         </a>
-        <a href="../cadastro_port/cadastro.php">
+        <a href="../cadastro/cadastro.php">
           <span class="material-symbols-outlined"> person_add </span>
           <h3>Cadastra Usuário</h3>
         </a>

@@ -10,7 +10,7 @@
             >
           </li>
           <li>
-            <a href="cadastro_port/cadastro.php"
+            <a href="cadastro/cadastro.php"
             ><i class="fa fa-user-plus"></i> Cadastra Usuário</a
             >
           </li>
@@ -21,7 +21,7 @@
           </li>
           <li>
             <a
-            href="transporte_port/transporte-port.php"
+            href="transporte/transporte.php"
             ><i class="fa fa-bus"></i> Transporte</a
             >
           </li>

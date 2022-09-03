@@ -14,10 +14,6 @@ session_start();
       rel="shortcut icon"
       href="../image/icon/smart-city.png"
       type="image/x-icon"
-    />
-
-    <!-- ####################################################################################################### -->
-    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
     />
@@ -47,33 +43,28 @@ session_start();
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
     />
 
-    <link rel="stylesheet" href="./menu_topo/menu_topo.css" />
-    <script src="./menu_topo/menu_topo.js" defer></script>
-    <!-- ####################################################################################################### -->
-
-    <!-- MATERIAL CDN - ICONS DO GOOGLE -->
+    
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
-
+    
+    <link rel="stylesheet" href="./menu_topo/menu_topo.css" />
+    <link rel="stylesheet" href="./contato_modal/modal.css" />
     <link rel="stylesheet" href="style.css" />
-
+    
+    <script src="./menu_topo/menu_topo.js" defer></script>
+    <script src="./contato_modal/modal.js" defer></script>
     <script src="script.js" defer></script>
     <script src="servicos.js"></script>
-    <script src="../script/data_hora.js"></script>
-
-    <!-- MODAL -->
-    <script src="./contato_modal/modal.js" defer></script>
-    <link rel="stylesheet" href="./contato_modal/modal.css" />
-
-    <title>Principal-Dashboard</title>
+    <script src="data_hora.js"></script>
     <!-- CHATBOT -->
     <script
-      src="//code.tidio.co/1aqgswzm5wfvfba4mfj0anecdshqfdcq.js"
-      async
+    src="//code.tidio.co/1aqgswzm5wfvfba4mfj0anecdshqfdcq.js"
+    async
     ></script>
-    
+
+    <title>Principal-Dashboard</title>
   </head>
 
   <body>

@@ -67,14 +67,7 @@ $_SESSION['erros'] = ""
   <link rel="stylesheet" href="style.css" />
 
   <!-- [JS] -->
-  <!-- Se sua tag de script estiver na cabeça, o JavaScript será
-      carregado antes do seu HTML, 
-      portanto, o elemento que você está tentando acessar ainda não existe no DOM. 
-      Você precisará adicionar deferao seu script -->
-  <script src="../menu_topo.js" defer></script>
   <script src="edita.js" defer></script>
-  <!-- async = Você faz um carregamento assíncrono, ou seja, sem bloquear a página -->
-  <script src="../../script/data_hora.js" async></script>
   <script src="../usuario_apaga/apagarUsuario.js"defer></script>
 
 
@@ -107,7 +100,7 @@ $_SESSION['erros'] = ""
           <span class="material-symbols-outlined"> space_dashboard </span>
           <h3>Retornar a Dashboard</h3>
         </a>
-        <a href="../cadastro_port/cadastro.php">
+        <a href="../cadastro/cadastro.php">
           <span class="material-symbols-outlined"> person_add </span>
           <h3>Cadastra Usuário</h3>
         </a>

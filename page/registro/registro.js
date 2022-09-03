@@ -15,12 +15,12 @@ const validateEmailExiste = () => {
     success: function (data) {
       //console.log(data); 
       data = $.parseJSON(data);
-
-
+      
+      var idPag = (id != null) ? id.value : "";
       //========================================================
       if (data.email == "") {
         //Condição para edição quando é o proprio email do usuário
-        if (data.id != id.value) {
+        if (data.id != idPag) {
           emailEntrada.setCustomValidity("");
           $result.css('color', '#30dc30');
           $("#iresposta").text(data.email);
@@ -28,7 +28,7 @@ const validateEmailExiste = () => {
       } else {
         /* console.log("ID do banco: "+data.id)
         console.log("ID da pagina edita : "+id.value) */
-        if (data.id != id.value) {
+        if (data.id != idPag) {
           emailEntrada.setCustomValidity("E-mail já cadastrado!");
           emailEntrada.reportValidity();
           $result.css('color', '#dc3030');

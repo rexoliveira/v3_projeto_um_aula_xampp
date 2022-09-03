@@ -23,24 +23,16 @@
     />
 
     <!-- [CSS] -->
-    <link rel="stylesheet" href="../menu_topo.css" />
-    <link rel="stylesheet" href="form_style.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="table_style.css" />
     <link rel="stylesheet" href="data_hora_style.css" />
 
     <!-- [JS] -->
-    <!-- Se sua tag de script estiver na cabeça, o JavaScript será
-      carregado antes do seu HTML, 
-      portanto, o elemento que você está tentando acessar ainda não existe no DOM. 
-      Você precisará adicionar deferao seu script -->
-    <script src="../menu_topo.js" defer></script>
     <script src="dados_transportes.js" defer></script>
     <script src="script_dados_transportes.js" defer></script>
-    <!-- async = Você faz um carregamento assíncrono, ou seja, sem bloquear a página -->
-    <script src="../../script/data_hora.js" async></script>
+    <script src="data_hora.js" async></script>
 
-    <title>Transporte-port</title>
+    <title>Transporte</title>
   </head>
 
   <body>
