@@ -2,4 +2,4 @@
 apagar.html
 apagar.css
 apagar.js
-conexao.php
+page/PDO/conexao.php
