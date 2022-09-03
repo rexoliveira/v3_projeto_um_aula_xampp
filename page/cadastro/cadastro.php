@@ -10,7 +10,7 @@ session_start();
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="shortcut icon" href="../image/icon/smart-city.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="../../image/icon/smart-city-200.png" type="image/x-icon" />
 
 
   <!--Script abaixo faz parte da configuração de valida email- -->

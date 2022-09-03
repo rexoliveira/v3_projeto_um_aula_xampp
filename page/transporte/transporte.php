@@ -7,7 +7,7 @@
 
     <link
       rel="shortcut icon"
-      href="../image/icon/smart-city.png"
+      href="../../image/icon/smart-city.png"
       type="image/x-icon"
     />
 

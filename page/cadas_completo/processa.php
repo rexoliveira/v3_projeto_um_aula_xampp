@@ -46,7 +46,11 @@ $_SESSION['erros'] = ""
 
   <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0" />
 
-  <link rel="shortcut icon" href="../image/icon/smart-city.png" type="image/x-icon" />
+  <link
+      rel="shortcut icon"
+      href="../../image/icon/smart-city.png"
+      type="image/x-icon"
+    />
 
   <!-- MATERIAL CDN - ICONS DO GOOGLE -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css" />

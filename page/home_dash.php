@@ -12,8 +12,10 @@ session_start();
 
     <link
       rel="shortcut icon"
-      href="../image/icon/smart-city.png"
+      href="../image/icon/smart-city-200.png"
       type="image/x-icon"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
     />
@@ -34,13 +36,13 @@ session_start();
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,300,700"
       rel="stylesheet"
       type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
     />
 
     
