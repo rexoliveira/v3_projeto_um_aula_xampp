@@ -90,10 +90,6 @@
           <!-- mega-drop-down -->
           <?php //include_once("./menu_topo/desativado-mega-drop-down.php") ?>
           <!-- blog-drop-down -->
-          <?php include_once("./menu_topo/blog-drop-down.php") ?>
-          <!-- images-drop-down -->
-          <?php include_once("./menu_topo/images-drop-down.php") ?>
-          <!-- ============================================================= -->
           <li>
             <a href="./contato/contato.php"
               ><i class="fa fa-envelope"></i> Contato</a
@@ -101,9 +97,13 @@
           </li>
           <li>
             <a href="#" id="abrir-modal"
-              ><i class="fa fa-envelope"></i> Chat Bot</a
+              ><i class="fa fa-comments-o"></i> Chat Bot</a
             >
           </li>
+          <?php include_once("./menu_topo/blog-drop-down.php") ?>
+          <!-- images-drop-down -->
+          <?php include_once("./menu_topo/images-drop-down.php") ?>
+          <!-- ============================================================= -->
           <a href="#" class="toggle-menu visible-xs-block">|||</a>
         </ul>
   
