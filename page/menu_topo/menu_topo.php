@@ -89,17 +89,22 @@
           <?php //include_once("./menu_topo/desativado-drop-down.php") ?>
           <!-- mega-drop-down -->
           <?php //include_once("./menu_topo/desativado-mega-drop-down.php") ?>
-          <!-- blog-drop-down -->
           <li>
             <a href="./contato/contato.php"
-              ><i class="fa fa-envelope"></i> Contato</a
+            ><i class="fa fa-envelope"></i> Contato</a
             >
           </li>
           <li>
             <a href="#" id="abrir-modal"
-              ><i class="fa fa-comments-o"></i> Chat Bot</a
+            ><i class="fa fa-comments-o"></i> Chat Bot</a
             >
           </li>
+          <li>
+            <a href="./github_gist/gist.php" 
+            ><i class="fa fa-github-square"></i> GitHub & Gists</a
+            >
+          </li>
+          <!-- blog-drop-down -->
           <?php include_once("./menu_topo/blog-drop-down.php") ?>
           <!-- images-drop-down -->
           <?php include_once("./menu_topo/images-drop-down.php") ?>
