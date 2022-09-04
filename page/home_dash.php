@@ -1,8 +1,6 @@
 <?php
 session_start();
 ?>
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -15,51 +13,7 @@ session_start();
       href="../image/icon/smart-city-200.png"
       type="image/x-icon"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-    />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
-    <!-- partial -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,300,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-
-    
-    <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-    />
-    
-    <link rel="stylesheet" href="./menu_topo/menu_topo.css" />
-    <link rel="stylesheet" href="./contato_modal/modal.css" />
-    <link rel="stylesheet" href="style.css" />
-    
-    <script src="./menu_topo/menu_topo.js" defer></script>
-    <script src="./contato_modal/modal.js" defer></script>
-    <script src="script.js" defer></script>
-    <script src="servicos.js"></script>
-    <script src="data_hora.js"></script>
+    <!-- =============LINKS ESTÃO EM MENU_TOPO.PHP=========== -->
     <!-- CHATBOT -->
     <script
     src="//code.tidio.co/1aqgswzm5wfvfba4mfj0anecdshqfdcq.js"
@@ -70,12 +24,10 @@ session_start();
   </head>
 
   <body>
-    <section id="todo-modal">
+    <section id="todo-modal-chat-bot">
       <!-- <button id="abrir-modal" >Abrir</button> -->
-
       <!-- A transparência que divide o modal do conteudo de baixo -->
       <section class="hide" id="fade"></section>
-
       <section class="hide" id="modal-iframe">
         <section class="modal-cabecalho">
           <!-- <h2>Este é modal</h2> -->
@@ -83,12 +35,13 @@ session_start();
         </section>
         <section class="modal-corpo">
           <iframe
-            src="./contato_modal/contato_modal.php"
+            src="./chat_bot/chat_bot.php"
             frameborder="0"
           ></iframe>
         </section>
       </section>
     </section>
+       
     <section class="container">
       <!-- MENU-BOTÕES-TOPO -->
       <header>
