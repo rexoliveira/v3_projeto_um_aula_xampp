@@ -83,7 +83,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translatey(-12%);
-   width: 100%;
+    width: 100%;
     background-color: var(--color-white);
     border-radius: 10px;
     padding: 1rem;
@@ -97,9 +97,9 @@ body {
     color: var(--color-escuro);
 }
 
-pp.descricao {
+p.descricao {
     font-size: 1.1rem;
-    color: var(--color-white)
+    color: var(--color-principal);
 }
 
 #script{
