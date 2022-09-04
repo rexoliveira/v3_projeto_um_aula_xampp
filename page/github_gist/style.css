@@ -89,7 +89,7 @@ body {
     padding: 1rem;
 }
 
-.titulo, .subtitulo, p {
+.titulo, .subtitulo, p.descricao {
     padding-bottom: 1rem;
 }
 
@@ -97,7 +97,7 @@ body {
     color: var(--color-escuro);
 }
 
-p {
+pp.descricao {
     font-size: 1.1rem;
     color: var(--color-white)
 }
@@ -377,6 +377,8 @@ main {
 
 /* SESSÃO */
 .aside_direito .sessao_usuario_topo {
+    position: absolute;
+    max-width: 100%;
     display: flex;
     justify-content: end;
     gap: 2rem;

@@ -60,7 +60,7 @@
 <section class="gists">
     <article>
         <h1 class="titulo">Curso de Dart/Flutter Proz</h1>
-        <p>Semana-5 [Clases e programazação orientada a onjetos]</p>
+        <p class ="descricao">Semana-5 [Clases e programazação orientada a onjetos]</p>
         <h2 class="subtitulo" >Code Park - 1</h2>
         <section id="script" >
         <script src="https://gist.github.com/rexoliveira/47629864f94eb512b3fb5ca6887f602d.js" ></script>
