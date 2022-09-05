@@ -101,6 +101,10 @@ body {
     padding-bottom: 1rem;
 }
 
+.subtitulo,.subtitulo-sub{
+    color: var(--color-alerta);
+}
+
 p.descricao {
     font-size: 1.1rem;
     color: var(--color-principal);
@@ -659,8 +663,3 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
     }
 }
-
-/* 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
-*/
