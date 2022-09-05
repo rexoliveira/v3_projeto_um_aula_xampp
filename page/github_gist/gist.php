@@ -17,6 +17,7 @@
     />
     <link rel="stylesheet" href="style.css">
     <script src="./github_gist.js" defer></script>
+    <script src="./gist.js" defer></script>
     <title>Contato</title>
   </head>
   <body>
