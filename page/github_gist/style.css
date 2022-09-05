@@ -81,8 +81,7 @@ body {
 
 .gists {
     position: absolute;
-    top: 50%;
-    transform: translatey(-12%);
+    top: 5%;
     width: 100%;
     background-color: var(--color-white);
     border-radius: 10px;
@@ -95,6 +94,11 @@ body {
 
 .titulo, .subtitulo {
     color: var(--color-escuro);
+}
+
+.subtitulo-sub{
+    margin-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 p.descricao {
@@ -626,7 +630,9 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
     /* Eu */
     @media screen and (max-width: 530px) {
-
+        .gists{
+            top: 10%;
+        }
         .aside_direito .sessao_usuario_topo {
             margin-top: 0;
             padding: 0 3rem 0 0;
