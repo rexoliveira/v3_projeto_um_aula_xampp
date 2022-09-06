@@ -48,7 +48,7 @@ if (isset($_POST['enviar'])) {
         //SMTP username
         $mail->Username   = 'rex.oliveira15@gmail.com';
         //SMTP password          
-        $mail->Password   = ''; 
+        $mail->Password   = 'skmpjtptrfsukp'; 
         //Enable implicit TLS encryption                              
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         //TCP port to connect to; use 587 if you have set 
