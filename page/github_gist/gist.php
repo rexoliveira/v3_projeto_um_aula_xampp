@@ -63,15 +63,21 @@
         <h1 class="titulo">Curso de Dart/Flutter Proz</h1>
         <p class ="descricao">Semana-5 [Clases e programazação orientada a onjetos]</p>
         <h2 class="subtitulo" >Code Park - 1</h2>
+        
         <section id="script" >
+
         <script src="https://gist.github.com/rexoliveira/47629864f94eb512b3fb5ca6887f602d.js" ></script>
-        </section>
+        
         <h2 class="subtitulo-sub" >Code Park - 2</h2>
-        <section id="script" >
+        
         <script src="https://gist.github.com/rexoliveira/8b08f73588df135cd93ca2cb477ed31a.js"></script>
+        
+        <h2 class="subtitulo-sub" >Code Park - 3</h2>
+        
+        <script src="https://gist.github.com/rexoliveira/126a0f6b91812a9a2bcc3c366c2e7cf6.js"></script>
         </section>
     </article>
-    </section>
+</section>
 </main>
     <!-- ----------------------FIM MAIN---------------------- -->
 
