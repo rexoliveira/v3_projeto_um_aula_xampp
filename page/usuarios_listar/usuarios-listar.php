@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../PDO/conexao.php";
+require_once "../pdo/conexao.php";
 
 $filtro = isset($_GET['filtro']) ? $_GET['filtro'] : "";
 $where = isset($_GET['palavraFiltro']) ? $_GET['palavraFiltro'] : "";
@@ -13,7 +13,6 @@ else {
 }
 ;
 
-/* PDO */
 $resultado = $conexao->prepare($sql);
 $resultado->execute();
 
@@ -30,6 +29,7 @@ $resultado->execute();
 
   <!-- [JS] -->
   <script src="../usuario_apaga/apagarUsuario.js" defer></script>
+  <script src="../reset_banco/processa_json.js" defer></script>
   <script src="script.js" defer></script>
   <!-- [CSS] -->
   <link rel="stylesheet" href="../root.css">
@@ -73,6 +73,10 @@ $resultado->execute();
         <a href="#" onclick="genioFullScreen()" id="btn">
           <span class="material-symbols-outlined"> fullscreen </span>
           <h3>Tela Grande</h3>
+        </a>
+        <a href="#" onclick="confirmarReset()" style="color:red">
+          <span class="material-symbols-outlined"> restart_alt </span>
+          <h3>RESET_BANCO</h3>
         </a>
         <div class="tema-toggler" id="tema-toggler">
           <span class="material-symbols-outlined"> light_mode </span>

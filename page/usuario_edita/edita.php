@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../PDO/conexao.php";
+require_once "../pdo/conexao.php";
 function redireciona($erro)
 {
   $_SESSION['erros'] = "Erro: $erro";
@@ -13,7 +13,6 @@ $idFilter = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING, FILTER_FLAG_NO
 
 $sql = "SELECT id, nome, email, tel, password FROM public.usuario WHERE id = :id LIMIT 1";
 
-/* PDO */
 $resultado = $conexao->prepare($sql);
 $resultado->bindParam(':id', $idFilter, PDO::PARAM_STR);
 $resultado->execute();

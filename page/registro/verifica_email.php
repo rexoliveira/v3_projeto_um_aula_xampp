@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../PDO/conexao.php";
+require_once "../pdo/conexao.php";
 #Verifica se tem um email para pesquisa
 
 $emailFilter = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING, FILTER_FLAG_NONE) ?? "";

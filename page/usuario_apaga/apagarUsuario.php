@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../PDO/conexao.php";
+require_once "../pdo/conexao.php";
 
 //Verifica se propriedade ID existe
 $id = isset($_GET['id']) ? $_GET['id'] : redireciona("Sem ID");
@@ -19,7 +19,6 @@ function redireciona($erro)
 
 $sql = "DELETE FROM public.usuario WHERE id = :id ";
 
-/* PDO */
 $resultado = $conexao->prepare($sql);
 $resultado->bindParam(':id', $idFilter, PDO::PARAM_STR);
 //Retorna um booleano caso deleta ou não

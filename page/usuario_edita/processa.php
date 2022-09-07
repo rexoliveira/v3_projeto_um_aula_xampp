@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../PDO/conexao.php";
+require_once "../pdo/conexao.php";
 
 $id = isset($_POST['id']) ? $_POST['id'] : redireciona("id:id");
 $nome = isset($_POST['nome']) ? $_POST['nome'] : redireciona("name:nome");
@@ -35,7 +35,6 @@ $sql = 'UPDATE public.usuario SET  nome=:nome, email=:email, tel=:telefone, pass
   $sql = 'UPDATE public.usuario SET  nome=:nome, email=:email, tel=:telefone WHERE id=:id';
 } 
 
-/* PDO */
 $resultado = $conexao->prepare($sql);
 $resultado->bindParam(':id', $idFilter, PDO::PARAM_STR);
 $resultado->bindParam(':nome', $nomeFilter, PDO::PARAM_STR);

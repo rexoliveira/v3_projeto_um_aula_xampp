@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../PDO/conexao.php";
+require_once "../pdo/conexao.php";
 
 $nome = isset($_POST['nome']) ? $_POST['nome'] : redireciona("name:nome");
 $email = isset($_POST['email']) ? $_POST['email'] : redireciona("name:email");
@@ -29,13 +29,12 @@ foreach ($array as $chave => $valor) {
 
 $sql = 'INSERT INTO usuario (nome, email, tel, password) VALUES(:nome,:email,:telefone,:password )';
 
-
-/* PDO */
 $resultado = $conexao->prepare($sql);
 $resultado->bindParam(':nome', $nomeFilter, PDO::PARAM_STR);
 $resultado->bindParam(':email', $emailFilter, PDO::PARAM_STR);
 $resultado->bindParam(':telefone', $telefoneFilter, PDO::PARAM_STR);
-$resultado->bindValue(':password', $passwordFilter, PDO::PARAM_STR);
+$passwordHash = password_hash($passwordFilter, PASSWORD_DEFAULT);
+$resultado->bindValue(':password', $passwordHash, PDO::PARAM_STR);
 $resultado->execute();
 $_SESSION['erros'] = "";
 

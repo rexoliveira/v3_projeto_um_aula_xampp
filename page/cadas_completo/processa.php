@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../PDO/conexao.php";
+require_once "../pdo/conexao.php";
 
 $nome = isset($_POST['nome']) ? $_POST['nome'] : redireciona("name:nome");
 $email = isset($_POST['email']) ? $_POST['email'] : redireciona("name:email");
