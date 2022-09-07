@@ -16,7 +16,7 @@ function confirmarReset() {
 
 
 function buscarJson() {
-  var ajax = new XMLHttpRequest(Cache, false);
+  var ajax = new XMLHttpRequest();
 
   ajax.onload = function () {
     if (ajax.readyState == 4) {
