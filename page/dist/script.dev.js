@@ -29,22 +29,22 @@ themeToggler.addEventListener('click', function () {
 });
 /* Preencher serviços na tabela */
 
-dadostransportes.forEach(function (rotas) {
-  /* Cria o elemeneto dentro da "table tbody" */
+servicos.forEach(function (service) {
   var tr = document.createElement('tr');
+  /* Tem que ser dentro de crase */
+
   /* Escolhe o tipo de status basedo na cor do texto */
 
-  var status = rotas.linha === '' ? 'analise' : rotas.horarioChegada === '' ? 'alerta' : rotas.horarioSaida === '' ? 'sucesso' : rotas.empresa === '' ? 'analise' : rotas.diaSemana === 'Sabado/Domingo' ? 'sucesso' : rotas.diaSemana === 'Feriados' ? 'perigo' : 'white';
+  var status = service.situacao === 'Pendente' ? 'perigo' : service.situacao === 'Andamento' ? 'alerta' : service.situacao === 'Efetuado' ? 'sucesso' : service.situacao === 'Analise' ? 'analise' : 'principal';
   /* Atribui a construção da tabela à váriável */
 
-  var trContent = "\n                <td class=\"".concat(status, "\">").concat(rotas.linha, "</td>\n                <td class=\"").concat(status, "\">").concat(rotas.horarioChegada, "</td>\n                <td class=\"").concat(status, "\">").concat(rotas.horarioSaida, "</td>\n                <td class=\"").concat(status, "\">").concat(rotas.empresa, "</td>\n                <td class=\"").concat(status, "\">").concat(rotas.diaSemana, "</td>\n                ");
+  var trContent = "\n                <td>".concat(service.servico, "</td>\n                <td>").concat(service.numero, "</td>\n                <td>").concat(service.taxa, "</td>\n                <td class=\"").concat(status, "\">").concat(service.situacao, "</td>\n                <td class=\"principal\"><a href=\"#\" style=\"text-decoration:none\">Detalhes</a></td>\n                ");
   /* Cria as linha com o conteúdo da variável */
 
   tr.innerHTML = trContent;
-  console.log(tr);
   /* Atribui ao corpo da tabela as linhas */
 
-  document.querySelector('main table tbody').appendChild(tr);
+  document.querySelector('table tbody').appendChild(tr);
 });
 /* Crédito:https://www.horadecodar.com.br/2020/08/22/como-ativar-a-tela-cheia-do-navegador-com-javascript/ */
 

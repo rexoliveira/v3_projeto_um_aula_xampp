@@ -43,8 +43,9 @@ dadostransportes.forEach(rotas => {
       rotas.horarioChegada === '' ? 'alerta' :
         rotas.horarioSaida === '' ? 'sucesso' :
           rotas.empresa === '' ? 'analise' :
-            rotas.diaSemana === 'Feriados' ? 'perigo' :
-              'principal'
+            rotas.diaSemana === 'Sabado/Domingo' ? 'sucesso' :
+              rotas.diaSemana === 'Feriados' ? 'perigo' :
+                'white'
 
   /* Atribui a construção da tabela à váriável */
   const trContent =
@@ -64,31 +65,31 @@ dadostransportes.forEach(rotas => {
 
 
 /* Crédito:https://www.horadecodar.com.br/2020/08/22/como-ativar-a-tela-cheia-do-navegador-com-javascript/ */
-    /* GERA TELA EM FULLSCREEN */
-    function genioFullScreen() {
-      if (!document.fullscreenElement &&    // método padrão alternativo
-          !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // métodos de trabalho atuais
-        if (document.documentElement.requestFullscreen) {
-          document.documentElement.requestFullscreen();
-        } else if (document.documentElement.msRequestFullscreen) {
-          document.documentElement.msRequestFullscreen();
-        } else if (document.documentElement.mozRequestFullScreen) {
-          document.documentElement.mozRequestFullScreen();
-        } else if (document.documentElement.webkitRequestFullscreen) {
-          document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-        }
-      } else {
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if (document.msExitFullscreen) {
-          document.msExitFullscreen();
-        } else if (document.mozCancelFullScreen) {
-          document.mozCancelFullScreen();
-        } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
-        }
-      }
+/* GERA TELA EM FULLSCREEN */
+function genioFullScreen() {
+  if (!document.fullscreenElement &&    // método padrão alternativo
+    !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {  // métodos de trabalho atuais
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.msRequestFullscreen) {
+      document.documentElement.msRequestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
     }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+}
 
 
 
