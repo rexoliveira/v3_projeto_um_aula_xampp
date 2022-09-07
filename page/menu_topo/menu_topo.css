@@ -402,6 +402,7 @@ a.toggle-menu {
     max-height: 30px;
     background-color: var(--color-background);
     width: 100%;
+overflow: scroll;
   }
 
   .menu-topo>li>a {
@@ -433,7 +434,7 @@ a.toggle-menu {
     font-size: 22px;
     background-color: var(--color-principal);
     color: #23364B;
-overflow: scroll;
+
 
   }
 }
