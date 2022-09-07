@@ -433,5 +433,7 @@ a.toggle-menu {
     font-size: 22px;
     background-color: var(--color-principal);
     color: #23364B;
+overflow: scroll;
+
   }
 }
