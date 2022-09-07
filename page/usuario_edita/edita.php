@@ -39,25 +39,21 @@ extract($usuario);
       type="image/x-icon"
     />
 
-
+  <!-- [JS] -->
   <!--Script abaixo faz parte da configuração de valida email- -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="mascaras.js" defer></script>
-  <script src="valida_senha.js" defer></script>
-  <script src="validate_email.js" defer></script>
-  <script src="edita.js" defer></script>
   <!-- Verifica se e-mail já não está cadastrado -->
   <script src="../registro/registro.js" defer></script>
+  <script src="validate_email.js" defer></script>
+  <script src="valida_senha.js" defer></script>
+  <script src="mascaras.js" defer></script>
+  <script src="edita.js" defer></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css" />
+  <!-- [CSS] -->
+  <link rel="stylesheet" href="../root.css">
   <link rel="stylesheet" href="form_style.css" />
   <link rel="stylesheet" href="style.css" />
   
-  
-  <!-- MATERIAL CDN - ICONS DO GOOGLE -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
   <title>Edita usuário</title>
 </head>
 

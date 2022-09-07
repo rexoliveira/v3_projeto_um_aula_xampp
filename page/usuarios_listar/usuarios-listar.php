@@ -28,18 +28,14 @@ $resultado->execute();
 
   <link rel="shortcut icon" href="../../image/icon/smart-city-200.png" type="image/x-icon" />
 
-
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css" />
-
-  <!-- MATERIAL CDN - ICONS DO GOOGLE -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="usuarios_cards.css">
-
+  <!-- [JS] -->
   <script src="../usuario_apaga/apagarUsuario.js" defer></script>
   <script src="script.js" defer></script>
+  <!-- [CSS] -->
+  <link rel="stylesheet" href="../root.css">
+  <link rel="stylesheet" href="usuarios_cards.css">
+  <link rel="stylesheet" href="style.css" />
+
   <title>Lista de usuários</title>
 </head>
 

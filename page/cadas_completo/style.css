@@ -1,122 +1,8 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* ROOT VARIAVEIS */
-
-:root {
-    /* --color-principal: #7380ec; */
-    --color-principal: #53a2c7fe;
-    --color-perigo: #ff7782;
-    --color-sucesso: #41f1b6;
-    --color-alerta: #ffbb55;
-
-    /* EU */
-    --color-erro:#cc0000;
-    --color-analise: #55b0ff;
-    --color-logo-titulo: #61f889;
-    --color-card4: #55ffee;
-    --color-card5: #5560ff;
-    --color-card6: #eb55ff;
-
-    --color-info-escuro: #7d8da1;
-    --color-info-claro: #dce1eb;
-
-    --color-principal-variante: #111e88;
-
-    /* escuro-tema-variaveis { */
-    --color-background: #181a1e;
-    --color-white: #202528;
-    --color-escuro: #edeffd;
-    --color-escuro-variante: #a3bdcc;
-    --color-claro: rgba(0, 0, 0, 0.4);
-    --box-shadow: 0 2rem 3rem var(--color-claro);
-
-    --card-boder-radius: 0.5rem;
-    --boder-radius-1: 0.4rem;
-    --boder-radius-2: 0.8rem;
-    --boder-radius-3: 1.2rem;
-
-    --card-padding: 1.8rem;
-    --padding-1: 1.2rem;
-}
-
-/* ==============THEMA DARK ====================*/
-.claro-tema-variaveis {
-    --color-background: #f6f6f9;
-    --color-white: #fff;
-    --color-escuro: #363949;
-    --color-escuro-variante: #677483;
-    --color-claro: rgba(132, 139, 200, 0.18);
-    --box-shadow: 0 2rem 3rem var(--color-claro);
-}
-
 #erro{
     font-size: 1rem;
     color: var(--color-erro);
-}
-
-/* EU */
-
-.digital {
-    color: var(--color-escuro);
-    font-size: 2rem;
-}
-
-/* #############################GENIO################################### */
-/* .genio {
-    color: var(--color-principal);
-} */
-
-.genio {
-    color: var(--color-escuro);
-    position: relative;
-    font-size: 2rem;
-    -webkit-text-stroke: 0.05vw var(--color-escuro);
-    text-transform: uppercase;
-}
-
-.genio::before {
-    color: var(--color-principal);
-    content: 'Gênio';
-    position: absolute;
-    top: 4.5px;
-    left: 0;
-    width: 0%;
-    height: 65%;
-    -webkit-text-stroke: 0vw var(--color-principal);
-    border-right: 3px solid var(--color-principal);
-    overflow: hidden;
-    animation: animate 6s linear infinite;
-    -webkit-animation: animate 6s linear infinite;
-}
-
-@keyframes animate {
-    0% {
-        width: 0%;
-    }
-
-    50% {
-        width: 378%;
-    }
-}
-
-/* #################################################################### */
-
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    appearance: none;
-    border: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 14px;
 }
 
 body {
@@ -228,7 +114,7 @@ small {
 }
 
 #logout:hover {
-    color: red;
+    color: var(--color-erro);
     opacity: 1;
 }
 

@@ -12,23 +12,19 @@ session_start();
 
   <link rel="shortcut icon" href="../../image/icon/smart-city-200.png" type="image/x-icon" />
 
-
+  <!-- [JS] -->
   <!--Script abaixo faz parte da configuração de valida email- -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="mascaras.js" defer></script>
-  <script src="valida_senha.js" defer></script>
-  <script src="validate_email.js" defer></script>
-  <script src="cadastro.js" defer></script>
   <script src="../registro/registro.js" defer></script>
+  <script src="validate_email.js" defer></script>
+  <script src="valida_senha.js" defer></script>
+  <script src="mascaras.js" defer></script>
+  <script src="cadastro.js" defer></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css" />
+  <!-- [CSS] -->
+  <link rel="stylesheet" href="../root.css">
   <link rel="stylesheet" href="form_style.css" />
   <link rel="stylesheet" href="style.css" />
-
-
-  <!-- MATERIAL CDN - ICONS DO GOOGLE -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
   <title>Cadastro-port</title>
 </head>

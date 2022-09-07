@@ -52,28 +52,11 @@ $_SESSION['erros'] = ""
       type="image/x-icon"
     />
 
-  <!-- MATERIAL CDN - ICONS DO GOOGLE -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <!-- [JS] -->
+  <script src="cadastro.js" defer></script>
 
   <!-- [CSS] -->
-  <link rel="stylesheet" href="../menu_topo.css" />
-  <link rel="stylesheet" href="form_style.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="table_style.css" />
-  <link rel="stylesheet" href="data_hora_style.css" />
-
-  <!-- [JS] -->
-  <!-- Se sua tag de script estiver na cabeça, o JavaScript será
-      carregado antes do seu HTML, 
-      portanto, o elemento que você está tentando acessar ainda não existe no DOM. 
-      Você precisará adicionar deferao seu script -->
-  <script src="../menu_topo.js" defer></script>
-  <script src="cadastro.js" defer></script>
-  <!-- async = Você faz um carregamento assíncrono, ou seja, sem bloquear a página -->
-  <script src="../../script/data_hora.js" async></script>
-
+  <link rel="stylesheet" href="../root.css">
   <link rel="stylesheet" href="style.css" />
 
   <title>Confirma Cadastro</title>

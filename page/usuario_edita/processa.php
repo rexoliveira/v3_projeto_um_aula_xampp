@@ -60,20 +60,14 @@ $_SESSION['erros'] = ""
       type="image/x-icon"
     />
 
-  <!-- MATERIAL CDN - ICONS DO GOOGLE -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <!-- [JS] -->
+  <script src="../usuario_apaga/apagarUsuario.js"defer></script>
+  <script src="edita.js" defer></script>
 
   <!-- [CSS] -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../root.css">
   <link rel="stylesheet" href="usuarios_card_edita.css" />
   <link rel="stylesheet" href="style.css" />
-
-  <!-- [JS] -->
-  <script src="edita.js" defer></script>
-  <script src="../usuario_apaga/apagarUsuario.js"defer></script>
-
 
   <title>Confirma Edição</title>
 </head>

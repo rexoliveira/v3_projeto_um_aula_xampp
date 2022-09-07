@@ -58,19 +58,14 @@ $chave = $conexao->lastInsertId();
       type="image/x-icon"
     />
 
-  <!-- MATERIAL CDN - ICONS DO GOOGLE -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-  <!-- [CSS] -->
-  <link rel="stylesheet" href="form_style.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="./usuarios_card_cadastra.css">
-
   <!-- [JS] -->
   <script src="cadastro.js" defer></script>
   <script src="../usuario_apaga/apagarUsuario.js" defer></script>
+
+  <!-- [CSS] -->
+  <link rel="stylesheet" href="../root.css">
+  <link rel="stylesheet" href="./usuarios_card_cadastra.css">
+  <link rel="stylesheet" href="style.css" />
 
   <title>Confirma Cadastro</title>
 </head>

@@ -11,14 +11,14 @@
       type="image/x-icon"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-    />
+    <!-- [JS] -->
+    <script src="./contato.js" defer></script>
 
+    <!-- [CSS] -->
+    <link rel="stylesheet" href="../root.css">
     <link rel="stylesheet" href="contato.css" />
     <link rel="stylesheet" href="style.css">
-    <script src="./contato.js" defer></script>
+    
     <title>Contato</title>
   </head>
   <body>

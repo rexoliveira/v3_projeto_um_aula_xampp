@@ -10,14 +10,14 @@
       href="../../image/icon/smart-city.png"
       type="image/x-icon"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-    />
-    <link rel="stylesheet" href="style.css">
+    <!-- [JS] -->
     <script src="./github_gist.js" defer></script>
+
+    <!-- [CSS] -->
+    <link rel="stylesheet" href="../root.css">
+    <link rel="stylesheet" href="style.css">
     <script src="./gist.js" defer></script>
+
     <title>Contato</title>
   </head>
   <body>

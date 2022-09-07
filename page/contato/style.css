@@ -1,72 +1,5 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* ROOT VARIAVEIS */
-
-:root {
-    /* --color-principal: #7380ec; */
-    --color-principal: #53a2c7fe;
-    --color-perigo: #ff7782;
-    --color-sucesso: #41f1b6;
-    --color-alerta: #ffbb55;
-
-    /* EU */
-    --color-erro:#cc0000;
-    --color-analise: #55b0ff;
-    --color-logo-titulo: #61f889;
-    --color-card4: #55ffee;
-    --color-card5: #5560ff;
-    --color-card6: #eb55ff;
-
-    --color-info-escuro: #7d8da1;
-    --color-info-claro: #dce1eb;
-
-    --color-principal-variante: #111e88;
-
-    /* escuro-tema-variaveis { */
-    --color-background: #181a1e;
-    --color-white: #202528;
-    --color-escuro: #edeffd;
-    --color-escuro-variante: #a3bdcc;
-    --color-claro: rgba(0, 0, 0, 0.4);
-    --box-shadow: 0 2rem 3rem var(--color-claro);
-
-    --card-boder-radius: 0.5rem;
-    --boder-radius-1: 0.4rem;
-    --boder-radius-2: 0.8rem;
-    --boder-radius-3: 1.2rem;
-
-    --card-padding: 1.8rem;
-    --padding-1: 1.2rem;
-}
-
-/* ==============THEMA DARK ====================*/
-.claro-tema-variaveis {
-    --color-background: #f6f6f9;
-    --color-white: #fff;
-    --color-escuro: #363949;
-    --color-escuro-variante: #677483;
-    --color-claro: rgba(132, 139, 200, 0.18);
-    --box-shadow: 0 2rem 3rem var(--color-claro);
-}
-
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    appearance: none;
-    border: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 14px;
-}
-
 body {
     width: 100%;
     height: 100%;
@@ -92,7 +25,7 @@ body {
     gap: 0 1.5rem 1.5rem 1.5rem;
     /* define 3blocos/coluna */
     grid-template-columns: 16.5rem auto 16.5rem;
-    grid-template-areas: 
+    grid-template-areas:
         "left main right";
     grid-template-rows: 60px 1fr;
 
@@ -145,7 +78,7 @@ small {
     font-size: 0.75rem;
 }
 
-.perfil{
+.perfil {
     height: 4rem;
 }
 
@@ -176,7 +109,7 @@ small {
 }
 
 #logout:hover {
-    color: red;
+    color: var(--color-erro);
     opacity: 1;
 }
 
@@ -232,7 +165,7 @@ b {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0.7rem auto 0.7rem 2rem; 
+    margin: 0.7rem auto 0.7rem 2rem;
 }
 
 
@@ -240,7 +173,7 @@ b {
     align-items: center;
     justify-content: center;
     display: flex;
-    gap: 0.4rem ;
+    gap: 0.4rem;
 
 }
 
@@ -334,10 +267,10 @@ main {
 
     align-items: center;
     justify-content: center;
-height: 100vh;
+    height: 100vh;
 }
 
-.tit_confirma_cadastro{
+.tit_confirma_cadastro {
     text-align: center;
 }
 
@@ -468,14 +401,14 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
     }
 
 
-   
-   
+
+
 
     .aside_direito {
         margin: 0.5rem 0 0 0;
     }
 
-    .aside_direito p, .aside_direito .texto_base_card{
+    .aside_direito p, .aside_direito .texto_base_card {
         display: flex;
         flex-wrap: wrap;
     }
@@ -484,13 +417,13 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
     @media screen and (max-width: 1060px) {
 
-        
 
-         .container {
+
+        .container {
             display: grid;
             width: 100%;
             height: 100%;
-            grid-template-areas: 
+            grid-template-areas:
                 "main"
                 "right";
             grid-template-columns: auto;
@@ -506,7 +439,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
         .aside_esquerdo {
             position: fixed;
-            
+
             /* Esconde sidebar */
             left: -100%;
             background: var(--color-white);
@@ -557,9 +490,9 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             cursor: pointer;
         }
 
-       
+
         main {
-            
+
             padding: 1rem 1rem 0 1rem;
         }
 
@@ -607,10 +540,10 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
 
     }
 
-   
+
     /* Eu */
     @media screen and (max-width: 530px) {
-       
+
         .aside_direito .sessao_usuario_topo {
             margin-top: 0;
             padding: 0 3rem 0 0;
@@ -629,7 +562,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
             margin-top: 0;
             padding-top: 0;
         }
- 
+
         .aside_direito {
             width: 87%;
 

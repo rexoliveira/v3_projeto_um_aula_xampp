@@ -10,27 +10,18 @@
       href="../../image/icon/smart-city.png"
       type="image/x-icon"
     />
-
-    <!-- MATERIAL CDN - ICONS DO GOOGLE -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,300,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-    />
+    <!-- [JS] -->
+    <!-- OBS.: "dados_transportes.js" tem que estar antes de "script_dados_transportes.js" -->
+    <script src="dados_transportes.js" defer></script>
+    <script src="script_dados_transportes.js" defer></script>
+    <script src="data_hora.js" async></script>
 
     <!-- [CSS] -->
+    <link rel="stylesheet" href="../root.css">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="table_style.css" />
     <link rel="stylesheet" href="data_hora_style.css" />
 
-    <!-- [JS] -->
-    <script src="dados_transportes.js" defer></script>
-    <script src="script_dados_transportes.js" defer></script>
-    <script src="data_hora.js" async></script>
 
     <title>Transporte</title>
   </head>
