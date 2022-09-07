@@ -23,3 +23,4 @@ $conexao = new PDO($dsn, $usuario, $senha, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EX
 catch (PDOException $e) {
     die($e->getMessage());
 }
+
