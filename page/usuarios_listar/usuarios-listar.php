@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../pdo/conexao.php";
+require_once('../pdo/conexao.php');
 
 $filtro = isset($_GET['filtro']) ? $_GET['filtro'] : "";
 $where = isset($_GET['palavraFiltro']) ? $_GET['palavraFiltro'] : "";
