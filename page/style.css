@@ -882,7 +882,7 @@ Crédito:https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-t
         }
 
         .aside_esquerdo {
-            position: relative;
+            position: fixed;
             top: 105px;
             /* Esconde sidebar */
             left: -100%;
