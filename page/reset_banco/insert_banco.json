@@ -1,0 +1,74 @@
+[
+    {
+        "acao": "DELETE FROM public.usuario"
+    },
+    {
+        "acao": "ALTER SEQUENCE usuario_id_seq RESTART WITH 1"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Harding Velasquez', 'cras.convallis@yahoo.com', '(02) 4135 7948', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'May Adams', 'nisl.nulla.eu@google.org', '(03) 3436 2331', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Wynne Waller', 'elit.pharetra.ut@outlook.org', '(04) 3397 4905', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Cally Marsh', 'nulla.donec@yahoo.edu', '(04) 4572 1416', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Lee Estes', 'dolor.fusce@protonmail.org', '(03) 3343 8533', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Audra Johnson', 'faucibus.leo@google.edu', '(07) 8996 4274', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Fallon Bernard', 'suspendisse.commodo.tincidunt@google.com', '(04) 4486 6512', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Kenyon Mcfarland', 'aliquam@icloud.edu', '(08) 1277 2661', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Christian Rocha', 'aliquam.auctor@yahoo.net', '(04) 6533 8521', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Clark Patton', 'vel@google.com', '(05) 2995 4417', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Maxine West', 'facilisis.magna@protonmailacademicoifsuledu.edu', '(08) 7664 2153', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Camille Roman', 'nascetur.ridiculus.mus@icloud.net', '(01) 1413 3941', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Bo Blake', 'nisl.maecenas@academicoifsul.com', '(05) 7369 2162', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Maryam Franklin', 'quisque.nonummy@hotmail.org', '(05) 1048 3228', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Amir Walter', 'sollicitudin.commodo@academicoifsul.net', '(08) 6754 3328', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Jessamine Miles', 'elit.a.feugiat@outlook.edu', '(03) 6527 2672', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Jasper Ortiz', 'justo.sit.amet@yahoo.net', '(08) 6421 0227', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Kaye Park', 'fringilla.ornare.placerat@academicoifsul.edu', '(04) 7122 2764', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Macey Whitley', 'malesuada.fringilla@hotmail.edu', '(03) 7622 3436', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Martena Knox', 'cursus.et.magna@google.com', '(04) 6638 3643', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Damian Mitchell', 'lacus.quisque@hotmail.net', '(07) 4225 5224', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    },
+    {
+        "acao": "INSERT INTO public.usuario (nome, email, tel, password) VALUES ( 'Teste de Teste', 'teste@teste.com', '(00) 0000 0000', '$2y$10$/Y19c7YejnnKRhZ8nkDvAuZ8iya1.rAZzQ1nGCViw6p1.82TJ1Jcq')"
+    }
+]
