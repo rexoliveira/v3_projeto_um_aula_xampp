@@ -12,10 +12,7 @@ $usuario = "postgres";
 $senha = "12070205"; */
 try {
     $dsn = "pgsql:host=$servidor;port=$porta;dbname=$bancoDeDados;";
-
-    
 $conexao = new PDO($dsn, $usuario, $senha, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-
     if ($conexao) {
         //echo "Conectado ao banco de dados $db com sucesso!";
     }
