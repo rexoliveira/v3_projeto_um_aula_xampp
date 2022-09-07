@@ -17,7 +17,7 @@ function confirmarReset(){
 //Função chama o json externo
 function buscarJson() {
 
-    let ajax = new XMLHttpRequest(Cache, true);
+    let ajax = new XMLHttpRequest(Cache, false);
 
     ajax.onload = function () {
         if (ajax.readyState == 4) {
