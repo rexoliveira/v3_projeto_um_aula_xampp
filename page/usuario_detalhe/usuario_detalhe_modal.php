@@ -6,7 +6,7 @@
     <title>Modal</title>
   </head>
   <body>
-    <section id="modal-detalhe-usuario" class="modal">
+   
       <section class="modal-conteudo">
         <header class="modal-header">
             <h1>Detalhes do Usuário</h1>
@@ -27,6 +27,6 @@
             <button class="btn-fechar" onclick="fecharModal()">Fechar</button>
         </footer>
       </section>
-    </section>
+    
   </body>
 </html>

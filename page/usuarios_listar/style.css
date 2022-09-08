@@ -8,7 +8,7 @@ body {
     background: var(--color-background);
     user-select: none;
     /* Tira a barra de rolagem lateral */
-    overflow-x: hidden;
+    overflow: hidden;
     color: var(--color-escuro);
 }
 

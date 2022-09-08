@@ -1,4 +1,4 @@
-.modal{
+/* .modal{
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
@@ -7,7 +7,7 @@
     height: 100vw;
     display: none;
     z-index: 10000;
-}
+} */
 
 .modal-conteudo{
     position: absolute;
@@ -26,18 +26,26 @@
 }
 
 .modal-header{
+    position: relative;
     background-color: var(--color-background);
     border-radius: 10px 10px 0 0;
+    height: 3rem;
 }
 
 .modal-header h1{
     font-weight: bold;
     color: var(--color-escuro);
     text-align: center;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
-
 .modal-main{
+    position: relative;
     background-color: var(--color-escuro);
+    border-radius: 10px;
 }
 
 dt{

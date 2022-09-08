@@ -94,9 +94,7 @@ $resultado->execute();
     <!-- ----------------------FIM DO ASIDE---------------------- -->
 
     <main>
-      <!-- ====================================================================-->
-      <?php include_once('../usuario_detalhe/usuario_detalhe_modal.php')?>
-      <!-- =================================================================== -->
+      
       <section class="formF">
         <form id="form_filtro" action="" method="get">
           <label id="label_filtro" for="filtro">Filtrar por</label>
@@ -123,18 +121,25 @@ elseif ($where == 'tel') {
   $n_filtro = "Celular";
 }
 if ($filtro != "" && $where != "todos") {
-  print "<h5>Resultado do filtro '$n_filtro' contendo '$filtro'. </h5>";
+  echo "<h5>Resultado do filtro '$n_filtro' contendo '$filtro'. </h5>";
 }
 else {
-  print "<h5>Escolha outro filtro no lugar de 'todos' para uma informação específica. </h5>";
+  echo "<h5>Escolha outro filtro no lugar de 'todos' para uma informação específica. </h5>";
 }
 echo "<h2 id='avisoDelete'></h2>";
 
-print "<section class=\"cartoes\">";
+echo '<section id="modal-detalhe-usuario" class="modal">';
+
+include_once('../usuario_detalhe/usuario_detalhe_modal.php');
+
+echo "</section>";
+
+
+echo "<section class='cartoes'>";
 
 $contadorImg = 0;
 while ($sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC)) {
-
+  
   $contadorImg++;
 
   $id = $sql_conteudo['id'];
@@ -142,29 +147,29 @@ while ($sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC)) {
   $email = $sql_conteudo['email'];
   $tel = $sql_conteudo['tel'];
 
-  print "<article class='c-card'>";
+  echo "<article class='c-card'>";
 
-  print "<section class='c-card_image'>";
+  echo "<section class='c-card_image'>";
 
-  print "<a href='../usuario_edita/edita.php?id=$id' class='btn_editar'><span class='material-symbols-outlined'> edit </span></a>";
-  print "<a href='#' class='btn_delete' onclick='apagarUsuario($id)'><span class='material-symbols-outlined'> delete </span></a>";
-  print "<img class='imagem'src='../../image/avatar/${contadorImg}.png' alt='image avatar'>";
+  echo "<a href='../usuario_edita/edita.php?id=$id' class='btn_editar'><span class='material-symbols-outlined'> edit </span></a>";
+  echo "<a href='#' class='btn_delete' onclick='apagarUsuario($id)'><span class='material-symbols-outlined'> delete </span></a>";
+  echo "<img class='imagem'src='../../image/avatar/${contadorImg}.png' alt='image avatar'>";
 
-  print "</section>";
+  echo "</section>";
 
-  print "<section class='c-card_content'>";
+  echo "<section class='c-card_content'>";
 
-  print "<span class='u-text-placeholder' ><h2 class='dados'>$nome</h2></span>";
-  print " <span class='u-text-placeholder' ><h2 class='dados'>$email</h2></span>";
-  print "<span class='u-text-placeholder' ><h2 class='dados'>$tel</h2></span>";
-  print "<a href='#' class='btn_detalhes' onclick='detalharUsuario($id)'><span class='material-symbols-outlined'> loupe </span></a>";
+  echo "<span class='u-text-placeholder' ><h2 class='dados'>$nome</h2></span>";
+  echo " <span class='u-text-placeholder' ><h2 class='dados'>$email</h2></span>";
+  echo "<span class='u-text-placeholder' ><h2 class='dados'>$tel</h2></span>";
+  echo "<a href='#' class='btn_detalhes' onclick='detalharUsuario($id)'><span class='material-symbols-outlined'> loupe </span></a>";
   
-  print "</section>";
+  echo "</section>";
 
-  print "</article>";
+  echo "</article>";
 }
 
-print "</section>";
+echo "</section>";
 
 ?>
     </main>
