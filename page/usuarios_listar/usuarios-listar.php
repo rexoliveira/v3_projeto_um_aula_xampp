@@ -26,16 +26,22 @@ $resultado->execute();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="shortcut icon" href="../../image/icon/smart-city-200.png" type="image/x-icon" />
-
+  
+  
+  <!-- [CSS] -->
+  <link rel="stylesheet" href="../root.css">
+  <link rel="stylesheet" href="../usuario_detalhe/usuario_detalhe_modal.css">
+  <link rel="stylesheet" href="usuarios_cards.css">
+  <link rel="stylesheet" href="style.css" />
+  
+  
   <!-- [JS] -->
+  <script src="../usuario_detalhe/usuario_detalhe.js" defer ></script>
+  <script src="../usuario_detalhe/usuario_detalhe_modal.js" defer></script>
   <script src="../usuario_apaga/apagarUsuario.js" defer></script>
   <script src="../reset_banco/processa_json.js" defer></script>
   <script src="script.js" defer></script>
-  <!-- [CSS] -->
-  <link rel="stylesheet" href="../root.css">
-  <link rel="stylesheet" href="usuarios_cards.css">
-  <link rel="stylesheet" href="style.css" />
-
+  
   <title>Lista de usuários</title>
 </head>
 
@@ -88,6 +94,9 @@ $resultado->execute();
     <!-- ----------------------FIM DO ASIDE---------------------- -->
 
     <main>
+      <!-- ====================================================================-->
+      <?php include_once('../usuario_detalhe/usuario_detalhe_modal.php')?>
+      <!-- =================================================================== -->
       <section class="formF">
         <form id="form_filtro" action="" method="get">
           <label id="label_filtro" for="filtro">Filtrar por</label>
@@ -102,9 +111,7 @@ $resultado->execute();
           <input id="botao_filtro" class="item_menu" type="submit" value="Filtrar">
         </form>
       </section>
-
       <?php
-
 
 if ($where == 'email') {
   $n_filtro = 'E-mail';
@@ -150,8 +157,8 @@ while ($sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC)) {
   print "<span class='u-text-placeholder' ><h2 class='dados'>$nome</h2></span>";
   print " <span class='u-text-placeholder' ><h2 class='dados'>$email</h2></span>";
   print "<span class='u-text-placeholder' ><h2 class='dados'>$tel</h2></span>";
-  print "<a href='' class='btn_detalhes'><span class='material-symbols-outlined'> loupe </span></a>";
-
+  print "<a href='#' class='btn_detalhes' onclick='detalharUsuario($id)'><span class='material-symbols-outlined'> loupe </span></a>";
+  
   print "</section>";
 
   print "</article>";

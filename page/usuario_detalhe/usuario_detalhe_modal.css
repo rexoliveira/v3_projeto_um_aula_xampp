@@ -1,0 +1,80 @@
+.modal{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    display: none;
+    z-index: 10000;
+}
+
+.modal-conteudo{
+    position: absolute;
+    margin: 0 auto;
+    /* margin-top: 40%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 600px;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+.modal-header,.modal-main,.modal-footer{
+    padding: 10px;
+}
+
+.modal-header{
+    background-color: var(--color-background);
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-header h1{
+    font-weight: bold;
+    color: var(--color-escuro);
+    text-align: center;
+}
+
+.modal-main{
+    background-color: var(--color-escuro);
+}
+
+dt{
+    color:var(--color-principal);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+dd{
+    color:var(--color-white);
+    font-size: 1rem;
+    padding: 0.2rem 0 0.2rem 0;
+}
+
+.modal-footer{
+    background-color: var(--color-background);
+    border-radius: 0px 0px 10px 10px;
+}
+
+.btn-fechar{
+    padding: 5px;
+    background: none;
+    border-style: none;
+    transition: all 0.5s ease;
+    background-color: var(--color-principal);
+    color: var(--color-escuro);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    opacity: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+.btn-fechar:hover{
+    background-color: var(--color-principal);
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 1s ease;
+}
