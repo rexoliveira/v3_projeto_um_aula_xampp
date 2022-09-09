@@ -26,22 +26,22 @@ $resultado->execute();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="shortcut icon" href="../../image/icon/smart-city-200.png" type="image/x-icon" />
-  
-  
+
+
   <!-- [CSS] -->
   <link rel="stylesheet" href="../root.css">
   <link rel="stylesheet" href="../usuario_detalhe/usuario_detalhe_modal.css">
   <link rel="stylesheet" href="usuarios_cards.css">
   <link rel="stylesheet" href="style.css" />
-  
-  
+
+
   <!-- [JS] -->
-  <script src="../usuario_detalhe/usuario_detalhe.js" defer ></script>
-  <script src="../usuario_detalhe/usuario_detalhe_modal.js" defer></script>
+  <script src="../usuario_detalhe/usuario_detalhe.js" defer></script>
+  <script src="../usuario_detalhe/usuario_detalhe_modal.js"async></script>
   <script src="../usuario_apaga/apagarUsuario.js" defer></script>
   <script src="../reset_banco/processa_json.js" defer></script>
   <script src="script.js" defer></script>
-  
+
   <title>Lista de usuários</title>
 </head>
 
@@ -94,7 +94,7 @@ $resultado->execute();
     <!-- ----------------------FIM DO ASIDE---------------------- -->
 
     <main>
-      
+
       <section class="formF">
         <form id="form_filtro" action="" method="get">
           <label id="label_filtro" for="filtro">Filtrar por</label>
@@ -128,6 +128,7 @@ else {
 }
 echo "<h2 id='avisoDelete'></h2>";
 
+echo "<a href='#' id='btn_detalhes_abrir' class='btn_detalhes' onclick='detalharUsuario(0)'>Detalhar usuário<span class='material-symbols-outlined'> loupe </span></a>";
 echo '<section id="modal-detalhe-usuario" class="modal">';
 
 include_once('../usuario_detalhe/usuario_detalhe_modal.php');
@@ -135,11 +136,12 @@ include_once('../usuario_detalhe/usuario_detalhe_modal.php');
 echo "</section>";
 
 
+
 echo "<section class='cartoes'>";
 
 $contadorImg = 0;
 while ($sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC)) {
-  
+
   $contadorImg++;
 
   $id = $sql_conteudo['id'];
@@ -162,8 +164,8 @@ while ($sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC)) {
   echo "<span class='u-text-placeholder' ><h2 class='dados'>$nome</h2></span>";
   echo " <span class='u-text-placeholder' ><h2 class='dados'>$email</h2></span>";
   echo "<span class='u-text-placeholder' ><h2 class='dados'>$tel</h2></span>";
-  echo "<a href='#' class='btn_detalhes' onclick='detalharUsuario($id)'><span class='material-symbols-outlined'> loupe </span></a>";
-  
+  echo "<a href='#'id= 'iloupe' class='btn_detalhes' onclick='detalharUsuario($id)'><input type='checkbox' id='toggle-1'><span class='material-symbols-outlined'> loupe </span></a>";
+
   echo "</section>";
 
   echo "</article>";

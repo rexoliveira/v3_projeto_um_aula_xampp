@@ -9,7 +9,8 @@
    
       <section class="modal-conteudo">
         <header class="modal-header">
-            <h1>Detalhes do Usuário</h1>
+          <button class="btn-fechar" onclick="fecharModal()">Fechar</button>
+          <h1>Detalhes do Usuário</h1>
         </header>
         <main class="modal-main">
           <dl class="linha">
@@ -21,10 +22,19 @@
             
             <dt class="cem">E-mail: </dt>
             <dd class="cemu"><span id="emailUsuario"></span></dd>
+
+            <dt class="cte">Telefone: </dt>
+            <dd class="cite"><span id="telUsuario"></span></dd>
+            
+            <dt class="cen">Endereço: </dt>
+            <dd class="cnen"><span id="endUsuario"></span></dd>
+            
+            <dt class="cgh">GitHub: </dt>
+            <dd class="cegh"><span id="githubUsuario"></span></dd>
           </dl>
         </main>
         <footer class="modal-footer">
-            <button class="btn-fechar" onclick="fecharModal()">Fechar</button>
+           
         </footer>
       </section>
     

@@ -18,9 +18,10 @@ function detalharUsuario(id) {
           resposta = _context.sent;
           document.getElementById("idUsuario").innerHTML = resposta['dados'].id;
           document.getElementById("nomeUsuario").innerHTML = resposta['dados'].nome;
+          document.getElementById("telUsuario").innerHTML = resposta['dados'].tel;
           document.getElementById("emailUsuario").innerHTML = resposta['dados'].email;
 
-        case 9:
+        case 10:
         case "end":
           return _context.stop();
       }
