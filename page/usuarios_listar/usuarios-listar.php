@@ -149,6 +149,8 @@ while ($sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC)) {
   $email = $sql_conteudo['email'];
   $tel = $sql_conteudo['tel'];
 
+  //Não imprime o cartão de informação
+  if($id != 1){
   echo "<article class='c-card'>";
 
   echo "<section class='c-card_image'>";
@@ -164,11 +166,13 @@ while ($sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC)) {
   echo "<span class='u-text-placeholder' ><h2 class='dados'>$nome</h2></span>";
   echo " <span class='u-text-placeholder' ><h2 class='dados'>$email</h2></span>";
   echo "<span class='u-text-placeholder' ><h2 class='dados'>$tel</h2></span>";
+  
   echo "<a href='#'id= 'iloupe' class='btn_detalhes' onclick='detalharUsuario($id)'><input type='checkbox' id='toggle-1'><span class='material-symbols-outlined'> loupe </span></a>";
 
   echo "</section>";
 
   echo "</article>";
+  }
 }
 
 echo "</section>";
