@@ -54,7 +54,7 @@ function sendJson(dados) {
     };
 
     //Tipo POST que envia dados para o arquivo ./processa.php
-    xmlhttp.open("POST", "../reset_banco/processa.php");
+    xmlhttp.open("POST", "../reset_banco/processa.php", true);
     //Cabeçalho que define tipo de arquivo a ser enviado que é json
     xmlhttp.setRequestHeader("Content-Type", "application/json");
 

@@ -216,6 +216,21 @@ h5 {
 
 }
 
+@media screen and (max-height : 1080px) {
+    .cartoes {
+        width: 90%;
+        height: 80vh;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .modal {
+        width: 90%;
+        height:25vh;
+        padding: 5px 0px 5px 30px;
+    }
+}
+
 
 @media screen and (max-width : 770px) {
     .formF {
@@ -230,3 +245,4 @@ h5 {
         margin: 5rem 0 0 1.5rem;
     }
 }
+

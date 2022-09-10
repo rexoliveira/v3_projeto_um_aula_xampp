@@ -17,6 +17,7 @@ function fecharBtnModal(display) {
     }
     if (display === 'Block') {
         cartoes.style.height = '60vh'
+        modal.style.height = '22vh'
         btn_detalhes_abrir.style.display = 'none'
         btn_detalhes.style.color = 'var(--color-alerta)'
        

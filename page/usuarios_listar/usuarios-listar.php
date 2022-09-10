@@ -128,7 +128,7 @@ else {
 }
 echo "<h2 id='avisoDelete'></h2>";
 
-echo "<a href='#' id='btn_detalhes_abrir' class='btn_detalhes' onclick='detalharUsuario(0)'>Detalhar usuário<span class='material-symbols-outlined'> loupe </span></a>";
+echo "<a href='#' id='btn_detalhes_abrir' class='btn_detalhes' onclick='detalharUsuario(1)'>Detalhar usuário<span class='material-symbols-outlined'> loupe </span></a>";
 echo '<section id="modal-detalhe-usuario" class="modal">';
 
 include_once('../usuario_detalhe/usuario_detalhe_modal.php');
