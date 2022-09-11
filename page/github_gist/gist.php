@@ -76,10 +76,18 @@
         
         <script src="https://gist.github.com/rexoliveira/126a0f6b91812a9a2bcc3c366c2e7cf6.js"></script>
 
+        <h2 class="subtitulo-sub" >Code Park - 4</h2>
+        
+        <script src="https://gist.github.com/rexoliveira/10320e3de750446b71534c1d0c8e8530.js"></script>
+
         <p class ="descricao">Semana-6 [Git/GitHub]</p>
         <h2 class="subtitulo" >Code Park - 1</h2>
 
         <script src="https://gist.github.com/rexoliveira/f894485f5f187a0b5f7c862d3e169bea.js"></script>
+
+        <h2 class="subtitulo" >Code Park - 2</h2>
+
+        <script src="https://gist.github.com/rexoliveira/24635ae057c411b0448895f5da9ba785.js"></script>
         </section>
     </article>
 </section>
