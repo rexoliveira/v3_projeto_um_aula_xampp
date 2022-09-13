@@ -1,5 +1,5 @@
 
-const abrir_modal = document.querySelector('.btn_detalhes')
+/* const abrir_modal = document.querySelector('.btn_detalhes')
 const modal = document.getElementById('modal-detalhe-usuario')
 const cartoes = document.querySelector('.cartoes')
 const btn_detalhes = document.querySelector('#iloupe');
@@ -29,5 +29,14 @@ function fecharBtnModal(display) {
         btn_detalhes.style.color = 'var(--color-escuro)'
     }
     modal.style.display = display
+} */
+
+
+function abrir(display){
+    document.querySelector('#btn_detalhes_abrir').style.display = display;
+}
+
+function fechar(display){
+    document.querySelector('#btn_detalhes_abrir').style.display = display;
 }
 
