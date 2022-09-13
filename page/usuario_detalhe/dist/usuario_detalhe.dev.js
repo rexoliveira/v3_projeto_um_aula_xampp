@@ -19,8 +19,6 @@ function detalharUsuario(id) {
   ajax.onload = function () {
     if (ajax.readyState == 4) {
       if (ajax.status == 200) {
-        //Objeto sem aspas na CHAVE somente no VALUE ao contrário do Json
-        //O parse torna o Json em OBJETO
         var resposta = JSON.parse(ajax.responseText);
         document.getElementById("idUsuario").innerHTML = resposta['dados'].id;
         document.getElementById("nomeUsuario").innerHTML = resposta['dados'].nome;
