@@ -3,4 +3,4 @@ apagar.html
 apagar.css
 apagar.js
 conexao.php
-page/pdo/conexao.php
+page/pdo/config.php
