@@ -1,5 +1,5 @@
 <?php
-require_once("config.php");
+require_once("../../config.php");
 
 $servidor = DB_HOST;
 $porta = DB_PORT;
