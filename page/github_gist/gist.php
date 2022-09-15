@@ -80,6 +80,10 @@
         
         <script src="https://gist.github.com/rexoliveira/10320e3de750446b71534c1d0c8e8530.js"></script>
 
+        <h2 class="subtitulo" >Projeto Final da  5ª Semana</h2>
+
+        <script src="https://gist.github.com/rexoliveira/739bba2fa32d5fbae88698d27938b0c7.js"></script>
+        
         <p class ="descricao">Semana-6 [Git/GitHub]</p>
         <h2 class="subtitulo" >Code Park - 1</h2>
 
@@ -88,6 +92,7 @@
         <h2 class="subtitulo" >Code Park - 2</h2>
 
         <script src="https://gist.github.com/rexoliveira/24635ae057c411b0448895f5da9ba785.js"></script>
+
         </section>
     </article>
 </section>
