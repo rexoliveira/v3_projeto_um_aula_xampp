@@ -1,30 +1,38 @@
 "use strict";
 
+/* 
+async function detalharUsuario(id){
+const  detalhes = await fetch('../usuario_detalhe/usuario_detalhe_processa.php?id='+id)
+const resposta = await detalhes.json()
+
+
+document.getElementById("idUsuario").innerHTML = resposta['dados'].id;
+document.getElementById("nomeUsuario").innerHTML = resposta['dados'].nome;
+document.getElementById("telUsuario").innerHTML = resposta['dados'].tel;
+document.getElementById("emailUsuario").innerHTML = resposta['dados'].email;
+}
+ */
+//Função chama o json externo
 function detalharUsuario(id) {
-  var detalhes, resposta;
-  return regeneratorRuntime.async(function detalharUsuario$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          _context.next = 2;
-          return regeneratorRuntime.awrap(fetch('../usuario_detalhe/usuario_detalhe_processa.php?id=' + id));
+  var ajax = new XMLHttpRequest();
 
-        case 2:
-          detalhes = _context.sent;
-          _context.next = 5;
-          return regeneratorRuntime.awrap(detalhes.json());
-
-        case 5:
-          resposta = _context.sent;
-          document.getElementById("idUsuario").innerHTML = resposta['dados'].id;
-          document.getElementById("nomeUsuario").innerHTML = resposta['dados'].nome;
-          document.getElementById("telUsuario").innerHTML = resposta['dados'].tel;
-          document.getElementById("emailUsuario").innerHTML = resposta['dados'].email;
-
-        case 10:
-        case "end":
-          return _context.stop();
+  ajax.onload = function () {
+    if (ajax.readyState == 4) {
+      if (ajax.status == 200) {
+        var resposta = JSON.parse(ajax.responseText);
+        document.getElementById("idUsuario").innerHTML = resposta['dados'].id;
+        document.getElementById("nomeUsuario").innerHTML = resposta['dados'].nome;
+        document.getElementById("telUsuario").innerHTML = resposta['dados'].tel;
+        document.getElementById("emailUsuario").innerHTML = resposta['dados'].email;
+      } else {
+        //Verifica se o arquivo existe e imprime um erro
+        if (ajax.status == 404) {
+          document.getElementById("idUsuario").innerHTML = '<span style="color:red">Arquivo não encotrado!</span>';
+        }
       }
     }
-  });
+  };
+
+  ajax.open("GET", '../usuario_detalhe/usuario_detalhe_processa.php?id=' + id);
+  ajax.send();
 }

@@ -9,7 +9,7 @@
    
       <section class="modal-conteudo">
         <header class="modal-header">
-          <button class="btn-fechar" onclick="fecharModal()">Fechar</button>
+          <button class="btn-fechar" onclick="fechar('none')">Fechar</button>
           <h1>Detalhes do Usuário</h1>
         </header>
         <main class="modal-main">

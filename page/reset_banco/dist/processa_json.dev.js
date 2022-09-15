@@ -29,10 +29,8 @@ function buscarJson() {
       } else {
         //Verifica se o arquivo existe e imprime um erro
         if (ajax.status == 404) {
-          var testa = '<h1 class="erro">Arquivo não encotrado!</h1>';
+          document.getElementById("avisoDelete").innerHTML = '<h1 class="erro">Arquivo não encotrado!</h1>';
         }
-
-        document.getElementById("avisoDelete").innerHTML = testa;
       }
     }
   };

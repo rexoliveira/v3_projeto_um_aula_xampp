@@ -1,6 +1,6 @@
 
 
-function confirmarReset(){
+function confirmarReset() {
     var confirma = confirm("Confirme se quer acionar o RESET do BANCO!")
     if (confirma) {
         buscarJson()
@@ -29,10 +29,9 @@ function buscarJson() {
                 sendJson(dados);
             } else {
                 //Verifica se o arquivo existe e imprime um erro
-                if(ajax.status == 404){
-                    var testa = '<h1 class="erro">Arquivo não encotrado!</h1>'
+                if (ajax.status == 404) {
+                    document.getElementById("avisoDelete").innerHTML = '<h1 class="erro">Arquivo não encotrado!</h1>'
                 }
-                document.getElementById("avisoDelete").innerHTML = testa;
             }
         }
     };
