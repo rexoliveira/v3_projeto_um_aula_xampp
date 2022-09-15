@@ -30,14 +30,14 @@ $resultado->execute();
 
   <!-- [CSS] -->
   <link rel="stylesheet" href="../root.css">
-  <link rel="stylesheet" href="../usuario_detalhe/usuario_detalhe_modal.css">
+  <link rel="stylesheet" href="../usuario_detalhe/usuario_detalhe_janela.css">
   <link rel="stylesheet" href="usuarios_cards.css">
   <link rel="stylesheet" href="style.css" />
 
 
   <!-- [JS] -->
   <script src="../usuario_detalhe/usuario_detalhe.js" defer></script>
-  <script src="../usuario_detalhe/usuario_detalhe_modal.js"async></script>
+  <script src="../usuario_detalhe/usuario_detalhe_janela.js"async></script>
   <script src="../usuario_apaga/apagarUsuario.js" defer></script>
   <script src="../reset_banco/processa_json.js" defer></script>
   <script src="script.js" defer></script>
@@ -128,11 +128,9 @@ else {
 }
 echo "<h2 id='avisoDelete'></h2>";
 
-echo "<a href='#' class='btn_abrir_detalhes' onclick='abrir('block')'>Abrir detalhes do Usuário<span class='material-symbols-outlined'> open_in_new </span></a>";
+echo '<section id="janela-detalhe-usuario" class="janela">';
 
-echo '<section id="modal-detalhe-usuario" class="modal">';
-
-include_once('../usuario_detalhe/usuario_detalhe_modal.php');
+include_once('../usuario_detalhe/usuario_detalhe_janela.php');
 
 echo "</section>";
 
@@ -168,7 +166,7 @@ while ($sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC)) {
   echo " <span class='u-text-placeholder' ><h2 class='dados'>$email</h2></span>";
   echo "<span class='u-text-placeholder' ><h2 class='dados'>$tel</h2></span>";
   
-  echo "<a href='#'id= 'iloupe' class='btn_detalhes' onclick='detalharUsuario($id)'><input type='checkbox' id='toggle-1'><span class='material-symbols-outlined'> loupe </span></a>";
+  echo "<a href='#' id='btn_detalhes $id' class='btn_detalhes' onclick='detalharUsuario($id),abrir(\"block\")'><input type='checkbox' id='toggle-1'><span class='material-symbols-outlined'> loupe </span></a>";
 
   echo "</section>";
 

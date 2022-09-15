@@ -33,10 +33,15 @@ function fecharBtnModal(display) {
 
 
 function abrir(display){
-    document.querySelector('#btn_detalhes_abrir').style.display = display;
+    document.querySelector('#janela-detalhe-usuario').style.display = display;
+    document.querySelector('#janela-detalhe-usuario').style.height = '30vh'
+    document.querySelector('.cartoes').style.height = '50vh'
 }
 
 function fechar(display){
-    document.querySelector('#btn_detalhes_abrir').style.display = display;
+    document.querySelector('#janela-detalhe-usuario').style.display = display;
+    document.querySelector('.cartoes').style.margin = '1rem 0 0 0'
+    document.querySelector('.cartoes').style.height = '80vh'
+    document.location.reload(true)
 }
 

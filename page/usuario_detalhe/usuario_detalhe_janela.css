@@ -1,4 +1,4 @@
-/* .modal{
+/* .janela{
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
@@ -9,7 +9,7 @@
     z-index: 10000;
 } */
 
-.modal-conteudo{
+.janela-conteudo{
     position: relative;
     margin: 0 auto;
     /* margin-top: 40%; */
@@ -23,11 +23,11 @@
     overflow-y: scroll;
 }
 
-.modal-header,.modal-main,.modal-footer{
+.janela-header,.janela-main,.janela-footer{
     padding: 10px;
 }
 
-.modal-header{
+.janela-header{
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -37,7 +37,7 @@
     justify-content: space-between;
 }
 
-.modal-header h1{
+.janela-header h1{
     font-weight: bold;
     color: var(--color-alerta);
     text-align: center;
@@ -47,7 +47,7 @@
     justify-content: center;
     margin: 0;
 }
-.modal-main{
+.janela-main{
     position: relative;
     background-color: var(--color-escuro);
     border-radius: 10px;
@@ -65,7 +65,7 @@ dd{
     padding: 0.2rem 0 0.2rem 0;
 }
 
-.modal-footer{
+.janela-footer{
     background-color: var(--color-background);
     border-radius: 0px 0px 10px 10px;
 }

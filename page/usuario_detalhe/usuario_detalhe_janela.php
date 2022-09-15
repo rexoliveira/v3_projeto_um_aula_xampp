@@ -7,12 +7,12 @@
   </head>
   <body>
    
-      <section class="modal-conteudo">
-        <header class="modal-header">
+      <section class="janela-conteudo">
+        <header class="janela-header">
           <button class="btn-fechar" onclick="fechar('none')">Fechar</button>
           <h1>Detalhes do Usuário</h1>
         </header>
-        <main class="modal-main">
+        <main class="janela-main">
           <dl class="linha">
             <dt class="cid">ID: </dt>
             <dd class="cidu"><span id="idUsuario"></span></dd>
@@ -33,7 +33,7 @@
             <dd class="cegh"><span id="githubUsuario"></span></dd>
           </dl>
         </main>
-        <footer class="modal-footer">
+        <footer class="janela-footer">
            
         </footer>
       </section>

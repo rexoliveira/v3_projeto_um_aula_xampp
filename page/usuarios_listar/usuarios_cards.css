@@ -25,10 +25,10 @@
     gap: 30px;
 }
 
-.modal {
+.janela {
     position: relative;
     width: 100%;
-    height: 20vh;
+    height: 60vh;
     background-color: var(--color-background);
     padding: 5px 0px 5px 40px;
     display: none;
