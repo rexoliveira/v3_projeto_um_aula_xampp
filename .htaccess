@@ -1,0 +1,7 @@
+
+RewriteEngine on
+
+#REGRA DE REWRITE TUDO PARA INDEX
+#CRÉDITO:https://youtu.be/7fxguLAebl4?t=3368
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$  ./public/index.php [QSA,NC]
