@@ -17,7 +17,7 @@
     <script src="./chat_bot/chat_bot_modal.js" defer></script>
     <script src="./menu_topo/menu_topo.js" defer></script>
     <script src="script.js" defer></script>
-    <script src="data_hora.js"></script>
+    <script src="./script/data_hora.js"></script>
     <script src="servicos.js"></script>
 
     <!-- [CSS] -->

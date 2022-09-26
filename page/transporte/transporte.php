@@ -14,7 +14,7 @@
     <!-- OBS.: "dados_transportes.js" tem que estar antes de "script_dados_transportes.js" -->
     <script src="dados_transportes.js" defer></script>
     <script src="script_dados_transportes.js" defer></script>
-    <script src="data_hora.js" async></script>
+    <script src="../script/data_hora.js" async></script>
 
     <!-- [CSS] -->
     <link rel="stylesheet" href="../root.css">
