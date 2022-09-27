@@ -43,10 +43,10 @@ extract($usuario);
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <!-- Verifica se e-mail já não está cadastrado -->
   <script src="../registro/registro.js" defer></script>
-  <script src="validate_email.js" defer></script>
-  <script src="valida_senha.js" defer></script>
-  <script src="mascaras.js" defer></script>
-  <script src="edita.js" defer></script>
+  <script src="../script/valida_email.js" defer></script>
+  <script src="../script/valida_senha.js" defer></script>
+  <script src="../script/mascaras.js" defer></script>
+  <script src="../script/script.js" defer></script>
 
   <!-- [CSS] -->
   <link rel="stylesheet" href="../root.css">
@@ -144,7 +144,7 @@ extract($usuario);
               value='<?php echo "$email"?>' 
               required
               />
-              <span id="alert_email"></span>
+              <span id="ialert_email"></span>
               <span id="iresposta"></span>
             </section>
             <section class="input_group">
@@ -159,11 +159,11 @@ extract($usuario);
             </section>
             <section class="input_group w50">
               <label for="senha">Senha</label>
-              <input type="password" id="senha" name="senha" placeholder="Digite sua senha"/>
+              <input type="password" id="isenha" name="senha" placeholder="Digite sua senha"/>
             </section>
             <section class="input_group w50 c_senha">
               <label for="confirmar_senha">Confirmar a Senha</label>
-              <input type="password" id="confirma_senha" name="confirma_senha" placeholder="Confirme a senha" 
+              <input type="password" id="iconfirma_senha" name="confirma_senha" placeholder="Confirme a senha" 
                 />
             </section>
             <section class="input_group">

@@ -9,7 +9,7 @@ const validateEmailExiste = () => {
   const id = document.getElementById('id')
   //JQuery
   $.ajax({
-    url: '../../page/registro/verifica_email.php',
+    url: '../../app/registro/verifica_email.php',
     type: 'POST',
     data: { "email": emailEntrada.value },
     success: function (data) {

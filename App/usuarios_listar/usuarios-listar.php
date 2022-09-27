@@ -13,6 +13,7 @@ else {
 }
 ;
 
+
 $resultado = $conexao->prepare($sql);
 $resultado->execute();
 

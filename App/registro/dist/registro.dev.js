@@ -9,7 +9,7 @@ var validateEmailExiste = function validateEmailExiste() {
   var id = document.getElementById('id'); //JQuery
 
   $.ajax({
-    url: '../../page/registro/verifica_email.php',
+    url: '../../app/registro/verifica_email.php',
     type: 'POST',
     data: {
       "email": emailEntrada.value
