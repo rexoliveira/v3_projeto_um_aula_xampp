@@ -16,9 +16,10 @@
     <!--▼OBS.: Tem ser o caminho assim porque ele carrega um nivel acima -->
     <script src="./chat_bot/chat_bot_modal.js" defer></script>
     <script src="./menu_topo/menu_topo.js" defer></script>
+    <script src="dados_servicos.js" defer></script>
+    <script src="lista_servicos.js" defer></script>
     <script src="script.js" defer></script>
     <script src="./script/data_hora.js"></script>
-    <script src="servicos.js"></script>
 
     <!-- [CSS] -->
     <!-- ▼Está (bootstrap) aqui e não em "root.css" pq ele altera outras páginas-->
