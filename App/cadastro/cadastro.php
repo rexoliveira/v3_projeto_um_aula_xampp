@@ -22,9 +22,9 @@ session_start();
   <script src="../script/mascaras.js" defer></script>
 
   <!-- [CSS] -->
-  <link rel="stylesheet" href="../root.css">
-  <link rel="stylesheet" href="form_style.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../css/root.css">
+  <link rel="stylesheet" href="./css/form_style.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 
   <title>Cadastro-port</title>
 </head>

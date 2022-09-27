@@ -64,9 +64,9 @@ $_SESSION['erros'] = ""
   <script src="edita.js" defer></script>
 
   <!-- [CSS] -->
-  <link rel="stylesheet" href="../root.css">
-  <link rel="stylesheet" href="usuarios_card_edita.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../css/root.css">
+  <link rel="stylesheet" href="./css/usuarios_card_edita.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 
   <title>Confirma Edição</title>
 </head>

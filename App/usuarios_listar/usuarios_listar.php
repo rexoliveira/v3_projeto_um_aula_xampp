@@ -31,9 +31,9 @@ $resultado->execute();
 
   <!-- [CSS] -->
   <link rel="stylesheet" href="../root.css">
-  <link rel="stylesheet" href="../usuario_detalhe/usuario_detalhe_janela.css">
-  <link rel="stylesheet" href="usuarios_cards.css">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../usuario_detalhe/css/usuario_detalhe_janela.css">
+  <link rel="stylesheet" href="./css/usuarios_cards.css">
+  <link rel="stylesheet" href="./css/style.css" />
 
 
   <!-- [JS] -->

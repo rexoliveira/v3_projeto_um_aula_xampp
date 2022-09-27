@@ -16,9 +16,9 @@
     <!--▼OBS.: Tem ser o caminho assim porque ele carrega um nivel acima -->
     <script src="./chat_bot/chat_bot_modal.js" defer></script>
     <script src="./menu_topo/menu_topo.js" defer></script>
-    <script src="./dados_servicos.js" defer></script>
+    <script src="./script/dados_servicos.js" defer></script>
     <script src="./script/script.js" defer></script>
-    <script src="./lista_servicos.js" defer></script>
+    <script src="./script/lista_servicos.js" defer></script>
     <script src="./script/data_hora.js"></script>
 
     <!-- [CSS] -->
@@ -29,11 +29,11 @@
       href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
     />
     <!-- ▼O formato href tem ser assim 'root.css', ele carrega na raiz" -->
-    <link rel="stylesheet" href="root.css">
+    <link rel="stylesheet" href="./css/root.css">
     <!-- ▼OBS.: Tem ser o caminho assim porque ele carrega um nivel acima -->
-    <link rel="stylesheet" href="./menu_topo/menu_topo.css" />
+    <link rel="stylesheet" href="./menu_topo/css/menu_topo.css" />
     <link rel="stylesheet" href="./chat_bot/chat_bot_modal.css">
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
   <title>Menu Topo</title>
 </head>

@@ -15,9 +15,9 @@
     <script src="../script/script.js" defer></script>
 
     <!-- [CSS] -->
-    <link rel="stylesheet" href="../root.css">
-    <link rel="stylesheet" href="contato.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="./css/contato.css" />
+    <link rel="stylesheet" href="./css/style.css">
     
     <title>Contato</title>
   </head>

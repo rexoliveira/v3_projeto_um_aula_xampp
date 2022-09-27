@@ -50,8 +50,8 @@ extract($usuario);
 
   <!-- [CSS] -->
   <link rel="stylesheet" href="../root.css">
-  <link rel="stylesheet" href="form_style.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./css/form_style.css" />
+  <link rel="stylesheet" href="./css/style.css" />
   
   <title>Edita usuário</title>
 </head>

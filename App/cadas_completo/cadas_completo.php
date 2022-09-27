@@ -26,10 +26,10 @@ session_start();
   <script src="../script/script.js" defer></script>
 
   <!-- [CSS] -->
-  <link rel="stylesheet" href="../root.css">
-  <link rel="stylesheet" href="style_cadas_completo.css">
-  <link rel="stylesheet" href="form_style.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../css/root.css">
+  <link rel="stylesheet" href="./css/style_cadas_completo.css">
+  <link rel="stylesheet" href="./css/form_style.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 
   <title>Cadastro-port</title>
 </head>

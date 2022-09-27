@@ -62,9 +62,9 @@ $chave = $conexao->lastInsertId();
   <script src="../usuario_apaga/apagarUsuario.js" defer></script>
 
   <!-- [CSS] -->
-  <link rel="stylesheet" href="../root.css">
-  <link rel="stylesheet" href="./usuarios_card_cadastra.css">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../css/root.css">
+  <link rel="stylesheet" href="./css/usuarios_card_cadastra.css">
+  <link rel="stylesheet" href="./css/style.css" />
 
   <title>Confirma Cadastro</title>
 </head>

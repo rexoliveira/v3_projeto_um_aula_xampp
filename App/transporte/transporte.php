@@ -18,10 +18,10 @@
     <script src="../script/script.js" async></script>
 
     <!-- [CSS] -->
-    <link rel="stylesheet" href="../root.css">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="table_style.css" />
-    <link rel="stylesheet" href="data_hora_style.css" />
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/table_style.css" />
+    <link rel="stylesheet" href="./css/data_hora_style.css" />
 
 
     <title>Transporte</title>

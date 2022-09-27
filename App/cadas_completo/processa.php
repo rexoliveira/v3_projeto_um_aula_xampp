@@ -56,8 +56,8 @@ $_SESSION['erros'] = ""
   <script src="cadastro.js" defer></script>
 
   <!-- [CSS] -->
-  <link rel="stylesheet" href="../root.css">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../css/root.css">
+  <link rel="stylesheet" href="./css/style.css" />
 
   <title>Confirma Cadastro</title>
 </head>
