@@ -1,14 +1,33 @@
 {
     "name": "v3_projeto_um_aula_xampp/site",
     "description": "Projeto de Aula Internet II",
+    "keywords": [
+        "psr4"
+    ],
+    "homepage": "https://github.com/rexoliveira/v3_projeto_um_aula_xampp",
+    "license": "MIT",
     "authors": [
         {
             "name": "Rodrigo Oliveira",
-            "email": "rex.oliveira.15@gmail.com"
+            "email": "rodrigooliveira.cm015@academico.ifsul.edu.br",
+            "homepage": "http://smartcamaqua.herokuapp.com/"
         }
     ],
     "require": {
-        "php": ">=7.2",
+        "php": "^7.2 || ^8.0",
         "phpmailer/phpmailer": "^6.5"
+    },
+    "config": {
+        "scripts": {
+            "start": "php -S localhost:8080 -t public/"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8080 -t public"
     }
 }

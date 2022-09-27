@@ -3,7 +3,7 @@
         'name' => 'v3_projeto_um_aula_xampp/site',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'e9de92987d17e5702ab139043391045734426230',
+        'reference' => 'b463bab2abaf982d6f7644df4fbfa58dac075cd9',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'v3_projeto_um_aula_xampp/site' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'e9de92987d17e5702ab139043391045734426230',
+            'reference' => 'b463bab2abaf982d6f7644df4fbfa58dac075cd9',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
