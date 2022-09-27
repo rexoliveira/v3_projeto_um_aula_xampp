@@ -17,9 +17,9 @@ session_start();
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="../registro/registro.js" defer></script>
   <script src="validate_email.js" defer></script>
+  <script src="../script/script.js" defer></script>
   <script src="valida_senha.js" defer></script>
   <script src="mascaras.js" defer></script>
-  <script src="cadastro.js" defer></script>
 
   <!-- [CSS] -->
   <link rel="stylesheet" href="../root.css">

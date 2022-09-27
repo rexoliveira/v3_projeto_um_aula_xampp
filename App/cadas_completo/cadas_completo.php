@@ -23,7 +23,7 @@ session_start();
   <script src="validate_email.js" defer></script>
   <script src="valida_senha.js" defer></script>
   <script src="mascaras.js" defer></script>
-  <script src="cadastro.js" defer></script>
+  <script src="../script/script.js" defer></script>
 
   <!-- [CSS] -->
   <link rel="stylesheet" href="../root.css">

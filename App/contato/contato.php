@@ -12,7 +12,7 @@
     />
 
     <!-- [JS] -->
-    <script src="./contato.js" defer></script>
+    <script src="../script/script.js" defer></script>
 
     <!-- [CSS] -->
     <link rel="stylesheet" href="../root.css">
