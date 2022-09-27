@@ -17,7 +17,7 @@ function redireciona($erro)
     header('Location: ../usuarios_listar/usuarios-listar.php');
 }
 
-$sql = "DELETE FROM public.usuario WHERE id = :id ";
+$sql = "DELETE FROM usuario WHERE id = :id ";
 
 $resultado = $conexao->prepare($sql);
 $resultado->bindParam(':id', $idFilter, PDO::PARAM_STR);

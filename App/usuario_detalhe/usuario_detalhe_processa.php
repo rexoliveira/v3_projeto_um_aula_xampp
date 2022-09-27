@@ -6,7 +6,7 @@ $id = filter_input(INPUT_GET,"id",FILTER_SANITIZE_NUMBER_INT);
 
 if (!empty($id)) {
 
-    $sql = "SELECT id, nome,tel, email FROM public.usuario WHERE id = :id LIMIT 1";
+    $sql = "SELECT id, nome,tel, email FROM usuario WHERE id = :id LIMIT 1";
 
     $resultado = $conexao->prepare($sql);
     $resultado->bindParam(':id',$id,PDO::PARAM_INT);

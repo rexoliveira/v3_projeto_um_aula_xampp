@@ -35,7 +35,7 @@ function buscarJson() {
     }
   };
 
-  ajax.open("GET", "../reset_banco/insert_banco.json");
+  ajax.open("GET", "../reset_banco/insert_banco.json", true);
   ajax.send();
 } //Função envido OBJETO
 
