@@ -15,10 +15,10 @@
     <script src="../script/script.js" defer></script>
 
     <!-- [CSS] -->
-    <link rel="stylesheet" href="../root.css">
+    <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="style.css">
 
-    <title>Contato</title>
+    <title>Gist</title>
   </head>
   <body>
   <section class="container">

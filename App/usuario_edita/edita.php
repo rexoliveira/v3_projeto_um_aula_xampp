@@ -21,6 +21,10 @@ $_SESSION['erros'] = "";
 
 $usuario = $resultado->fetch(PDO::FETCH_ASSOC);
 extract($usuario);
+$id_edita = is_string($id) ? $id :"erro - sem id";
+$nome_edita = is_string($nome) ? $nome :"erro - sem nome";
+$email_edita = is_string($email) ? $email :"erro - sem email";
+$tel_edita = is_string($tel) ? $tel :"erro - sem telefone";
 
 ?>
 
@@ -49,7 +53,7 @@ extract($usuario);
   <script src="../script/script.js" defer></script>
 
   <!-- [CSS] -->
-  <link rel="stylesheet" href="../root.css">
+  <link rel="stylesheet" href="../css/root.css">
   <link rel="stylesheet" href="./css/form_style.css" />
   <link rel="stylesheet" href="./css/style.css" />
   
@@ -125,14 +129,14 @@ extract($usuario);
           <form name="edita_form" id="form_edita" action="processa.php" method="POST">
           <section class="input_group">
               <input style="display:none" type="text" id="id" name="id"
-              value='<?php echo "$id"?>'
+              value='<?php echo "$id_edita"?>'
               required
                />
             </section>
             <section class="input_group">
               <label for="nome">Nome Completo</label>
               <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"
-              value='<?php echo "$nome"?>'
+              value='<?php echo "$nome_edita"?>'
               minlength="5"
               maxlength="30"
               required
@@ -141,7 +145,7 @@ extract($usuario);
             <section class="input_group">
               <label for="email">E-mail</label>
               <input type="email" id="iemail" name="email" placeholder="Digite seu email"
-              value='<?php echo "$email"?>' 
+              value='<?php echo "$email_edita"?>' 
               required
               />
               <span id="ialert_email"></span>
@@ -151,7 +155,7 @@ extract($usuario);
               <label for="telefone">Telefone</label>
               <input type="text" id="telefone" name="telefone" onkeypress="mask(this, mphone);"
                 onblur="mask(this, mphone);" th:value="${usuario.telefone}" placeholder="(00) 00000-0000" 
-                value='<?php echo "$tel"?>'
+                value='<?php echo "$tel_edita"?>'
                 minlength="14"
                 maxlength="15"
                 required

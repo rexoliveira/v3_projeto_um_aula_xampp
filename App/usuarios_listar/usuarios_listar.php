@@ -30,7 +30,7 @@ $resultado->execute();
 
 
   <!-- [CSS] -->
-  <link rel="stylesheet" href="../root.css">
+  <link rel="stylesheet" href="../css/root.css">
   <link rel="stylesheet" href="../usuario_detalhe/css/usuario_detalhe_janela.css">
   <link rel="stylesheet" href="./css/usuarios_cards.css">
   <link rel="stylesheet" href="./css/style.css" />
