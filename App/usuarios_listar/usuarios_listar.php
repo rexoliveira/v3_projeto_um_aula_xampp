@@ -39,9 +39,9 @@ $resultado->execute();
   <!-- [JS] -->
   <script src="../usuario_detalhe/usuario_detalhe.js" defer></script>
   <script src="../usuario_detalhe/usuario_detalhe_janela.js"async></script>
-  <script src="../usuario_apaga/apagarUsuario.js" defer></script>
+  <script src="../usuario_deleta/usuario_deleta.js" defer></script>
   <script src="../reset_banco/processa_json.js" defer></script>
-  <script src="script.js" defer></script>
+  <script src="../script/script.js" defer></script>
 
   <title>Lista de usuários</title>
 </head>
@@ -156,7 +156,7 @@ while ($sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC)) {
   echo "<section class='c-card_image'>";
 
   echo "<a href='../usuario_edita/edita.php?id=$id' class='btn_editar'><span class='material-symbols-outlined'> edit </span></a>";
-  echo "<a href='#' class='btn_delete' onclick='apagarUsuario($id)'><span class='material-symbols-outlined'> delete </span></a>";
+  echo "<a href='#' class='btn_delete' onclick='deletarUsuario($id)'><span class='material-symbols-outlined'> delete </span></a>";
   echo "<img class='imagem'src='../../image/avatar/${contadorImg}.png' alt='image avatar'>";
 
   echo "</section>";

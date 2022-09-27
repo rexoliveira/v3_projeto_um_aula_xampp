@@ -16,9 +16,9 @@
     <!--▼OBS.: Tem ser o caminho assim porque ele carrega um nivel acima -->
     <script src="./chat_bot/chat_bot_modal.js" defer></script>
     <script src="./menu_topo/menu_topo.js" defer></script>
-    <script src="dados_servicos.js" defer></script>
+    <script src="./dados_servicos.js" defer></script>
     <script src="./script/script.js" defer></script>
-    <script src="lista_servicos.js" defer></script>
+    <script src="./lista_servicos.js" defer></script>
     <script src="./script/data_hora.js"></script>
 
     <!-- [CSS] -->
@@ -45,7 +45,7 @@
             >
           </li>
           <li>
-            <a href="usuarios_listar/usuarios-listar.php"
+            <a href="usuarios_listar/usuarios_listar.php"
             ><i class="fa fa-users"></i> Usuários</a
             >
           </li>

@@ -12,11 +12,11 @@
     />
     <!-- [JS] -->
     <script src="./github_gist.js" defer></script>
+    <script src="../script/script.js" defer></script>
 
     <!-- [CSS] -->
     <link rel="stylesheet" href="../root.css">
     <link rel="stylesheet" href="style.css">
-    <script src="./gist.js" defer></script>
 
     <title>Contato</title>
   </head>

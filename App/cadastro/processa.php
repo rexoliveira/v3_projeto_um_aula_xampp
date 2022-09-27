@@ -99,7 +99,7 @@ $chave = $conexao->lastInsertId();
           <span class="material-symbols-outlined"> person_add </span>
           <h3>Cadastra Usuário</h3>
         </a>
-        <a href="../usuarios_listar/usuarios-listar.php">
+        <a href="../usuarios_listar/usuarios_listar.php">
           <span class="material-symbols-outlined"> groups </span>
           <h3>Lista Usuários</h3>
         </a>

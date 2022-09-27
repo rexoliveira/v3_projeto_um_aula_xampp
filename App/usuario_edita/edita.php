@@ -4,14 +4,14 @@ require_once "../pdo/conexao.php";
 function redireciona($erro)
 {
   $_SESSION['erros'] = "Erro: $erro";
-  header('Location: ../usuarios_listar/usuarios-listar.php');
+  header('Location: ../usuarios_listar/usuarios_listar.php');
 }
 
 $id = isset($_GET['id']) ? $_GET['id'] : redireciona("Sem ID");
 (!empty($_GET['id']))?"":redireciona("Sem ID");
 $idFilter = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING, FILTER_FLAG_NONE) ?? redireciona("Erro na entrada -'id'");
 
-$sql = "SELECT id, nome, email, tel, password FROM public.usuario WHERE id = :id LIMIT 1";
+$sql = "SELECT id, nome, email, tel, password FROM usuario WHERE id = :id LIMIT 1";
 
 $resultado = $conexao->prepare($sql);
 $resultado->bindParam(':id', $idFilter, PDO::PARAM_STR);
@@ -87,7 +87,7 @@ extract($usuario);
           <span class="material-symbols-outlined"> person_add </span>
           <h3>Cadastra Usuário</h3>
         </a>
-        <a href="../usuarios_listar/usuarios-listar.php">
+        <a href="../usuarios_listar/usuarios_listar.php">
           <span class="material-symbols-outlined"> groups </span>
           <h3>Lista Usuários</h3>
         </a>

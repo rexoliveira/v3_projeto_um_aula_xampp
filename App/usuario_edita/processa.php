@@ -25,14 +25,14 @@ $passwordFilter = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING)?? re
 function redireciona($erro)
 {
   $_SESSION['erros'] = "Erro: $erro";
-  header('Location: ../usuarios_listar/usuarios-listar.php');
+  header('Location: ../usuarios_listar/usuarios_listar.php');
   die();
 }
 
 if(!empty($passwordFilter)){
-$sql = 'UPDATE public.usuario SET  nome=:nome, email=:email, tel=:telefone, password=:password WHERE id=:id';
+$sql = 'UPDATE usuario SET  nome=:nome, email=:email, tel=:telefone, password=:password WHERE id=:id';
 }else{
-  $sql = 'UPDATE public.usuario SET  nome=:nome, email=:email, tel=:telefone WHERE id=:id';
+  $sql = 'UPDATE usuario SET  nome=:nome, email=:email, tel=:telefone WHERE id=:id';
 } 
 
 $resultado = $conexao->prepare($sql);
@@ -60,7 +60,7 @@ $_SESSION['erros'] = ""
     />
 
   <!-- [JS] -->
-  <script src="../usuario_apaga/apagarUsuario.js"defer></script>
+  <script src="../usuario_deleta/usuario_deleta.js"defer></script>
   <script src="edita.js" defer></script>
 
   <!-- [CSS] -->
@@ -101,7 +101,7 @@ $_SESSION['erros'] = ""
           <span class="material-symbols-outlined"> person_add </span>
           <h3>Cadastra Usuário</h3>
         </a>
-        <a href="../usuarios_listar/usuarios-listar.php">
+        <a href="../usuarios_listar/usuarios_listar.php">
           <span class="material-symbols-outlined"> groups </span>
           <h3>Lista Usuários</h3>
         </a>
@@ -151,7 +151,7 @@ $_SESSION['erros'] = ""
 
               echo"<a href='../usuario_edita/edita.php?id=$id' class='btn_editar'>
               <span class='material-symbols-outlined'> edit </span></a>";
-              echo"<a href='#' class='btn_delete' onclick='apagarUsuario($id)'>
+              echo"<a href='#' class='btn_delete' onclick='deletarUsuario($id)'>
               <span class='material-symbols-outlined'> delete </span></a>";
               echo "<img class='imagem'src='../../image/avatar/0.png' alt='image avatar'>";
               echo "<span class='dados-card id' ><h2 class='dados'>ID: $id</h2></span>";

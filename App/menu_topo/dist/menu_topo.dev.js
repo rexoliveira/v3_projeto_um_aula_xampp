@@ -1,9 +1,9 @@
 "use strict";
 
-var hea = document.querySelector('header');
+var header = document.querySelector('header');
 $(function () {
   $('.toggle-menu').click(function () {
     $('.menu-topo').toggleClass('display');
-    hea.style.width = '100%';
+    header.style.width = '100%';
   });
 });
