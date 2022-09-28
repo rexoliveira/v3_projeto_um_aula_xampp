@@ -107,7 +107,7 @@ form .input_group label {
     transition: all 0.5s ease;
 }
 
-form .input_group input {
+form .input_group input{
     width: 100%;
     height: 47px;
     background-color: var(--color-escuro);
@@ -119,6 +119,18 @@ form .input_group input {
     color: var(--color-background);
     transition: all 0.4s ease;
     transition: all 0.5s ease;
+}
+
+form .input_group input.foto {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background);
+    color: var(--color-write);
+    border-radius: 10px;
+    padding: 2px 20px;
+    font-size: 12px;   
 }
 
 form .input_group input:focus {

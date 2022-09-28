@@ -49,10 +49,13 @@ $extension = pathinfo($path, PATHINFO_EXTENSION);
 $nome_arquivo = $chave .".". $extension;
 
 if (isset($foto['name']) and (!empty($foto['name']))) {
+
   $diretorio = "../image/foto_perfil/$chave/";
   mkdir($diretorio, 0755);
   move_uploaded_file($foto['tmp_name'],$diretorio . $nome_arquivo);
+  
 } else {
+
   $diretorio = "../image/foto_perfil/$chave/";
   mkdir($diretorio, 0755);
   $nome_image = $chave.".jpg";
@@ -62,6 +65,7 @@ $sql = "UPDATE usuario SET foto = :edita_foto WHERE id = $chave";
 $resultado = $conexao->prepare($sql);
 $resultado->bindParam(':edita_foto', $nome_image, PDO::PARAM_STR);
 $resultado->execute();
+
 }
 
 

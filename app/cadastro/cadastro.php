@@ -121,9 +121,9 @@ session_start();
               <input type="password" id="iconfirma_senha" name="confirma_senha" placeholder="Confirme a senha" required
                 />
             </section>
-            <section class="input_group">
+            <section class="input_group foto">
               <label for="foto">Foto</label>
-              <input type="file" id="ifoto" name="foto"/>
+              <input class="foto" type="file" id="ifoto" name="foto"/>
             </section>
             <section class="input_group">
               <button type="submit" >Cadastrar</button>
