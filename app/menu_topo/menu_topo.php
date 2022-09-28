@@ -89,6 +89,11 @@
           <?php include_once("./menu_topo/blog-drop-down.php") ?>
           <!-- images-drop-down -->
           <?php include_once("./menu_topo/images-drop-down.php") ?>
+          <li>
+            <a href="usuario_login/login.php" 
+            ><i class="fa fa-sign-in"></i> Login </a
+            >
+          </li>
           <!-- ============================================================= -->
           <a href="#" class="toggle-menu visible-xs-block">|||</a>
         </ul>
