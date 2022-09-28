@@ -112,14 +112,14 @@ form .input_group input:focus {
     transition: all 0.5s ease;
 }
 
-form .input_group button:hover {
+form .input_group .button:hover {
     /* hover passar o mouse por cima */
     color: var(--color-escuro);
     transition: all 0.5s ease;
     background-color: var(--color-background);
 }
 
-form .input_group button {
+form .input_group .button {
     font-weight: bold;
     width: 100%;
     height: 47px;

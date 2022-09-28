@@ -1,3 +1,9 @@
+<?php
+session_start();
+include_once '../pdo/conexao.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -9,7 +15,7 @@
   <link rel="shortcut icon" href="../image/icon/smart-city.png" type="image/x-icon" />
 
   <!-- [JS] -->
-    <script src="../script/script.js" defer></script>
+  <script src="../script/script.js" defer></script>
 
   <!-- [CSS] -->
   <link rel="stylesheet" href="../css/root.css">
@@ -71,18 +77,55 @@
       </section>
       <section class="box_form">
         <h2>Fazer Login</h2>
-        <form action="#">
+        <?php
+$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
+if (!empty($dados['enviarLogin'])) {
+
+  $sql = "SELECT * FROM usuario WHERE email = :email LIMIT 1";
+
+  $usuario = $conexao->prepare($sql) ;
+  $usuario-> bindParam(':email', $dados['email'],PDO::PARAM_STR);
+  $usuario->execute();
+
+  if($usuario AND ($usuario->rowCount()!=0)){
+    $linha_usuario = $usuario->fetch(PDO::FETCH_ASSOC);
+  
+    if (password_verify($dados['password'],$linha_usuario['password'])) {
+      $_SESSION['id']= $linha_usuario['id'];
+      $_SESSION['nome']= $linha_usuario['nome'];
+      header("Location: ../home_dash.php");
+    } else {
+      $_SESSION['msg']="<br><p style='color:red' >Usuário ou senha inválido!</p>";
+    }
+    
+
+  }else{
+    $_SESSION['msg']="<br><p style='color:red' >Usuário ou senha inválido!</p>";
+  };
+
+  if (isset($_SESSION['msg'])) {
+    echo $_SESSION['msg'];
+    unset($_SESSION['msg']);
+  }
+}
+
+
+?>
+
+
+        <form action="" method="POST">
           <section class="input_group">
             <label for="email">E-mail</label>
-            <input type="email" id="iemail" placeholder="Digite seu email" required />
+            <input type="email" id="iemail" name="email" placeholder="Digite seu email" required />
           </section>
           <section class="input_group">
             <label for="senha">Senha</label>
-            <input type="password" id="isenha" placeholder="Digite sua senha" required />
+            <input type="password" id="isenha" name="password" placeholder="Digite sua senha" required />
           </section>
 
           <section class="input_group">
-            <button>Entrar</button>
+            <input class="button" type="submit" value="Entrar" name="enviarLogin">
           </section>
         </form>
       </section>
@@ -94,28 +137,7 @@
   <aside class="aside_direito">
     <section class="sessao_usuario_topo">
       <!-- ######################PERFIL##########################▼ -->
-      <section class="perfil">
-        <button id="menu-button">
-          <span class="material-symbols-outlined"> menu </span>
-        </button>
-
-        <div class="info">
-          <p>Oi, <strong>Rodrigo Oliveira</strong></p>
-          <small class="texto_base_card">Administrador</small>
-        </div>
-
-        <div class="perfil-foto">
-          <img src="../../image/avatar/rodrigo-oliveira.jpg" alt="avatar" />
-        </div>
-
-        <!-- href="../page/principal.php" DE TESTE AJUSTAR -->
-        <a href="../page/principal.php">
-          <span id="logout" class="material-symbols-outlined">
-            logout
-          </span>
-          <!-- <h3>Logout</h3> -->
-        </a>
-      </section>
+      <?php include_once '../usuario_perfil/usuario_perfil.php'?>
       <!-- ######################PERFIL##########################▲ -->
     </section>
   </aside>

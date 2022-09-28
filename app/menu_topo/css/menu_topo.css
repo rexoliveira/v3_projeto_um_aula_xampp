@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+.fa.fa-sign-in{
+color: var(--color-logo-titulo);
+}
+
 .clearfix:after,
 .clearfix:before {
   content: '';

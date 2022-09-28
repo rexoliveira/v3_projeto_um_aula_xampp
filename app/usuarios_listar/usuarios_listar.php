@@ -185,29 +185,8 @@ echo "</section>";
     <aside class="aside_direito">
       <section class="sessao_usuario_topo">
         <!-- ######################PERFIL##########################▼ -->
-        <section class="perfil">
-          <button id="menu-button">
-            <span class="material-symbols-outlined"> menu </span>
-          </button>
-
-          <div class="info">
-            <p>Oi, <strong>Rodrigo Oliveira</strong></p>
-            <small class="texto_base_card">Administrador</small>
-          </div>
-
-          <div class="perfil-foto">
-            <img src="../../image/avatar/rodrigo-oliveira.jpg" alt="avatar" />
-          </div>
-
-          <!-- href="../page/principal.php" DE TESTE AJUSTAR -->
-          <a href="../page/principal.php">
-            <span id="logout" class="material-symbols-outlined">
-              logout
-            </span>
-            <!-- <h3>Logout</h3> -->
-          </a>
-        </section>
-        <!-- ######################PERFIL##########################▲ -->
+      <?php include_once '../usuario_perfil/usuario_perfil.php'?>
+      <!-- ######################PERFIL##########################▲ -->
       </section>
     </aside>
   </section>

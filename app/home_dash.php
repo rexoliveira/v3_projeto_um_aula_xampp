@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -283,28 +284,7 @@ session_start();
       <aside class="aside_direito">
         <section class="sessao_usuario_topo">
           <!-- ######################PERFIL##########################▼ -->
-          <section class="perfil">
-            <button id="menu-button">
-              <span class="material-symbols-outlined"> menu </span>
-            </button>
-
-            <div class="info">
-              <p>Oi, <strong>Rodrigo Oliveira</strong></p>
-              <small class="texto_base_card">Administrador</small>
-            </div>
-
-            <div class="perfil-foto">
-              <img src="../image/avatar/rodrigo-oliveira.jpg" alt="avatar" />
-            </div>
-
-            <!-- href="../page/principal.php" DE TESTE AJUSTAR -->
-            <a href="../page/principal.php">
-              <span id="logout" class="material-symbols-outlined">
-                logout
-              </span>
-              <!-- <h3>Logout</h3> -->
-            </a>
-          </section>
+          <?php include_once './usuario_perfil/dash_usuario_perfil.php'?>
           <!-- ######################PERFIL##########################▲ -->
         </section>
         <!-- FIM TOPO -->

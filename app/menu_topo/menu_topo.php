@@ -1,3 +1,7 @@
+<?php
+//NÂO ADICIONAR SESSION_START
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
