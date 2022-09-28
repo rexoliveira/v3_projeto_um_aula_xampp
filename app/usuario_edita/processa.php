@@ -58,7 +58,10 @@ $diretorio = "../image/foto_perfil/$id/";
 
 //Lista e exclui a imagem anterior
 $file = glob($diretorio . '/*');
-if(is_file($file[0])) {unlink($file[0]); };
+if(!empty($file[0])  and is_file($file[0])) {unlink($file[0]); };
+
+
+!is_dir($diretorio)? mkdir($diretorio, 0755):"";
 
 move_uploaded_file($foto['tmp_name'],$diretorio . $nome_arquivo);
   

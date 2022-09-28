@@ -198,8 +198,8 @@ $_SESSION['erros'] = "";
                 echo "<span class='dados-card' ><h2 class='dados'>Nome: $nome</h2></span>";
                 echo " <span class='dados-card' ><h2 class='dados'>E-mail: $email</h2></span>";
                 echo "<span class='dados-card' ><h2 class='dados'>Contato: $tel</h2></span>";
-                echo"<a href='' class='btn_detalhes'>
-                <span class='material-symbols-outlined'> loupe </span></a>";
+                /* echo"<a href='' class='btn_detalhes'>
+                <span class='material-symbols-outlined'> loupe </span></a>"; */
 
               echo "</section>";
 
