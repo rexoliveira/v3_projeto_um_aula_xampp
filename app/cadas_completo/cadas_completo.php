@@ -20,6 +20,7 @@ session_start();
   <!--Script abaixo faz parte da configuração de valida email- -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="script_cadas_completo.js" defer></script>
+  <script src="../registro/verifica_email.js" defer></script>
   <script src="../script/valida_email.js" defer></script>
   <script src="../script/valida_senha.js" defer></script>
   <script src="../script/mascaras.js" defer></script>
