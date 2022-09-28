@@ -18,13 +18,14 @@ $resultado->bindParam(':id', $idFilter, PDO::PARAM_STR);
 $resultado->execute();
 $_SESSION['erros'] = ""; 
 
-
 $usuario = $resultado->fetch(PDO::FETCH_ASSOC);
 extract($usuario);
-$id_edita = is_string($id) ? $id :"erro - sem id";
-$nome_edita = is_string($nome) ? $nome :"erro - sem nome";
-$email_edita = is_string($email) ? $email :"erro - sem email";
-$tel_edita = is_string($tel) ? $tel :"erro - sem telefone";
+$id_edita = !empty($id) ? $id :"erro - sem id";
+$nome_edita = !empty($nome) ? $nome :"erro - sem nome";
+$email_edita = !empty($email) ? $email :"erro - sem email";
+$tel_edita = !empty($tel) ? $tel :"erro - sem telefone";
+//SEM USO
+$foto_edita = !empty($foto) ? $foto :"erro - sem foto";
 
 ?>
 
@@ -46,7 +47,7 @@ $tel_edita = is_string($tel) ? $tel :"erro - sem telefone";
   <!--Script abaixo faz parte da configuração de valida email- -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <!-- Verifica se e-mail já não está cadastrado -->
-  <script src="../registro/registro.js" defer></script>
+  <script src="../registro/verifica_email.js" defer></script>
   <script src="../script/valida_email.js" defer></script>
   <script src="../script/valida_senha.js" defer></script>
   <script src="../script/mascaras.js" defer></script>

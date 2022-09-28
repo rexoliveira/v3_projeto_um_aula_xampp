@@ -127,7 +127,7 @@ $_SESSION['erros'] = ""
     <main>
       <?php
       
-      $sql = "SELECT * FROM usuario WHERE id=:id";
+      $sql = "SELECT * FROM usuario WHERE id = :id";
            
       $resultado = $conexao->prepare($sql);
       $resultado->bindParam(':id',$_POST['id']);

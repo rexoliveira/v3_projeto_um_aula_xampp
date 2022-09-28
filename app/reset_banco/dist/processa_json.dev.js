@@ -16,7 +16,7 @@ function confirmarReset() {
 
 
 function buscarJson() {
-  var ajax = new XMLHttpRequest();
+  var ajax = new XMLHttpRequest(Cache, false);
 
   ajax.onload = function () {
     if (ajax.readyState == 4) {
@@ -41,7 +41,7 @@ function buscarJson() {
 
 
 function sendJson(dados) {
-  var xmlhttp = new XMLHttpRequest(); // new HttpRequest instance ;
+  var xmlhttp = new XMLHttpRequest(Cache, false); // new HttpRequest instance ;
 
   xmlhttp.onload = function () {
     //Recebe os dados vindos do aqruivo processa.php

@@ -38,7 +38,7 @@ $resultado->execute();
 
   <!-- [JS] -->
   <script src="../usuario_detalhe/usuario_detalhe.js" defer></script>
-  <script src="../usuario_detalhe/usuario_detalhe_janela.js"async></script>
+  <script src="../usuario_detalhe/usuario_detalhe_janela.js" async></script>
   <script src="../usuario_deleta/usuario_deleta.js" defer></script>
   <script src="../reset_banco/processa_json.js" defer></script>
   <script src="../script/script.js" defer></script>
@@ -148,7 +148,12 @@ while ($sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC)) {
   $nome = $sql_conteudo['nome'];
   $email = $sql_conteudo['email'];
   $tel = $sql_conteudo['tel'];
+  $foto = $sql_conteudo['foto'];
 
+  $extension = pathinfo( $foto, PATHINFO_EXTENSION);
+  
+
+  
   //Não imprime o cartão de informação
   if($id != 1){
   echo "<article class='c-card'>";
@@ -157,7 +162,12 @@ while ($sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC)) {
 
   echo "<a href='../usuario_edita/edita.php?id=$id' class='btn_editar'><span class='material-symbols-outlined'> edit </span></a>";
   echo "<a href='#' class='btn_delete' onclick='deletarUsuario($id)'><span class='material-symbols-outlined'> delete </span></a>";
-  echo "<img class='imagem'src='../../image/avatar/${contadorImg}.png' alt='image avatar'>";
+
+  if(empty($foto)){
+  echo "<img class='imagem'src='../image/avatar_exemplo/${contadorImg}.png' alt='image avatar'>";
+  }else{
+    echo "<img class='imagem'src='../image/foto_perfil/$id/$id.$extension' alt='image avatar'>";
+  }
 
   echo "</section>";
 
@@ -185,8 +195,8 @@ echo "</section>";
     <aside class="aside_direito">
       <section class="sessao_usuario_topo">
         <!-- ######################PERFIL##########################▼ -->
-      <?php include_once '../usuario_perfil/usuario_perfil.php'?>
-      <!-- ######################PERFIL##########################▲ -->
+        <?php include_once '../usuario_perfil/usuario_perfil.php'?>
+        <!-- ######################PERFIL##########################▲ -->
       </section>
     </aside>
   </section>

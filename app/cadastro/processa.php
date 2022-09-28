@@ -5,19 +5,20 @@ require_once "../pdo/conexao.php";
 $nome = isset($_POST['nome']) ? $_POST['nome'] : redireciona("name:nome");
 $email = isset($_POST['email']) ? $_POST['email'] : redireciona("name:email");
 $telefone = isset($_POST['telefone']) ? $_POST['telefone'] : redireciona("name:telefone");
-$password = isset($_POST['senha']) ? $_POST['senha'] : redireciona("neme:senha");
+$password = isset($_POST['senha']) ? $_POST['senha'] : redireciona("name:senha"); 
+$foto = isset($_FILES['foto']) ? $_FILES['foto'] : redireciona("name:foto");
 
 function redireciona($erro)
 {
   $_SESSION['erros'] = "Erro: $erro";
   header('Location: cadastro.php');
-}
+} 
 
 
 $nomeFilter = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING, FILTER_FLAG_NONE) ?? redireciona("Erro na entrada -'nome'");
-$emailFilter = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL)?? redireciona("Erro na entrada -'email'");;
+$emailFilter = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL)?? redireciona("Erro na entrada -'email'");
 $telefoneFilter = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING)?? redireciona("Erro na entrada -'telefone'");;
-$passwordFilter = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING)?? redireciona("Erro na entrada -'senha'");;
+$passwordFilter = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING)?? redireciona("Erro na entrada -'senha'"); 
 
 $array = filter_input_array(INPUT_POST);
 foreach ($array as $chave => $valor) {
@@ -27,19 +28,45 @@ foreach ($array as $chave => $valor) {
   ;
 }
 
-$sql = 'INSERT INTO usuario (nome, email, tel, password) VALUES(:nome,:email,:telefone,:password )';
+$sql = 'INSERT INTO usuario (nome, email, tel, password, foto) VALUES(:nome,:email,:telefone,:password, :foto )';
 
 $resultado = $conexao->prepare($sql);
+
 $resultado->bindParam(':nome', $nomeFilter, PDO::PARAM_STR);
 $resultado->bindParam(':email', $emailFilter, PDO::PARAM_STR);
 $resultado->bindParam(':telefone', $telefoneFilter, PDO::PARAM_STR);
 $passwordHash = password_hash($passwordFilter, PASSWORD_DEFAULT);
 $resultado->bindValue(':password', $passwordHash, PDO::PARAM_STR);
+$resultado->bindValue(':foto', $foto['name'], PDO::PARAM_STR);
+
 $resultado->execute();
-$_SESSION['erros'] = "";
 
 //Retorna o ID 
 $chave = $conexao->lastInsertId();
+
+$path = $foto['full_path'];
+$extension = pathinfo($path, PATHINFO_EXTENSION);
+$nome_arquivo = $chave .".". $extension;
+
+if (isset($foto['name']) and (!empty($foto['name']))) {
+  $diretorio = "../image/foto_perfil/$chave/";
+  mkdir($diretorio, 0755);
+  move_uploaded_file($foto['tmp_name'],$diretorio . $nome_arquivo);
+} else {
+  $diretorio = "../image/foto_perfil/$chave/";
+  mkdir($diretorio, 0755);
+  $nome_image = $chave.".jpg";
+  copy('../image/foto_perfil/avatar-generico.jpg',$diretorio .$nome_image);
+
+$sql = "UPDATE usuario SET foto = :edita_foto WHERE id = $chave";
+$resultado = $conexao->prepare($sql);
+$resultado->bindParam(':edita_foto', $nome_image, PDO::PARAM_STR);
+$resultado->execute();
+}
+
+
+$_SESSION['erros'] = "";
+
 
 ?>
 
@@ -138,6 +165,11 @@ $chave = $conexao->lastInsertId();
       $nome = !empty($sql_conteudo['nome'])?$sql_conteudo['nome']:"";
       $email = !empty($sql_conteudo['email'])?$sql_conteudo['email']:"";
       $tel = !empty($sql_conteudo['tel'])?$sql_conteudo['tel']:"";
+      $foto = !empty($sql_conteudo['foto'])?$sql_conteudo['foto']:"";
+
+      $extension = pathinfo($foto, PATHINFO_EXTENSION);
+      
+      $ext = (!empty($extension ))?$extension:"jpg";
 
         echo "<section class='cartao'>";
         echo "<h2 id='avisoDelete'></h2>";
@@ -152,7 +184,7 @@ $chave = $conexao->lastInsertId();
               /* Não faz sentido estar aqui - reavaliação futura */
               /* echo"<a href='#' class='btn_delete' onclick='apagarUsuario($id)'>
               <span class='material-symbols-outlined'> delete </span></a>"; */
-              echo "<img class='imagem'src='../../image/avatar/0.png' alt='image avatar'>";
+              echo "<img class='imagem'src='../image/foto_perfil/$id/$id.$ext' alt='image_avatar'>";
               echo "<span class='dados-card id' ><h2 class='dados'>ID: $id</h2></span>";
 
             echo "</section>";

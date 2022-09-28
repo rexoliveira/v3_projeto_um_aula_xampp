@@ -94,6 +94,7 @@ if (!empty($dados['enviarLogin'])) {
     if (password_verify($dados['password'],$linha_usuario['password'])) {
       $_SESSION['id']= $linha_usuario['id'];
       $_SESSION['nome']= $linha_usuario['nome'];
+      $_SESSION['foto']= $linha_usuario['foto'];
       header("Location: ../home_dash.php");
     } else {
       $_SESSION['msg']="<br><p style='color:red' >Usuário ou senha inválido!</p>";

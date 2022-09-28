@@ -15,7 +15,7 @@ session_start();
   <!-- [JS] -->
   <!--Script abaixo faz parte da configuração de valida email- -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="../registro/registro.js" defer></script>
+  <script src="../registro/verifica_email.js" defer></script>
   <script src="../script/valida_email.js" defer></script>
   <script src="../script/valida_senha.js" defer></script>
   <script src="../script/script.js" defer></script>
@@ -92,7 +92,7 @@ session_start();
           <section>
             <!-- <span class="erro"><?php /* echo $_SESSION['erros'];  */?></span> -->
           </section>
-          <form name="cadastro_form" id="iform_cadastro" action="processa.php" method="POST">
+          <form name="cadastro_form" id="iform_cadastro" action="processa.php" method="POST" enctype="multipart/form-data">
             <section class="input_group">
               <label for="nome">Nome Completo</label>
               <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"
@@ -120,6 +120,10 @@ session_start();
               <label for="confirmar_senha">Confirmar a Senha</label>
               <input type="password" id="iconfirma_senha" name="confirma_senha" placeholder="Confirme a senha" required
                 />
+            </section>
+            <section class="input_group">
+              <label for="foto">Foto</label>
+              <input type="file" id="ifoto" name="foto"/>
             </section>
             <section class="input_group">
               <button type="submit" >Cadastrar</button>

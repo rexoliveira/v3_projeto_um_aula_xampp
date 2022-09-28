@@ -17,7 +17,7 @@ function confirmarReset() {
 //Função chama o json externo
 function buscarJson() {
 
-    let ajax = new XMLHttpRequest();
+    let ajax = new XMLHttpRequest(Cache, false);
 
     ajax.onload = function () {
         if (ajax.readyState == 4) {
@@ -42,7 +42,7 @@ function buscarJson() {
 
 //Função envido OBJETO
 function sendJson(dados) {
-    var xmlhttp = new XMLHttpRequest(); // new HttpRequest instance ;
+    var xmlhttp = new XMLHttpRequest(Cache, false); // new HttpRequest instance ;
     xmlhttp.onload = function () {
         //Recebe os dados vindos do aqruivo processa.php
         document.getElementById("avisoDelete").innerHTML = xmlhttp.responseText;
