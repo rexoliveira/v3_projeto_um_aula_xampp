@@ -7,6 +7,7 @@ $nome = isset($_POST['nome']) ? $_POST['nome'] : redireciona("name:nome");
 $email = isset($_POST['email']) ? $_POST['email'] : redireciona("name:email");
 $telefone = isset($_POST['telefone']) ? $_POST['telefone'] : redireciona("name:telefone");
 $password = isset($_POST['senha']) ? $_POST['senha'] : redireciona("neme:senha");
+$foto = isset($_FILES['foto']) ? $_FILES['foto'] : redireciona("name:foto");
 
 $array = filter_input_array(INPUT_POST);
 
@@ -41,8 +42,32 @@ $resultado->bindParam(':nome', $nomeFilter, PDO::PARAM_STR);
 $resultado->bindParam(':email', $emailFilter, PDO::PARAM_STR);
 $resultado->bindParam(':telefone', $telefoneFilter, PDO::PARAM_STR);
 (!empty($passwordFilter))?$resultado->bindValue(':password', $passwordFilter, PDO::PARAM_STR):"";
+
 $resultado->execute();
-$_SESSION['erros'] = ""
+$_SESSION['erros'] = "";
+
+//==================================================================
+
+if (isset($foto['name']) and (!empty($foto['name']))) {
+
+$path = $foto['full_path'];
+$extension = pathinfo($path, PATHINFO_EXTENSION);
+$nome_arquivo = $id .".". $extension;
+
+$diretorio = "../image/foto_perfil/$id/";  
+
+//Lista e exclui a imagem anterior
+$file = glob($diretorio . '/*');
+if(is_file($file[0])) {unlink($file[0]); };
+
+move_uploaded_file($foto['tmp_name'],$diretorio . $nome_arquivo);
+  
+$sql = "UPDATE usuario SET foto = :edita_foto WHERE id = $id";
+$resultado = $conexao->prepare($sql);
+$resultado->bindParam(':edita_foto', $foto['name'], PDO::PARAM_STR);
+$resultado->execute();
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -140,6 +165,11 @@ $_SESSION['erros'] = ""
       $nome = !empty($sql_conteudo['nome'])?$sql_conteudo['nome']:"";
       $email = !empty($sql_conteudo['email'])?$sql_conteudo['email']:"";
       $tel = !empty($sql_conteudo['tel'])?$sql_conteudo['tel']:"";
+      $foto = !empty($sql_conteudo['foto'])?$sql_conteudo['foto']:"";
+
+      $extension = pathinfo($foto, PATHINFO_EXTENSION);
+      
+      $ext = (!empty($extension ))?$extension:"jpg";
 
         echo "<section class='cartao'>";
         echo "<h2 id='avisoDelete'></h2>";
@@ -153,7 +183,7 @@ $_SESSION['erros'] = ""
               <span class='material-symbols-outlined'> edit </span></a>";
               echo"<a href='#' class='btn_delete' onclick='deletarUsuario($id)'>
               <span class='material-symbols-outlined'> delete </span></a>";
-              echo "<img class='imagem'src='../../image/avatar/0.png' alt='image avatar'>";
+              echo "<img class='imagem'src='../image/foto_perfil/$id/$id.$ext' alt='image_avatar'>";
               echo "<span class='dados-card id' ><h2 class='dados'>ID: $id</h2></span>";
 
             echo "</section>";

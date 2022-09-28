@@ -127,7 +127,7 @@ $foto_edita = !empty($foto) ? $foto :"erro - sem foto";
           <section>
             <!-- <span class="erro"><?php /* echo $_SESSION['erros'];  */?></span> -->
           </section>
-          <form name="edita_form" id="form_edita" action="processa.php" method="POST">
+          <form name="edita_form" id="form_edita" action="processa.php" method="POST" enctype="multipart/form-data">
           <section class="input_group">
               <input style="display:none" type="text" id="id" name="id"
               value='<?php echo "$id_edita"?>'
@@ -170,6 +170,10 @@ $foto_edita = !empty($foto) ? $foto :"erro - sem foto";
               <label for="confirmar_senha">Confirmar a Senha</label>
               <input type="password" id="iconfirma_senha" name="confirma_senha" placeholder="Confirme a senha" 
                 />
+            </section>
+            <section class="input_group">
+              <label for="foto">Foto</label>
+              <input class ="foto" type="file" id="ifoto" name="foto"/>
             </section>
             <section class="input_group">
               <button onclick="fechaAviso()" type="submit" >Alterar</button>
