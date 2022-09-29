@@ -101,8 +101,9 @@ session_start();
                 type="text"
                 name="nome"
                 id="inome"
+                placeholder="Usuário não logado, email não pode ser enviado"
                 readonly
-                value="Rodrigo Oliveira"
+                value=<?php if(!empty($_SESSION['nome'])) {echo($_SESSION['nome'] );}else {echo"Não_Logado";}?>
               />
               <label for="inome" class="label"> 
                 <span class="material-symbols-outlined" id="nome_icon">
@@ -156,9 +157,15 @@ session_start();
                 Mensagem
               </label>
             </section>
-            <section id="botao">
-              <input type="submit" value="Enviar" name="enviar" />
-            </section>
+            <?php if(!empty($_SESSION['nome'])) {
+              echo '<section id="botao">';
+              echo    '<input type="submit" value="Enviar" name="enviar" />';
+              echo'</section>';
+              }else{
+              echo '<p style="color:red;font-size:12px">Usuário não esta logado e não é possível enviar email</p>';
+              }
+
+              ?>            
           </form>
         </section>
       </section>
