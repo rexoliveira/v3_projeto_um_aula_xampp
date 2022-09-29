@@ -142,8 +142,6 @@ echo "<section class='cartoes'>";
 $contadorImg = 0;
 while ($sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC)) {
 
-  $contadorImg++;
-
   $id = $sql_conteudo['id'];
   $nome = $sql_conteudo['nome'];
   $email = $sql_conteudo['email'];
@@ -164,6 +162,9 @@ while ($sql_conteudo = $resultado->fetch(PDO::FETCH_ASSOC)) {
   echo "<a href='#' class='btn_delete' onclick='deletarUsuario($id)'><span class='material-symbols-outlined'> delete </span></a>";
 
   if(empty($foto)){
+    
+    $contadorImg++;
+
   echo "<img class='imagem'src='../image/avatar_exemplo/${contadorImg}.png' alt='image avatar'>";
   }else{
     echo "<img class='imagem'src='../image/foto_perfil/$id/$id.$extension' alt='image avatar'>";
